@@ -19,5 +19,7 @@ Route::get('/admin/login','Admin\AdminController@getLogin');
 Route::post('/admin/login','Admin\RegisterController@login');
 Route::get('/admin/register','Admin\AdminController@getRegister');
 Route::post('/admin/register','Admin\RegisterController@register');
+Route::post('/admin/registerother','Admin\RegisterController@registerother');
 Route::get('/confirm/{email}-{token}','Admin\RegisterController@comfirm');
 Route::get('/exitadmin','Admin\RegisterController@exitadmin');
+Route::get('/admin/users','Admin\AdminController@admins');

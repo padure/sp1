@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use DB;
+use App\Admin;
 
 class AdminController extends Controller
 {
@@ -14,10 +16,32 @@ class AdminController extends Controller
             return redirect("/admin/login");
         }
     }
+    public function admins(Admin $admin){
+        if (filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            $result=$admin->getAdmins();
+            return view("admin.admins",["admins"=>$result]);
+        }else{
+            return redirect("/admin/login");
+        }
+    }
     public function getLogin(){
-        return view('admin.partials.login');
+        $first=DB::table('admin')->where('confirmed',1)->count();
+        if($first>0)
+        {
+            return view('admin.partials.login');
+        }
+        else{
+            return redirect('/admin/register');
+        }
     }
     public function getRegister(){
-        return view('admin.partials.register');
+        $first=DB::table('admin')->where('confirmed',1)->count();
+        if($first>0)
+        {
+            return redirect('/admin/login');
+        }
+        else{
+            return view('admin.partials.register');
+        }
     }
 }

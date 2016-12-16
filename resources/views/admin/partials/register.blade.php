@@ -1,6 +1,5 @@
 @extends("admin.partials.header")
 @section("header")
-<a href="{{URL("/admin/login")}}">Logare</a>
 <div class="col-md-8 col-md-offset-2">
     <div class="panel panel-default">
         <div class="panel-heading">Registrare</div>
