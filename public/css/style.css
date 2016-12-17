@@ -129,8 +129,12 @@ body{
 }
 .main-post{
 	border-bottom: 1px solid gray;
+        width: 100%;
+        height: auto;
+        float:left
 }
 .main-post button{
-    float: left;
     margin-bottom: 5px;
+    float: left;
+    
 }
