@@ -24,6 +24,6 @@
         </script>
     </head>
     <body>
-        @yield("header")
+        @yield('header')
     </body>
 </html>

@@ -44,7 +44,7 @@
                 <div class="row posts">
 			<div class="col-md-12 content">
 				<div class="col-md-10 main-posts">
-					 @yield("content")
+                                    @yield("posts")
 				</div>
 				<div class="col-md-2 right-menu">
 						<h3>Menu</h3>
