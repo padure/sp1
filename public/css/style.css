@@ -52,15 +52,7 @@ body{
 	
 	
 }
-.main-posts{
-	border: 1px solid gray;
-	height: auto;
-	padding: 0;
-}
-.main-post{
-	height: 150px;
-	border-bottom: 1px solid gray;
-}
+
 .footer{
 	height: 150px;
 	background-color: #333;
@@ -110,4 +102,34 @@ body{
 .navbar-inverse .navbar-nav>li>a{padding-left: 11px; padding-right: 5px; } 
 .navbar-nav li a{
 	border-bottom: 2px solid transparent;
+}
+/*Postarile*/
+.main-post img{
+    width: 200px;
+    height: auto;
+    float: right;
+    margin-left: 20px;
+}
+.main-post p{
+    text-align: justify;
+}
+.main-post h3{
+    border-bottom: 1px dotted gray;
+    width: 100%;
+    color: #80b3ff;
+}
+.main-post span{
+    float: right;
+}
+.main-posts{
+	border: 1px double gray;
+	height: auto;
+	padding: 0;
+}
+.main-post{
+	border-bottom: 1px solid gray;
+}
+.main-post button{
+    float: right;
+    margin-bottom: 5px;
 }
