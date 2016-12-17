@@ -43,7 +43,7 @@ body{
 .navbar{
 	border: none;
 	border-radius: 0;
-	background-color: black;
+	background-color: black!important;
 }
 .content{
 	height: auto;
@@ -108,4 +108,6 @@ body{
 	border-bottom: 2px solid #ff6600;
 }
 .navbar-inverse .navbar-nav>li>a{padding-left: 11px; padding-right: 5px; } 
-/*Submeniuri*/
+.navbar-nav li a{
+	border-bottom: 2px solid transparent;
+}
