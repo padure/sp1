@@ -12,4 +12,7 @@ class MainController extends Controller
     public function main(){
         return view('main.posts.post');
     }
+    public function infopost($i){
+        return view('main.posts.infopost');
+    }
 }

@@ -31,3 +31,4 @@ Route::get('/admin/events','Admin\AdminController@events');
 
 /*Main Page*/
 Route::get('/','Main\MainController@main');
+Route::get('/post/{i}','Main\MainController@infopost');
