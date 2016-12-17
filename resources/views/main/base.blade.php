@@ -45,14 +45,68 @@
 				  <a class="navbar-brand active" href="{{URL("/")}}">HOME</a>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
-				  <ul class="nav navbar-nav">
-					<li><a href="#">Meserii</a></li>
-					<li><a href="#">Despre noi</a></li>
-					<li><a href="#">Regulamente</a></li>
-					<li><a href="#">Admiterea</a></li>
-					<li><a href="#">Parteneriate</a></li>
-					<li><a href="#">Elevi</a></li>
-					<li><a href="#">Galerie</a></li>
+                                    <ul class="nav navbar-nav">
+					<li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Meserii</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Operator pentru suport tehnic al calculatoarelor</a></li>
+                                                    <li><a href="#">Controlor produse alimentare</a></li>
+                                                    <li><a href="#">Bucatar/Chelner</a></li>
+                                                    <li><a href="#">Croitor confecționer înbrăcăminte la comandă - cusător</a></li>
+                                                    <li><a href="#">Cofetar</a></li>
+                                               </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Despre noi</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Misiune și viziune</a></li>
+                                                    <li><a href="#">Plan de dezvoltare școlară</a></li>
+                                                    <li><a href="#">Organigrama instituției</a></li>
+                                                    <li><a href="#">Administrația</a></li>
+                                                    <li><a href="#">Corpul didactic</a></li>
+                                               </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Regulamente</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Regulamentul intern de activitate al școlii profesionale</a></li>
+                                                    <li><a href="#">Regulamentul de activitate al consiliului de administrație</a></li>
+                                                    <li><a href="#">Regulamentul consiliului elevilor</a></li>
+                                                    <li><a href="#">Regulamentul privind modul și condițiile de cazare</a></li>
+                                                    <li><a href="#">Regulamentul de activitate a căminurilor</a></li>
+                                               </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Admiterea</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Regulamentul de admitere</a></li>
+                                                    <li><a href="#">Planul de înmatriculare</a></li>
+                                               </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Parteneriate</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Parteneri educaționali</a></li>
+                                                    <li><a href="#">Parteneri naționali</a></li>
+                                                    <li><a href="#">Parteneri internaționali</a></li>
+                                                    <li><a href="#">Agenți economici</a></li>
+                                               </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Elevi</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Elevi absolvenți</a></li>
+                                                    <li><a href="#">Chestionar pentru elevi</a></li>
+                                               </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Galerie</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Activitați extracurs</a></li>
+                                                    <li><a href="#">Decada meseriilor</a></li>
+                                                    <li><a href="#">Alte activitați</a></li>
+                                               </ul>
+                                        </li>
 					<li><a href="#">Contacte</a></li>
 				  </ul>
 				</div>
