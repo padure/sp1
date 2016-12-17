@@ -56,7 +56,7 @@
 					<li><a href="#">Contacte</a></li>
 				  </ul>
 				</div>
-			  </div>
+			  </div> 
 		</nav>
 		<div class="row">
 			<div class="block slideshoow col-md-12">
