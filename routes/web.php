@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'Controller@home');
+
 
 /*Admin Page*/
 Route::get('/admin','Admin\AdminController@base');
@@ -23,3 +23,6 @@ Route::post('/admin/registerother','Admin\RegisterController@registerother');
 Route::get('/confirm/{email}-{token}','Admin\RegisterController@comfirm');
 Route::get('/exitadmin','Admin\RegisterController@exitadmin');
 Route::get('/admin/users','Admin\AdminController@admins');
+
+/*Main Page*/
+Route::get('/','Main\MainController@home');
