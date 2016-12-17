@@ -25,4 +25,4 @@ Route::get('/exitadmin','Admin\RegisterController@exitadmin');
 Route::get('/admin/users','Admin\AdminController@admins');
 
 /*Main Page*/
-Route::get('/','Main\MainController@home');
+Route::get('/','Main\MainController@main');

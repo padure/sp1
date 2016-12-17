@@ -9,7 +9,7 @@ use DB;
 
 class MainController extends Controller
 {
-    public function home(){
+    public function main(){
         return view('main.posts.post');
     }
 }

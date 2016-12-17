@@ -107,3 +107,4 @@ body{
 .navbar-nav li a:hover{
 	border-bottom: 2px solid #ff6600;
 }
+.navbar-inverse .navbar-nav>li>a{padding-left: 11px; padding-right: 5px; }

@@ -7,8 +7,6 @@
         <title>SP1 Cahul</title>
         <script src="{{ asset("js/jquery.min.js") }}"></script>
         <script src="{{ asset("js/bootstrap.min.js") }}"></script>
-        
-        <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" type="text/css">
         <link href="{{ asset('adminstyle/admin.css') }}" rel="stylesheet" type="text/css">
         <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet" >
         <link href="{{ asset("css/style.css") }}" rel="stylesheet" >
@@ -48,14 +46,14 @@
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 				  <ul class="nav navbar-nav">
-					<li><a href="#">Page 1</a></li>
-					<li><a href="#">Page 2</a></li>
-					<li><a href="#">Page 3</a></li>
-					<li><a href="#">Page 4</a></li>
-					<li><a href="#">Page 5</a></li>
-					<li><a href="#">Page 6</a></li>
-					<li><a href="#">Page 7</a></li>
-					<li><a href="#">Page 8</a></li>
+					<li><a href="#">Meserii</a></li>
+					<li><a href="#">Despre noi</a></li>
+					<li><a href="#">Regulamente</a></li>
+					<li><a href="#">Admiterea</a></li>
+					<li><a href="#">Parteneriate</a></li>
+					<li><a href="#">Elevi</a></li>
+					<li><a href="#">Galerie</a></li>
+					<li><a href="#">Contacte</a></li>
 				  </ul>
 				</div>
 			  </div>
@@ -86,8 +84,8 @@
 		</div>
 		<div class="row posts">
 			<div class="col-md-12 block footer">
-				<address>Scoala Profesională Nr.1 Cahul</address>
-			</div>
+                            <address>Scoala Profesională Nr.1 Cahul</address>
+                        </div>
 		</div>
     </body>
 </html>
