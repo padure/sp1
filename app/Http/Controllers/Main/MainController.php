@@ -10,6 +10,6 @@ use DB;
 class MainController extends Controller
 {
     public function home(){
-        return view('main.home');
+        return view('main.posts.post');
     }
 }

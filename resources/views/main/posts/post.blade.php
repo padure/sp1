@@ -1,5 +1,5 @@
-@extends("base")
-@section("posts")
+@extends("main.base")
+@section("content")
     <div class="col-md-12 main-post">
     <h2>Post 1</h2>
 </div>
