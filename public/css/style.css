@@ -120,6 +120,7 @@ body{
 }
 .main-post span{
     float: right;
+    font-size: 18px;
 }
 .main-posts{
 	border: 1px double gray;
@@ -130,6 +131,6 @@ body{
 	border-bottom: 1px solid gray;
 }
 .main-post button{
-    float: right;
+    float: left;
     margin-bottom: 5px;
 }

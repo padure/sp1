@@ -9,7 +9,7 @@
        pentru a participa la festivitatea de deschidere a noului an școlar. De departe, cei mai emoționați au fost bobocii,
        care au intrat astăzi pentru prima dată pe porțile instituției, curioși să-și cunoască noii colegi, profesorii,
        dar și liceul în care vor învă</p>
-    <button class="btn btn-info btn-sm">Mai mult</button>
+    <button class="btn btn-info btn-sm">Citeste</button>
 </div>
 <div class="col-md-12 main-post">
    <h3>Prima zi de scoala <span>18/12/16</span></h3>
@@ -20,7 +20,7 @@
        pentru a participa la festivitatea de deschidere a noului an școlar. De departe, cei mai emoționați au fost bobocii,
        care au intrat astăzi pentru prima dată pe porțile instituției, curioși să-și cunoască noii colegi, profesorii,
        dar și liceul în care vor învă</p>
-    <button class="btn btn-info btn-sm">Mai mult</button>
+    <button class="btn btn-info btn-sm">Citeste</button>
 </div>
 <div class="col-md-12 main-post" class="img-thumbnail">
    <h3>Prima zi de scoala <span>18/12/16</span></h3>
@@ -31,6 +31,6 @@
        pentru a participa la festivitatea de deschidere a noului an școlar. De departe, cei mai emoționați au fost bobocii,
        care au intrat astăzi pentru prima dată pe porțile instituției, curioși să-și cunoască noii colegi, profesorii,
        dar și liceul în care vor învă</p>
-    <button class="btn btn-info btn-sm">Mai mult</button>
+    <button class="btn btn-info btn-sm">Citeste</button>
 </div>
 @endsection
