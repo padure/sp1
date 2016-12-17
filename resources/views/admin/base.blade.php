@@ -12,17 +12,12 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li><a href="{{URL("/admin/actiune/produse")}}">Produse</a></li>
-                    <li><a href="{{URL("/admin/actiune/tabele")}}">Tabele</a></li>
-                    <li><a href="{{URL("/admin/actiune/menu")}}">Meniu</a></li>
-                    <li><a href="#">Utilizatori</a></li>
-                    <li><a href="{{URL("/admin/users")}}">Admini</a></li>
+                    <li><a href="{{URL("/admin/events")}}">Evenimente</a></li>
+                    
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Altele <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Page 1-1</a></li>
-                            <li><a href="#">Page 1-2</a></li>
-                            <li><a href="#">Page 1-3</a></li>
+                            <li><a href="{{URL("/admin/users")}}">Admini</a></li>
                         </ul>
                     </li>
                 </ul>

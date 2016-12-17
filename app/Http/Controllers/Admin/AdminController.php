@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use DB;
 use App\Admin;
+use App\Events;
 
 class AdminController extends Controller
 {
@@ -42,6 +43,13 @@ class AdminController extends Controller
         }
         else{
             return view('admin.partials.register');
+        }
+    }
+    public function events(){
+        if (filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            return view("admin.events");
+        }else{
+            return redirect("/admin/login");
         }
     }
 }
