@@ -67,7 +67,7 @@
                                                </ul>
                                         </li>
                                         <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Regulamente</a>
+                                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Regulamente</a>
                                                 <ul class="dropdown-menu">
                                                     <li><a href="{{URL("regulamente/regulament-intern-activitate-scoala")}}">Regulamentul intern de activitate al școlii profesionale</a></li>
                                                     <li><a href="{{URL("regulamente/regulament-activitate-consiliu-admin")}}">Regulamentul de activitate al consiliului de administrație</a></li>
@@ -77,37 +77,37 @@
                                                </ul>
                                         </li>
                                         <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Admiterea</a>
+                                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Admiterea</a>
                                                 <ul class="dropdown-menu">
                                                     <li><a href="{{URL("admitere/regulamentul-admitere")}}">Regulamentul de admitere</a></li>
                                                     <li><a href="{{URL("admitere/plan-inmatriculare")}}">Planul de înmatriculare</a></li>
                                                </ul>
                                         </li>
                                         <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Parteneriate</a>
+                                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Parteneriate</a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="#">Parteneri educaționali</a></li>
-                                                    <li><a href="#">Parteneri naționali</a></li>
-                                                    <li><a href="#">Parteneri internaționali</a></li>
-                                                    <li><a href="#">Agenți economici</a></li>
+                                                    <li><a href="{{URL("parteneriate/parteneri-educationali")}}">Parteneri educaționali</a></li>
+                                                    <li><a href="{{URL("parteneriate/parteneri-nationali")}}">Parteneri naționali</a></li>
+                                                    <li><a href="{{URL("parteneriate/parteneri-internationali")}}">Parteneri internaționali</a></li>
+                                                    <li><a href="{{URL("parteneriate/agenti-economici")}}">Agenți economici</a></li>
                                                </ul>
                                         </li>
                                         <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Elevi</a>
+                                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Elevi</a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="#">Elevi absolvenți</a></li>
-                                                    <li><a href="#">Chestionar pentru elevi</a></li>
+                                                    <li><a href="{{URL("elevi/absolventi")}}">Elevi absolvenți</a></li>
+                                                    <li><a href="{{URL("https://goo.gl/forms/UX6yP9FPyJtcf0xi2")}}">Chestionar pentru elevi</a></li>
                                                </ul>
                                         </li>
                                         <li class="dropdown">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Galerie</a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="#">Activitați extracurs</a></li>
-                                                    <li><a href="#">Decada meseriilor</a></li>
-                                                    <li><a href="#">Alte activitați</a></li>
+                                                    <li><a href="{{URL("galerie/activitati-extracurs")}}">Activitați extracurs</a></li>
+                                                    <li><a href="{{URL("galerie/decada-meseriilor")}}">Decada meseriilor</a></li>
+                                                    <li><a href="{{URL("galerie/alte-activitati")}}">Alte activitați</a></li>
                                                </ul>
                                         </li>
-					<li><a href="#">Contacte</a></li>
+					<li><a href="{{URL("contacte")}}">Contacte</a></li>
 				  </ul>
 				</div>
 			  </div> 

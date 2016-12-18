@@ -44,4 +44,26 @@ class MainController extends Controller
      public function admitere($admitere){
         return view('main.meniu.admitere.admiterea');
     }
+    /*Parteneriate*/
+     public function parteneriat($parteneriat){
+        return view('main.meniu.parteneriate.parteneriat');
+    }
+    /*Parteneriate*/
+     public function absolvent(){
+        return view('main.meniu.elevi.elev');
+    }
+    /*Galerie*/
+     public function activitati(){
+        return view('main.meniu.galerie.activitati');
+    }
+     public function decada(){
+        return view('main.meniu.galerie.decada');
+    }
+     public function altele(){
+        return view('main.meniu.galerie.alte');
+    }
+    /*Contacte*/
+    public function contacte(){
+        return view('main.meniu.contacte.contact');
+    }
 }

@@ -44,3 +44,13 @@ Route::get('/despre-noi/corp-didactic','Main\MainController@corpul');
 Route::get('/regulamente/{regulament}', 'Main\MainController@regulament');
 /*Admitere*/
 Route::get('/admitere/{admitere}', 'Main\MainController@admitere');
+/*Parteneriate*/
+Route::get('/parteneriate/{parteneriat}', 'Main\MainController@parteneriat');
+/*Absolventi*/
+Route::get('/elevi/absolventi', 'Main\MainController@absolvent');
+/*Galerie*/
+Route::get('/galerie/activitati-extracurs', 'Main\MainController@activitati');
+Route::get('/galerie/decada-meseriilor', 'Main\MainController@decada');
+Route::get('/galerie/alte-activitati', 'Main\MainController@altele');
+/*Contacte*/
+Route::get('/contacte', 'Main\MainController@contacte');
