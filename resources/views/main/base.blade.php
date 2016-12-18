@@ -7,6 +7,8 @@
         <title>SP1 Cahul</title>
         <script src="{{ asset("js/jquery.min.js") }}"></script>
         <script src="{{ asset("js/bootstrap.min.js") }}"></script>
+        <script src="{{ asset("js/myjs.js") }}"></script>
+        <script src="{{ asset("https://maps.googleapis.com/maps/api/js?callback=myMap") }}"></script>
         <link href="{{ asset('adminstyle/admin.css') }}" rel="stylesheet" type="text/css">
         <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet" >
         <link href="{{ asset("css/style.css") }}" rel="stylesheet" >
