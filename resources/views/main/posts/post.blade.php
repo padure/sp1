@@ -20,9 +20,9 @@
        pentru a participa la festivitatea de deschidere a noului an școlar. De departe, cei mai emoționați au fost bobocii,
        care au intrat astăzi pentru prima dată pe porțile instituției, curioși să-și cunoască noii colegi, profesorii,
        dar și liceul în care vor învă</p>
-    <button class="btn btn-info btn-sm">Citeste</button>
+    <a href="{{URL("/post/2")}}"><button class="btn btn-info btn-sm">Citeste</button></a>
 </div>
-<div class="col-md-12 main-post">
+<div class="col-md-12 main-post" >
    <h3>Prima zi de scoala <span>18/12/16</span></h3>
     <img src="{{ asset ( "images/studenti3.jpg" ) }}" class="img-thumbnail">
     <p>Ca în fiecare an, prima zi de școală a fost întâmpinată cu emoții și mult entuziasm de către elevii celui mai
@@ -31,6 +31,6 @@
        pentru a participa la festivitatea de deschidere a noului an școlar. De departe, cei mai emoționați au fost bobocii,
        care au intrat astăzi pentru prima dată pe porțile instituției, curioși să-și cunoască noii colegi, profesorii,
        dar și liceul în care vor învă</p>
-    <button class="btn btn-info btn-sm">Citeste</button>
+    <a href="{{URL("/post/3")}}"><button class="btn btn-info btn-sm">Citeste</button></a>
 </div>
 @endsection
