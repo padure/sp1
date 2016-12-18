@@ -30,4 +30,18 @@ class MainController extends Controller
     public function plan(){
         return view('main.meniu.despre-noi.plan');
     }
+    public function organigrama(){
+        return view('main.meniu.despre-noi.organigrama');
+    }
+    public function corpul(){
+        return view('main.meniu.despre-noi.corpul');
+    }
+    /*Regulamentele*/
+     public function regulament($regulament){
+        return view('main.meniu.regulamente.regulament');
+    }
+    /*Admitere*/
+     public function admitere($admitere){
+        return view('main.meniu.admitere.admiterea');
+    }
 }

@@ -38,3 +38,9 @@ Route::get('/meserii/{meserii}','Main\MainController@meserii');
 Route::get('/despre-noi/misiune-viziune','Main\MainController@misiune');
 Route::get('/despre-noi/administratia','Main\MainController@administratia');
 Route::get('/despre-noi/plan-dezvoltare-scoala','Main\MainController@plan');
+Route::get('/despre-noi/organigrama-institutiei','Main\MainController@organigrama');
+Route::get('/despre-noi/corp-didactic','Main\MainController@corpul');
+/*Regulamentele*/
+Route::get('/regulamente/{regulament}', 'Main\MainController@regulament');
+/*Admitere*/
+Route::get('/admitere/{admitere}', 'Main\MainController@admitere');
