@@ -19,6 +19,15 @@ class MainController extends Controller
         return view('main.posts.infopost',['post'=>$post]);
     }
     public function meserii($meserii){
-        return view('main.meserii.meserie');
+        return view('main.meniu.meserii.meserie');
+    }
+    public function administratia(){
+        return view('main.meniu.despre-noi.administratia');
+    }
+    public function misiune(){
+        return view('main.meniu.despre-noi.despre-noi');
+    }
+    public function plan(){
+        return view('main.meniu.despre-noi.plan');
     }
 }
