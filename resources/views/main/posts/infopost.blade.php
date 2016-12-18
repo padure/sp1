@@ -9,7 +9,7 @@
             </span>
         </h3>
         <div class="col-md-4">
-            <img src="{{ asset ( "images/studenti.jpg" ) }}" class="img-thumbnail">
+            <img src="{{ asset ( $post["name"][0]->image ) }}" class="img-thumbnail">
         </div>
         <div class="col-md-8 paragraf">
             @if(count($post["content"])>0)

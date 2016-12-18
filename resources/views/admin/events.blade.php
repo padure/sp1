@@ -8,15 +8,37 @@
         resize: vertical; 
         margin-top:15px;
     }
+    .img-upload{
+        padding: 0px !important; 
+    }
+    #defaultimagepreview{
+        border:1px solid #ccc;
+    }
+    .img-upload:hover{
+        opacity: 0.8;
+    }
+    .img-upload img{
+        cursor:pointer;
+    }
+    .text-red{
+        color:red;
+    }
 </style>
     <div class="content">
         <div class="col-md-10 eventcreator" id="eventcreator">
             <div class="form-group" id="title">
                 <input type="text" name="title" class="form-control" placeholder="Scrie un titlu">
             </div>
-            <div class="col-md-4" style="padding-left: 0px !important;">
-                <img src="{{asset("images/studenti2.jpg")}}" class="img-responsive"/>
-            </div>
+            <!--Upload imagine principala -->
+            <form id="upload" enctype="multipart/form-data" class="col-md-4 img-upload">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <label class="file">
+                    <img src="{{asset("allimages/system/upload.png")}}" class="img-responsive" id="defaultimagepreview"/>
+                    <input type="file" name="file" style="display:none;"><br>
+                </label>
+                <p id="imageeror" class="text-red"></p>
+            </form>
+             <!--End Upload -->
             <div class="col-md-8" id="paragrafs" >
                 
             </div>
@@ -41,6 +63,41 @@
     </div>
     <script>
         $(document).ready(function() {
+            /*Upload imagine*/
+            image="";
+            $('#upload').on('submit',(function(e) {
+                e.preventDefault();
+                $("#defaultimagepreview").attr("src",'{{asset("/allimages/system/loader.gif")}}');
+                var formData = new FormData(this);
+                formData.append("image",image);
+                $("#imageeror").html("");
+                $.ajax({
+                    type:'POST',
+                    url: "{{URL('/admin/defaultupload')}}",
+                    data:formData,
+                    cache:false,
+                    contentType: false,
+                    processData: false,
+                    success:function(data){
+                        if(data.succes===true){
+                            image=data.image;
+                            $("#defaultimagepreview").attr("src",'{{asset("/")}}'+data.image);
+                        }else{
+                            $("#imageeror").html("A aparut o eroare la incarcare");
+                            if(image.length>=2){
+                                $("#defaultimagepreview").attr("src",'{{asset("/")}}'+image);
+                            }else{
+                                $("#defaultimagepreview").attr("src",'{{asset("/allimages/system/upload.png")}}');
+                            }
+                        }
+                    }
+                });
+            }));
+            $("#upload").on("change", function() {
+                $("#upload").submit();
+                $("input[name=file]").val("");
+            });
+/*End upload imagine*/
             $("#saveEvent").on("click",function(){
                 var permit=true;
                 var title=$("input[name=title]").val();
@@ -69,6 +126,12 @@
                         $(this).remove();
                     }
                 });
+                if(image.length<1){
+                    permit=false;
+                    $("#defaultimagepreview").css("border-color","red");
+                }else{
+                    $("#defaultimagepreview").css("border-color","#ccc");
+                }
                 if(permit===true){
                     $("#saveEvent").button("loading");
                     $.ajax({  
@@ -77,6 +140,7 @@
                         data: 
                             { 
                                 title:title,
+                                image:image,
                                 content:content,
                                 paragraf:paragraf
                             },

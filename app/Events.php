@@ -14,6 +14,7 @@ class Events extends Model
                             $join->on('events.id', '=', 'eventcontent.events_id');
                             $join->where('eventcontent.type',1);
                         })
+                    ->orderby("events.id","desc")
                     ->get();
         $aseaza=[];
         $id=[];

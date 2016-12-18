@@ -8,7 +8,7 @@
                         {{Carbon\Carbon::createFromFormat('Y-m-d H:i:s',$i->created_at)->format('d/m/Y')}}
                     </span>
                 </h3>
-                <img src="{{ asset ( "images/studenti.jpg" ) }}" class="img-thumbnail">
+                <img src="{{ asset ( $i->image ) }}" class="img-thumbnail">
                 <p>{{$i->text}}</p>
                 <a href="{{URL("/post/".$i->id)}}"><button class="btn btn-info btn-sm">Citeste</button></a>
             </div>
