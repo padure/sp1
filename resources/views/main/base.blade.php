@@ -57,13 +57,13 @@
                                                </ul>
                                         </li>
                                         <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Despre noi</a>
+                                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Despre noi</a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="#">Misiune și viziune</a></li>
-                                                    <li><a href="#">Plan de dezvoltare școlară</a></li>
-                                                    <li><a href="#">Organigrama instituției</a></li>
-                                                    <li><a href="#">Administrația</a></li>
-                                                    <li><a href="#">Corpul didactic</a></li>
+                                                    <li><a href="{{URL("/despre-noi/misiune-viziune")}}">Misiune și viziune</a></li>
+                                                    <li><a href="{{URL("/despre-noi/plan-dezvoltare-scoala")}}">Plan de dezvoltare școlară</a></li>
+                                                    <li><a href="{{URL("/despre-noi/organigrama-institutiei")}}">Organigrama instituției</a></li>
+                                                    <li><a href="{{URL("/despre-noi/administratia")}}">Administrația</a></li>
+                                                    <li><a href="{{URL("/despre-noi/corp-didactic")}}">Corpul didactic</a></li>
                                                </ul>
                                         </li>
                                         <li class="dropdown">

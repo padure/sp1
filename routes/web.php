@@ -33,5 +33,8 @@ Route::post('/admin/saveevent','Admin\EventsController@saveevent');
 /*Post routes*/
 Route::get('/','Main\MainController@main');
 Route::get('/post/{i}','Main\MainController@infopost');
-/*Meserii routes*/
+/*Meniu routes*/
 Route::get('/meserii/{meserii}','Main\MainController@meserii');
+Route::get('/despre-noi/misiune-viziune','Main\MainController@misiune');
+Route::get('/despre-noi/administratia','Main\MainController@administratia');
+Route::get('/despre-noi/plan-dezvoltare-scoala','Main\MainController@plan');
