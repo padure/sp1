@@ -69,18 +69,18 @@
                                         <li class="dropdown">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Regulamente</a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="#">Regulamentul intern de activitate al școlii profesionale</a></li>
-                                                    <li><a href="#">Regulamentul de activitate al consiliului de administrație</a></li>
-                                                    <li><a href="#">Regulamentul consiliului elevilor</a></li>
-                                                    <li><a href="#">Regulamentul privind modul și condițiile de cazare</a></li>
-                                                    <li><a href="#">Regulamentul de activitate a căminurilor</a></li>
+                                                    <li><a href="{{URL("regulamente/regulament-intern-activitate-scoala")}}">Regulamentul intern de activitate al școlii profesionale</a></li>
+                                                    <li><a href="{{URL("regulamente/regulament-activitate-consiliu-admin")}}">Regulamentul de activitate al consiliului de administrație</a></li>
+                                                    <li><a href="{{URL("regulamente/regulament-consiliu-elevi")}}">Regulamentul consiliului elevilor</a></li>
+                                                    <li><a href="{{URL("regulamente/regulament-modul-cazare")}}">Regulamentul privind modul și condițiile de cazare</a></li>
+                                                    <li><a href="{{URL("regulamente/regulament-activitate-camine")}}">Regulamentul de activitate a căminurilor</a></li>
                                                </ul>
                                         </li>
                                         <li class="dropdown">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Admiterea</a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="#">Regulamentul de admitere</a></li>
-                                                    <li><a href="#">Planul de înmatriculare</a></li>
+                                                    <li><a href="{{URL("admitere/regulamentul-admitere")}}">Regulamentul de admitere</a></li>
+                                                    <li><a href="{{URL("admitere/plan-inmatriculare")}}">Planul de înmatriculare</a></li>
                                                </ul>
                                         </li>
                                         <li class="dropdown">
