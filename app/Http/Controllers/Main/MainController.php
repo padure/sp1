@@ -15,4 +15,7 @@ class MainController extends Controller
     public function infopost($i){
         return view('main.posts.infopost');
     }
+    public function meserii($meserii){
+        return view('main.meserii.meserie');
+    }
 }

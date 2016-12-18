@@ -124,12 +124,11 @@ body{
     font-size: 18px;
 }
 .main-posts{
-	
+	border-right: 1px solid gray;
 	height: auto;
 	padding: 0;
 }
 .main-post{
-	
         border-right: 1px solid gray;
         width: 100%;
         height: auto;
@@ -167,4 +166,12 @@ body{
     border-top: 1px dotted gray;
     padding: 15px;
     margin: 0;
+}
+/*Meserii*/
+.meserii h3{
+    color: #80b3ff;
+    border-bottom: 1px dotted gray;
+}
+.meserii{
+    border-right: 1px solid gray;
 }

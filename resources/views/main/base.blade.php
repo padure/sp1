@@ -47,13 +47,13 @@
 				<div class="collapse navbar-collapse" id="myNavbar">
                                     <ul class="nav navbar-nav">
 					<li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Meserii</a>
+                                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Meserii</a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="#">Operator pentru suport tehnic al calculatoarelor</a></li>
-                                                    <li><a href="#">Controlor produse alimentare</a></li>
-                                                    <li><a href="#">Bucatar/Chelner</a></li>
-                                                    <li><a href="#">Croitor confecționer înbrăcăminte la comandă - cusător</a></li>
-                                                    <li><a href="#">Cofetar</a></li>
+                                                    <li><a href="{{URL("/meserii/operator-suport-tehnic")}}">Operator pentru suport tehnic al calculatoarelor</a></li>
+                                                    <li><a href="{{URL("/meserii/controleor-produse-alimentare")}}">Controlor produse alimentare</a></li>
+                                                    <li><a href="{{URL("/meserii/bucatar-chelner")}}">Bucatar/Chelner</a></li>
+                                                    <li><a href="{{URL("/meserii/croitor-confectioner")}}">Croitor confecționer înbrăcăminte la comandă - cusător</a></li>
+                                                    <li><a href="{{URL("/meserii/cofetar")}}">Cofetar</a></li>
                                                </ul>
                                         </li>
                                         <li class="dropdown">

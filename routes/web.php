@@ -30,5 +30,8 @@ Route::get('/admin/events','Admin\AdminController@events');
 
 
 /*Main Page*/
+/*Post routes*/
 Route::get('/','Main\MainController@main');
 Route::get('/post/{i}','Main\MainController@infopost');
+/*Meserii routes*/
+Route::get('/meserii/{meserii}','Main\MainController@meserii');
