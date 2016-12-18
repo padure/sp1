@@ -73,7 +73,6 @@ body{
     margin: 0;
     padding: 0;
     width: 100%;
-    border-bottom: 1px solid gray;
 }
 
 .right-menu li a {
@@ -115,8 +114,8 @@ body{
     text-align: justify;
 }
 .main-post h3{
-    border-top: 1px dotted gray;
-    padding-top: 8px;
+    border-bottom: 1px dotted gray;
+   
     width: 100%;
     color: #80b3ff;
 }

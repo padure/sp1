@@ -1,8 +1,8 @@
 @extends("main.base")
 @section("content")
-<div class="col-md-12 main-post" class="img-thumbnail">
+<div class="col-md-12 main-post">
    <h3>Prima zi de scoala <span>18/12/16</span></h3>
-    <img src="images/studenti.jpg">
+    <img src="{{ asset ( "images/studenti.jpg" ) }}" class="img-thumbnail">
     <p>Ca în fiecare an, prima zi de școală a fost întâmpinată cu emoții și mult entuziasm de către elevii celui mai
        prestigios liceu din municipiul Alba Iulia, Colegiul Național ”Horea, Cloșca și Crișan”.Încă de la prima oră a
        dimineții, sute de elevi, îmbrăcați frumos, unii cu buchete de flori în mână, s-au strâns în curtea liceului

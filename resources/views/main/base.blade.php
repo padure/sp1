@@ -26,7 +26,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="logo">
-					<a href="{{URL("/")}}"><img src="images/Logo.png"></a>
+					<a href="{{URL("/")}}"> <img src="{{ asset ( "images/Logo.png" ) }}"></a>
 					<div class="name-site">
 						școala profesionala nr.1 cahul
 					</div>
@@ -114,7 +114,7 @@
 		</nav>
 		<div class="row">
 			<div class="block slideshoow col-md-12">
-				<img src="images/font.jpg">
+				<img src="{{ asset ( "images/font.jpg" ) }}">
 			</div>
 		</div>
                 <div class="row posts">
