@@ -31,6 +31,9 @@
 <div class="container">
     @yield("content")
 </div>
+<div class="footer" style="height: 100px;">
+    
+</div>
 <script>
     $(document).ready(function(){
             $('.dropdown-menu').click(function (e) {

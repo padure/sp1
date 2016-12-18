@@ -5,3 +5,7 @@
     width: 100%;
     float: left;
 }
+.eventcreator{
+    border-right: 1px solid gray;
+    padding: 0px !important;
+}

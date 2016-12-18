@@ -27,7 +27,7 @@ Route::get('/admin/users','Admin\AdminController@admins');
 Route::post('/admin/deleteadmin','Admin\SettingController@deleteadmin');
 /*Event routes*/
 Route::get('/admin/events','Admin\AdminController@events');
-
+Route::post('/admin/saveevent','Admin\EventsController@saveevent');
 
 /*Main Page*/
 /*Post routes*/
