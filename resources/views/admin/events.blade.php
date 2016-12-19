@@ -137,6 +137,7 @@
                 var permit=true;
                 var save=[];
                 var mode=[];
+                var isimage=[];
                 $('input, textarea').each(
                     function(index){  
                         var input = $(this);
@@ -144,6 +145,7 @@
                             if(input.val().length>1){
                                 save[index]=input.val();
                                 mode[index]=input.attr("mode");
+                                isimage[index]=input.attr("isimage");
                             }else{
                                 if(input.attr("name")==="paragraf"){
                                     input.remove();
@@ -176,7 +178,8 @@
                                 title:title,
                                 image:image,
                                 save:save,
-                                mode:mode
+                                mode:mode,
+                                isimage:isimage
                             },
                         success: function(data) {
                             $("#saveEvent").button("reset");
@@ -187,33 +190,36 @@
         });
         function textimage(){
             formid++;
-            $("#paragrafcontent").append("<div class='col-md-6'>\n\
+            $("#paragrafcontent").append("<div class='col-md-12'>\n\
+                                            <div class='col-md-6'>\n\
                                                 <textarea class='form-control' name='paragraf' mode='7' style='height:200px;'></textarea>\n\
-                                            </div>");
-            $("#paragrafcontent").append("<form name='upload100' id='form"+formid+"' enctype='multipart/form-data' class='col-md-6 img-upload'>\n\
+                                            </div>\n\
+                <form name='upload100' id='form"+formid+"' enctype='multipart/form-data' class='col-md-6 img-upload'>\n\
                     <input type='hidden' name='_token' value='{{ csrf_token() }}'>\n\
                     <label class='file'>\n\
                         <img src='{{asset('allimages/system/upload.png')}}' class='img-responsive' id='form"+formid+"image'/>\n\
                         <input type='file' name='file' style='display:none;'>\n\
-                        <input type='text' mode='7' value='' id='form"+formid+"input' style='display:none;'>\n\
+                        <input type='text' mode='7' isimage='1' value='' id='form"+formid+"input' style='display:none;'>\n\
                     </label>\n\
                     <p id='form"+formid+"eror' class='text-red'></p>\n\
-                </form>");
+                </form>\n\
+                </div>");
         }
         function imagetext(){
             formid++;
-            $("#paragrafcontent").append("<form name='upload100' id='form"+formid+"' enctype='multipart/form-data' class='col-md-6 img-upload'>\n\
+            $("#paragrafcontent").append("<div class='col-md-12'>\n\
+                    <form name='upload100' id='form"+formid+"' enctype='multipart/form-data' class='col-md-6 img-upload'>\n\
                     <input type='hidden' name='_token' value='{{ csrf_token() }}'>\n\
                     <label class='file'>\n\
                         <img src='{{asset('allimages/system/upload.png')}}' class='img-responsive' id='form"+formid+"image'/>\n\
                         <input type='file' name='file' style='display:none;'>\n\
-                        <input type='text' mode='6' value='' id='form"+formid+"input' style='display:none;'>\n\
+                        <input type='text' mode='6' value='' isimage='1' id='form"+formid+"input' style='display:none;'>\n\
                     </label>\n\
                     <p id='form"+formid+"eror' class='text-red'></p>\n\
-                </form>");
-                $("#paragrafcontent").append("<div class='col-md-6'>\n\
-                                                <textarea class='form-control' name='paragraf' mode='6' style='height:200px;'></textarea>\n\
-                                            </div>");
+                </form>\n\
+                <div class='col-md-6'>\n\
+                    <textarea class='form-control' name='paragraf' mode='6' style='height:200px;'></textarea>\n\
+                </div></div>");
         }
         function addtreimage(){
             for(var i=0;i<=2;i++){
@@ -223,7 +229,7 @@
                     <label class='file'>\n\
                         <img src='{{asset('allimages/system/upload.png')}}' class='img-responsive' id='form"+formid+"image'/>\n\
                         <input type='file' name='file' style='display:none;'>\n\
-                        <input type='text' mode='5' value='' id='form"+formid+"input' style='display:none;'>\n\
+                        <input type='text' mode='5' value='' isimage='1' id='form"+formid+"input' style='display:none;'>\n\
                     </label>\n\
                     <p id='form"+formid+"eror' class='text-red'></p>\n\
                 </form>");
@@ -237,7 +243,7 @@
                     <label class='file'>\n\
                         <img src='{{asset('allimages/system/upload.png')}}' class='img-responsive' id='form"+formid+"image'/>\n\
                         <input type='file' name='file' style='display:none;'>\n\
-                        <input type='text' mode='4' value='' id='form"+formid+"input' style='display:none;'>\n\
+                        <input type='text' mode='4' value='' isimage='1' id='form"+formid+"input' style='display:none;'>\n\
                     </label>\n\
                     <p id='form"+formid+"eror' class='text-red'></p>\n\
                 </form>");
@@ -250,7 +256,7 @@
                 <label class='file'>\n\
                     <img src='{{asset('allimages/system/upload.png')}}' class='img-responsive' id='form"+formid+"image'/>\n\
                     <input type='file' name='file' style='display:none;'>\n\
-                        <input type='text' mode='3' value='' id='form"+formid+"input' style='display:none;'>\n\
+                        <input type='text' mode='3' value='' isimage='1' id='form"+formid+"input' style='display:none;'>\n\
                 </label>\n\
                 <p id='form"+formid+"eror' class='text-red'></p>\n\
             </form>");

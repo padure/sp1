@@ -20,6 +20,7 @@ class EventsController extends Controller
         $image=$request->image;
         $save=$request->save;
         $mode=$request->mode;
+        $isimage=$request->isimage;
         $e=new Events;
         $e->title = $title;
         $e->image = $image;
@@ -29,7 +30,7 @@ class EventsController extends Controller
         if (count($save)>=1){
             for($i=0;$i<count($save);$i++){
                 if(strlen($save[$i])>=1){
-                    if($mode[$i]=="3" || $mode[$i]=="4" || $mode[$i]=="5"){
+                    if($isimage[$i]==1){
                         $insert[$i]=["events_id"=>$id,"text"=>$save[$i],"type"=>$mode[$i],"isimage"=>1];
                     }else{
                         $insert[$i]=["events_id"=>$id,"text"=>$save[$i],"type"=>$mode[$i],"isimage"=>0];

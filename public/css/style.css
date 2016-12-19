@@ -5,6 +5,10 @@ body{
 	background-attachment: fixed;
 	padding: 20px;
 }
+.clearboth{
+    float: left;
+    width: 100%;
+}
 .main{
 	background-color: #f2f2f2;
 }
