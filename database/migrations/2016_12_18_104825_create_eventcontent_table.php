@@ -17,6 +17,7 @@ class CreateEventcontentTable extends Migration
             $table->bigIncrements('id');
             $table->integer('events_id');
             $table->mediumText('text');
+            $table->boolean('isimage')->default(0);
             $table->smallInteger('type');
         });
     }

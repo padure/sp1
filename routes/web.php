@@ -29,6 +29,13 @@ Route::post('/admin/deleteadmin','Admin\SettingController@deleteadmin');
 Route::get('/admin/events','Admin\AdminController@events');
 Route::post('/admin/saveevent','Admin\EventsController@saveevent');
 Route::post('/admin/defaultupload','Admin\EventsController@defaultupload');
+Route::post('/admin/othersupload','Admin\EventsController@othersupload');
+
+
+
+
+
+
 /*Main Page*/
 /*Post routes*/
 Route::get('/','Main\MainController@main');

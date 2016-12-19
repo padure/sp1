@@ -24,6 +24,37 @@
                     @if($i->type==2)
                         <p>{{$i->text}}</p>
                     @endif
+                    @if($i->type==3)
+                        <p class="col-md-12">
+                            <img src="{{asset($i->text)}}" class="img-responsive col-md-12"/>
+                        </p>
+                    @endif
+                    @if($i->type==4)
+                        <p class="col-md-6">
+                            <img src="{{asset($i->text)}}" class="img-responsive"/>
+                        </p>
+                    @endif
+                    @if($i->type==5)
+                        <p class="col-md-4">
+                            <img src="{{asset($i->text)}}" class="img-responsive"/>
+                        </p>
+                    @endif
+                    @if($i->type==6 && $i->isimage==1)
+                        <p class="col-md-6">
+                            <img src="{{asset($i->text)}}" class="img-responsive"/>
+                        </p>
+                    @endif
+                    @if($i->type==6 && $i->isimage==0)
+                        <p class="col-md-6">{{$i->text}}</p>
+                    @endif
+                    @if($i->type==7 && $i->isimage==1)
+                        <p class="col-md-6">
+                            <img src="{{asset($i->text)}}" class="img-responsive"/>
+                        </p>
+                    @endif
+                    @if($i->type==7 && $i->isimage==0)
+                        <p class="col-md-6">{{$i->text}}</p>
+                    @endif
                 @endforeach
             @endif
         </div>
