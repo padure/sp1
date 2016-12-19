@@ -116,7 +116,7 @@
 		</nav>
 		<div class="row">
 			<div class="block slideshoow col-md-12">
-				<img src="{{ asset ( "images/font.jpg" ) }}">
+				<img src="{{ asset ( "images/slideshow.jpg" ) }}">
 			</div>
 		</div>
                 <div class="row posts">
