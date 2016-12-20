@@ -13,6 +13,7 @@
         <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet" >
         <link href="{{ asset("css/style.css") }}" rel="stylesheet" >
         <link href="{{ asset('css/bootstrap-theme.min.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('css/w3.css') }}" rel="stylesheet" type="text/css">
         <!--Icons -->
         <link rel="stylesheet" href="{{ asset("css/font-awesome.min.css") }}">
         <!-- token-->
@@ -22,6 +23,7 @@
            headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
         });
         </script>
+        
     </head>
     <body>
 <div class="container main">
@@ -114,11 +116,12 @@
 				</div>
 			  </div> 
 		</nav>
-		<div class="row">
-			<div class="block slideshoow col-md-12">
-				<img src="{{ asset ( "images/slideshow.jpg" ) }}">
-			</div>
-		</div>
+                    <div class="block slideshoow col-md-12">
+                      <img class="mySlidesss w3-animate-left" src="{{ asset ( "images/slideshow.jpg" ) }}">
+                      <img class="mySlidesss w3-animate-right" src="{{ asset ( "images/slideshow2.jpg" ) }}">
+                      <img class="mySlidesss w3-animate-left" src="{{ asset ( "images/slideshow3.jpg" ) }}">
+                      <img class="mySlidesss w3-animate-right" src="{{ asset ( "images/slideshow2.jpg" ) }}">
+                    </div>
                 <div class="row posts">
 			<div class="col-md-12 content">
 				<div class="col-md-10 main-posts">
@@ -143,5 +146,20 @@
                             <address>Scoala Profesională Nr.1 Cahul</address>
                         </div>
 		</div>
+ <script>
+                        var myIndex = 0;
+carousel();
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlidesss");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 5000);    
+}
+</script>
     </body>
 </html>
