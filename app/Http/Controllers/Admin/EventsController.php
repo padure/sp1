@@ -98,4 +98,7 @@ class EventsController extends Controller
             return response()->json(array('succes'=>"notfound"));
         }
     }
+    public function modificapost(Request $request){
+        return "sa modificat";
+    }
 }

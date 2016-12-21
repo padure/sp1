@@ -27,11 +27,12 @@ Route::get('/admin/users','Admin\AdminController@admins');
 Route::post('/admin/deleteadmin','Admin\SettingController@deleteadmin');
 /*Event routes*/
 Route::get('/admin/events','Admin\AdminController@events');
+Route::get('/admin/newevent','Admin\AdminController@newevent');
 Route::post('/admin/saveevent','Admin\EventsController@saveevent');
 Route::post('/admin/defaultupload','Admin\EventsController@defaultupload');
 Route::post('/admin/othersupload','Admin\EventsController@othersupload');
-
-
+Route::get('/admin/modifica/{id}','Admin\AdminController@modifica');
+Route::post('/admin/modifica','Admin\EventsController@modificapost');
 
 
 

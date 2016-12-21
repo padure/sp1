@@ -45,9 +45,25 @@ class AdminController extends Controller
             return view('admin.partials.register');
         }
     }
-    public function events(){
+    public function events(Events $events){
         if (filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
-            return view("admin.events");
+            $posts=$events->getAllEvents();
+            return view('admin.events',['posts'=>$posts]);
+        }else{
+            return redirect("/admin/login");
+        }
+    }
+    public function newevent(){
+        if (filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            return view("admin.newevent");
+        }else{
+            return redirect("/admin/login");
+        }
+    }
+    public function modifica(Events $events , $id){
+        if (filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            $post=$events->getEvent($id);
+            return view('admin.modevent',['post'=>$post]);
         }else{
             return redirect("/admin/login");
         }
