@@ -28,6 +28,15 @@ class Events extends Model
     }
     
     public function getEvent($i){
+        if(!isset($_COOKIE['views'])) {
+            setcookie("views", $i, time()+30);
+            DB::table("events")->where("id",$i)->increment('views');
+        }else{
+            if($_COOKIE['views']!=$i){
+                setcookie("views", $i, time()+30);
+                DB::table("events")->where("id",$i)->increment('views');
+            }
+        }
         $name=DB::table('events')
                     ->where("id",$i)
                     ->get();

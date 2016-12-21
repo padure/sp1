@@ -14,6 +14,7 @@
                         <th class="titluid">ID:</th>
                         <th class="titluimagine">Image:</th>
                         <th>Titlu:</th>
+                        <th>Vizitat:</th>
                         <th>Creat:</th>
                         <th style="width:  220px;">Setari:</th>
                     </tr>
@@ -29,6 +30,7 @@
                             {{$i->title}}
                         </a>
                     </td>
+                    <td>{{$i->views}}</td>
                     <td>{{date('d/m/Y', strtotime($i->created_at))}}</td>
                     <td>
                         <a href="{{URL("/admin/modifica/".$i->id)}}" data-toggle="modal"> 

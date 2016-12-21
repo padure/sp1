@@ -17,6 +17,7 @@ class CreateEventsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('image');
+            $table->bigInteger('views')->default(0);
             $table->timestamps();
         });
     }
