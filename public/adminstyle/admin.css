@@ -15,3 +15,9 @@
 .titluid{
     width: 70px;
 }
+.deleteevent{
+    cursor: pointer;
+    color:red;
+    float:right;
+    margin-right: 15px;
+}

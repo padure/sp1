@@ -33,6 +33,7 @@ Route::post('/admin/defaultupload','Admin\EventsController@defaultupload');
 Route::post('/admin/othersupload','Admin\EventsController@othersupload');
 Route::get('/admin/modifica/{id}','Admin\AdminController@modifica');
 Route::post('/admin/modifica','Admin\EventsController@modificapost');
+Route::post('/admin/deleteevent','Admin\EventsController@deleteevent');
 
 
 

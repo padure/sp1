@@ -87,10 +87,12 @@
             <button class="btn btn-block btn-primary" onclick="textimage()">7.Paragraf si Imagine</button>
         </div>
     </div>
-    <div class="col-md-12" style="margin-top:15px;float: left;">
+    <div class="col-md-12 text-center" style="margin-top:15px;float: left;">
         <button class="btn btn-primary" id="saveEvent" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Se salveaza">
+            <span class="glyphicon glyphicon-floppy-saved"></span>
             Salveaza
         </button>
+        <a href="{{URL('/admin/events')}}" class="btn btn-default">Inapoi</a>
     </div>
     <script>
         formid=0;

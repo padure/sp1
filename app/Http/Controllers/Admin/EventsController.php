@@ -99,6 +99,43 @@ class EventsController extends Controller
         }
     }
     public function modificapost(Request $request){
-        return "sa modificat";
+        if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            return redirect("/admin");
+        }
+        $id=$request->id;
+        $title=$request->title;
+        $image=$request->image;
+        $save=$request->save;
+        $mode=$request->mode;
+        $isimage=$request->isimage;
+        DB::table("events")->where("id",$id)->update(["title"=>$title,"image"=>$image,"updated_at"=>Carbon::now()]);
+        $insert=[];
+        DB::table("eventcontent")->where("events_id",$id)->delete();
+        if (count($save)>=1){
+            for($i=0;$i<count($save);$i++){
+                if(strlen($save[$i])>=1){
+                    if($isimage[$i]==1){
+                        $insert[$i]=["events_id"=>$id,"text"=>$save[$i],"type"=>$mode[$i],"isimage"=>1];
+                    }else{
+                        $insert[$i]=["events_id"=>$id,"text"=>$save[$i],"type"=>$mode[$i],"isimage"=>0];
+                    }
+                }
+            }
+            DB::table("eventcontent")->insert($insert);
+        }
+        return response()->json();
+    }
+    public function deleteevent(Request $request){
+        if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            return redirect("/admin");
+        }
+        $id=$request->id;
+        $images=DB::table("eventcontent")->where("events_id",$id)->where("isimage",1)->get();
+        foreach($images as $i){
+            File::delete($i->text);
+        }
+        DB::table("eventcontent")->where("events_id",$id)->delete();
+        File::delete(DB::table("events")->where("id",$id)->value("image"));
+        DB::table("events")->where("id",$id)->delete();
     }
 }
