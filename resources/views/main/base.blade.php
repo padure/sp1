@@ -38,7 +38,8 @@
 			</div>
 		</div>
 		<!-- menu top-->
-		<nav class="navbar navbar-inverse col-md-12">
+              <div class="row my-nave">
+		<nav class="navbar navbar-inverse col-md-12" style=" margin-bottom: 0px;">
 			  <div class="container-fluid">
 				<div class="navbar-header">
 				  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -46,7 +47,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>                        
 				  </button>
-				  <a class="navbar-brand active" href="{{URL("/")}}">HOME</a>
+				  <a class="navbar-brand actives" href="{{URL("/")}}">HOME</a>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
                                     <ul class="nav navbar-nav">
@@ -116,12 +117,48 @@
 				</div>
 			  </div> 
 		</nav>
-                    <div class="block slideshoow col-md-12">
-                      <img class="mySlidesss w3-animate-left" src="{{ asset ( "images/slideshow.jpg" ) }}">
-                      <img class="mySlidesss w3-animate-right" src="{{ asset ( "images/slideshow2.jpg" ) }}">
-                      <img class="mySlidesss w3-animate-left" src="{{ asset ( "images/slideshow3.jpg" ) }}">
-                      <img class="mySlidesss w3-animate-right" src="{{ asset ( "images/slideshow2.jpg" ) }}">
+               </div>
+        <div class="row my-slide">
+            <div class="row">
+        <div id="carousel" class="carousel slide">
+	<!--indicatore a slaidurilor -->
+		<ol class="carousel-indicators">
+			<li class="active" data-target="#carousel" data-slide-to="0"></li>
+			<li data-target="#carousel" data-slide-to="1"></li>
+			<li data-target="#carousel" data-slide-to="2"></li>
+		</ol>
+		<!--Slaiduri-->
+		<div class="carousel-inner">
+			<div class="item active">
+                            <img src="{{ asset ( "images/slideshow.jpg" ) }}" alt="Imaginea lipseste">
+				<div class="carousel-caption">
+					<p>Descriere</p>
+			    </div>
+			</div>
+			<div class="item">
+				<img src="{{ asset ( "images/slideshow2.jpg" ) }}" alt="Imaginea lipseste">
+				<div class="carousel-caption">
+					<p>Descriere</p>
+			    </div>
+			</div>
+			<div class="item">
+				<img src="{{ asset ( "images/slideshow3.jpg" ) }}" alt="Imaginea lipseste">
+				<div class="carousel-caption">
+					<p>Descriere</p>
+			    </div>
+			</div>
+		</div>
+		<!--Sagetile de pornire a slaidului -->
+		<a href="#carousel" class="left carousel-control" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left"></span>	
+		</a>
+		<a href="#carousel" class="right carousel-control" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+	</div>
                     </div>
+             </div>
+                      
                 <div class="row posts">
 			<div class="col-md-12 content">
 				<div class="col-md-10 main-posts">
@@ -130,36 +167,40 @@
 				<div class="col-md-2 right-menu">
 						<h3>Menu</h3>
 						<ul>
-							<li><a href="#home">Home</a></li>
-							<li><a href="#news">News</a></li>
-							<li><a href="#contact">Contact</a></li>
-							<li><a href="#about">About</a></li>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">News</a></li>
+							<li><a href="#">Contact</a></li>
+							<li><a href="#">About</a></li>
 						</ul>
+                                </div>
+                            <div class="col-md-2 my-link">
+                                
+                                     <h3>Link-uri utile</h3>
+						<ul>
+							<li><a href="#">Ctice</a></li>
+							<li><a href="#">MERM</a></li>
+							<li><a href="#">Contact</a></li>
+							<li><a href="#">About</a></li>
+						</ul>                                                  
+                                 
 				</div>
 			</div>
 		</div>
 		<div class="partnership">
-			
+                    <div>
+                        <p>ATIC</p>
+                    </div>
+                    <div>
+                        <p>ATIC</p>
+                    </div>
+                    <div>
+                        <p>ATIC</p>
+                    </div>
 		</div>
 		<div class="row posts">
 			<div class="col-md-12 block footer">
                             <address>Scoala Profesională Nr.1 Cahul</address>
                         </div>
 		</div>
- <script>
-                        var myIndex = 0;
-carousel();
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlidesss");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 5000);    
-}
-</script>
     </body>
 </html>
