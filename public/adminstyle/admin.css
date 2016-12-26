@@ -1,3 +1,7 @@
+html,body{
+    background-color: #edecec !important;
+}
+
 .calibri{
     font-family: Calibri !important;
 }
@@ -23,4 +27,46 @@
 }
 .slideimages{
     margin-top: 10px;
+}
+/*Acasa css*/
+.homepage{
+    width: 100%;
+    float:left;
+}
+.homepage h1{
+    color:white;
+    margin:0px;
+    font-size:40px;
+}
+.homepage h3{
+    color:white;
+    margin:0px;
+    font-size:25px;
+}
+.homepage .col-lg-3{
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+.homepage a:hover{
+    text-decoration: none;
+}
+.imagehome{
+    max-width: 100px;
+    margin:0 auto;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+.evenimentehome{
+    background-color: #ff4a43;
+    height: 200px;
+}
+.evenimentehome:hover{
+    background-color: #e44040;
+}
+.slideshowhome{
+    background-color: #22beef;
+    height: 200px;
+}
+.slideshowhome:hover{
+    background-color: #1cb8e8;
 }

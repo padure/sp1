@@ -7,6 +7,13 @@ use DB;
 
 class Admin extends Model
 {
+    public function getHomepage(){
+        $countevent=DB::table("events")->count("id");
+        $countslideshow=DB::table("slideshow")->count("id");
+        return ["countevent"=>$countevent,
+                "countslideshow"=>$countslideshow,
+            ];
+    }
     public function getEmail($email){
         $este=DB::table('admin')->where('email',  $email)->value('email');
         if(empty($este))

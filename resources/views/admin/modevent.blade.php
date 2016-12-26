@@ -209,6 +209,8 @@
     </div>
     <script>
         $(document).ready(function() {
+            formid={{$f}};
+            paragrafid={{$p}};
             /*Upload image width:100%*/
             $("body").on("submit","form[name=upload100]",(function(e) {
                 e.preventDefault();

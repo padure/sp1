@@ -11,9 +11,10 @@ use App\Slideshow;
 
 class AdminController extends Controller
 {
-    public function base(){
+    public function base(Admin $admin){
         if (filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
-            return view("admin.home");
+            $count=$admin->getHomepage();
+            return view("admin.home",$count);
         }else{
             return redirect("/admin/login");
         }

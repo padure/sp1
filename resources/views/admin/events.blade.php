@@ -2,7 +2,7 @@
 @section("content")
     <h1 class="text-center">Evenimente</h1>
     <p class="content text-right">
-        <a class="btn btn-info" href="{{URL("/admin/newevent")}}">
+        <a class="btn btn-success" href="{{URL("/admin/newevent")}}">
             <span class="glyphicon glyphicon-plus"></span>
             Adauga eveniment
         </a>
