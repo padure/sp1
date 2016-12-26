@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use DB;
 use App\Admin;
 use App\Events;
+use App\Slideshow;
 
 class AdminController extends Controller
 {
@@ -64,6 +65,14 @@ class AdminController extends Controller
         if (filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
             $post=$events->getEvent($id);
             return view('admin.modevent',['post'=>$post]);
+        }else{
+            return redirect("/admin/login");
+        }
+    }
+    public function slideshow(Slideshow $slideshow){
+        if (filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            $post=$slideshow->getSlideshow();
+            return view('admin.slideshow',['post'=>$post]);
         }else{
             return redirect("/admin/login");
         }

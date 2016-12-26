@@ -34,9 +34,10 @@ Route::post('/admin/othersupload','Admin\EventsController@othersupload');
 Route::get('/admin/modifica/{id}','Admin\AdminController@modifica');
 Route::post('/admin/modifica','Admin\EventsController@modificapost');
 Route::post('/admin/deleteevent','Admin\EventsController@deleteevent');
-
-
-
+/*SlideShow routes*/
+Route::get('/admin/slideshow','Admin\AdminController@slideshow');
+Route::post('/admin/uploadslideshow','Admin\SlideshowController@uploadslideshow');
+Route::post('/admin/deleteimageslider','Admin\SlideshowController@deleteimageslider');
 
 /*Main Page*/
 /*Post routes*/

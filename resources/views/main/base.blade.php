@@ -9,7 +9,6 @@
         <script src="{{ asset("js/bootstrap.min.js") }}"></script>
         <script src="{{ asset("js/myjs.js") }}"></script>
         <script src="{{ asset("https://maps.googleapis.com/maps/api/js?callback=myMap") }}"></script>
-        <link href="{{ asset('adminstyle/admin.css') }}" rel="stylesheet" type="text/css">
         <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet" >
         <link href="{{ asset("css/style.css") }}" rel="stylesheet" >
         <link href="{{ asset('css/bootstrap-theme.min.css') }}" rel="stylesheet" type="text/css">
@@ -118,47 +117,48 @@
 			  </div> 
 		</nav>
                </div>
+        <?php 
+            $slideshowimages=App\Slideshow::getSlideshow(); 
+        ?>
+        @if(!empty($slideshowimages) && count($slideshowimages)>0)
         <div class="row my-slide">
             <div class="row">
-        <div id="carousel" class="carousel slide">
-	<!--indicatore a slaidurilor -->
-		<ol class="carousel-indicators">
-			<li class="active" data-target="#carousel" data-slide-to="0"></li>
-			<li data-target="#carousel" data-slide-to="1"></li>
-			<li data-target="#carousel" data-slide-to="2"></li>
-		</ol>
-		<!--Slaiduri-->
-		<div class="carousel-inner">
-			<div class="item active">
-                            <img src="{{ asset ( "images/slideshow.jpg" ) }}" alt="Imaginea lipseste">
-				<div class="carousel-caption">
-					<p>Descriere</p>
-			    </div>
-			</div>
-			<div class="item">
-				<img src="{{ asset ( "images/slideshow2.jpg" ) }}" alt="Imaginea lipseste">
-				<div class="carousel-caption">
-					<p>Descriere</p>
-			    </div>
-			</div>
-			<div class="item">
-				<img src="{{ asset ( "images/slideshow3.jpg" ) }}" alt="Imaginea lipseste">
-				<div class="carousel-caption">
-					<p>Descriere</p>
-			    </div>
-			</div>
-		</div>
-		<!--Sagetile de pornire a slaidului -->
-		<a href="#carousel" class="left carousel-control" data-slide="prev">
-		<span class="glyphicon glyphicon-chevron-left"></span>	
-		</a>
-		<a href="#carousel" class="right carousel-control" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right"></span>
-		</a>
-	</div>
+                <div id="carousel" class="carousel slide">
+                <!--indicatore a slaidurilor -->
+                    <ol class="carousel-indicators">
+                        @for($i=0;$i < count($slideshowimages);$i++)
+                            @if($i==0)
+                                <li class="active" data-target="#carousel" data-slide-to="{{$i}}"></li>
+                            @else
+                                <li data-target="#carousel" data-slide-to="{{$i}}"></li>
+                            @endif
+                        @endfor	
+                    </ol>
+                    <!--Slaiduri-->
+                    <div class="carousel-inner">
+                        @foreach($slideshowimages as $i)
+                            @if($i->id==$slideshowimages[0]->id)
+                                <div class="item active">
+                                    <img src="{{ asset ( $i->slideimage ) }}" alt="Imaginea lipseste">
+                                </div>
+                            @else
+                                <div class="item">
+                                    <img src="{{ asset ( $i->slideimage ) }}" alt="Imaginea lipseste">
+                                </div>
+                            @endif
+                        @endforeach
                     </div>
-             </div>
-                      
+                    <!--Sagetile de pornire a slaidului -->
+                    <a href="#carousel" class="left carousel-control" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>	
+                    </a>
+                    <a href="#carousel" class="right carousel-control" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        @endif             
                 <div class="row posts">
 			<div class="col-md-12 content">
 				<div class="col-md-10 main-posts">

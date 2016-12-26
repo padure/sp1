@@ -13,7 +13,7 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li><a href="{{URL("/admin/events")}}">Evenimente</a></li>
-                    
+                    <li><a href="{{URL("/admin/slideshow")}}">Slideshow</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Altele <span class="caret"></span></a>
                         <ul class="dropdown-menu">
