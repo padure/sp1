@@ -180,24 +180,29 @@
                                 
                                      <h3>Link-uri utile</h3>
 						<ul>
-							<li><a href="#">Ctice</a></li>
-							<li><a href="#">MERM</a></li>
-							<li><a href="#">Contact</a></li>
-							<li><a href="#">About</a></li>
-						</ul>                                                  
-                                 
+							<li><a href="{{URL("http://ctice.md/ctice2013/")}}">Ctice</a></li>
+							<li><a href="{{URL("http://www.edu.gov.md/")}}">Ministerul Educatiei al RM</a></li>
+							<li><a href="{{URL("http://www.aee.edu.md/")}}">Agenţia Naţională pentru Curriculum şi Evaluare</a></li>
+							<li><a href="{{URL("http://ctice.md/ctice2013/")}}">About</a></li>
+						</ul>               
 				</div>
 			</div>
 		</div>
 		<div class="partnership">
                     <div>
-                        <p>ATIC</p>
+                        <img src="{{ asset ( "images/partnership/03_logo.png" ) }}" />
                     </div>
                     <div>
-                        <p>ATIC</p>
+                        <img src="{{ asset ( "images/partnership/COMPANII TIC.jpg" ) }}" />
                     </div>
                     <div>
-                        <p>ATIC</p>
+                        <img src="{{ asset ( "images/partnership/tricon.png" ) }}" />
+                    </div>
+                    <div>
+                        <img src="{{ asset ( "images/partnership/andy.png" ) }}" />
+                    </div>
+                    <div style="border-right: 1px solid transparent;">
+                        <img src="{{ asset ( "images/partnership/usaid-logo.jpeg" ) }}" />
                     </div>
 		</div>
 		<div class="row posts">

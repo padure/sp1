@@ -73,8 +73,9 @@ body{
 .right-menu li a {
     display: block;
     color: #000;
-    padding: 8px 16px;
+    padding: 5px 12px;
     text-decoration: none;
+    font-size: 14px;
 }
 
 .right-menu li a:hover {
@@ -206,8 +207,12 @@ body{
 .my-link{
     border-top: 1px solid gray;
 }
+.my-link ul{
+    padding-left: 5px;
+    font-size: 12px;
+}
 .partnership{
-  
+    border-top: 1px solid gray;
     text-align: center;
     margin-left: 0;
     margin-right: 0;
@@ -215,7 +220,9 @@ body{
 .partnership div{
     width: 20%;
     float: left;
+    border-right: 1px solid gray;
 }
+
 .partnership img{
     width: 100%;
     height: auto;
