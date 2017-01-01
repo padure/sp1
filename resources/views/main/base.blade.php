@@ -167,7 +167,11 @@
 						<h3>Menu</h3>
 						<ul>
 							<li><a href="#">Home</a></li>
-							<li><a href="#">News</a></li>
+							<li class="right-orar"><a>Orar</a></li>
+                                                        <ul class="orar">
+                                                            <li><a href="">Orar</a></li>
+                                                            <li><a href="">Orar modificat</a></li>
+                                                        </ul>
 							<li><a href="#">Contact</a></li>
 							<li><a href="#">About</a></li>
 						</ul>
@@ -202,4 +206,11 @@
                         </div>
 		</div>
     </body>
+    <script>
+        $(document).ready(function(){
+             $(".right-orar").click(function(){
+                $(".orar").toggle();
+    });
+});
+    </script>
 </html>
