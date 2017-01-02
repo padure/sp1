@@ -24,8 +24,6 @@ body{
 	height: auto;
 	float: left;
 	margin: 5px;
-	margin-left: 20px;
-	
 }
 .logo{
 	padding: 0;
@@ -36,7 +34,7 @@ body{
 .name-site{
 	height: auto;
 	color: #000;
-	font-size: 150%;
+	font-size: 130%;
 	font-weight: 700;
 	text-align: center;
 	background-color: transparent;	
@@ -104,7 +102,7 @@ body{
 .navbar-nav li a:visited{
 	border-bottom: 2px solid #ff6600;
 }
-.navbar-inverse .navbar-nav>li>a{padding-left: 9px; padding-right: 5px; font-size: 14px;} 
+.navbar-inverse .navbar-nav>li>a{padding-left: 8px; padding-right: 5px; font-size: 14px;} 
 .navbar-nav li a{
 	border-bottom: 2px solid transparent;
 }
@@ -210,6 +208,16 @@ body{
 .my-link ul{
     padding-left: 5px;
     font-size: 12px;
+    list-style-type: none;
+}
+.my-link li a:hover{
+    text-decoration: none;
+    background-color: gray;
+    color: white;
+}
+.my-link li:hover{
+    background-color: gray;
+    color: white;
 }
 .partnership{
     border-top: 1px solid gray;
@@ -237,4 +245,14 @@ body{
 .orar li a:hover{
     background-color: blue;
     
+}
+/*Elevi absolventi*/
+.table-responsive th{
+    width: 22%;
+}
+.table-responsive th:first-child{
+    width: 10%;
+}
+.tabel-elevi{
+    padding-top: 5px;
 }

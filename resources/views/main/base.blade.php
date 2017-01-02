@@ -190,19 +190,19 @@
 		</div>
 		<div class="partnership">
                     <div>
-                        <img src="{{ asset ( "images/partnership/03_logo.png" ) }}" />
+                        <a href="{{URL("http://www.edu.gov.md/")}}"><img src="{{ asset ( "images/partnership/03_logo.png" ) }}" /></a>
                     </div>
                     <div>
-                        <img src="{{ asset ( "images/partnership/COMPANII TIC.jpg" ) }}" />
+                       <a href="{{URL("http://www.edu.gov.md/")}}"><img src="{{ asset ( "images/partnership/COMPANII TIC.jpg" ) }}" /></a>
                     </div>
                     <div>
-                        <img src="{{ asset ( "images/partnership/tricon.png" ) }}" />
+                        <a href="{{URL("http://www.edu.gov.md/")}}"><img src="{{ asset ( "images/partnership/tricon.png" ) }}" /></a>
                     </div>
                     <div>
-                        <img src="{{ asset ( "images/partnership/andy.png" ) }}" />
+                        <a href="{{URL("http://www.edu.gov.md/")}}"><img src="{{ asset ( "images/partnership/andy.png" ) }}" /></a>
                     </div>
                     <div style="border-right: 1px solid transparent;">
-                        <img src="{{ asset ( "images/partnership/usaid-logo.jpeg" ) }}" />
+                       <a href="{{URL("http://www.edu.gov.md/")}}"> <img src="{{ asset ( "images/partnership/usaid-logo.jpeg" ) }}" /></a>
                     </div>
 		</div>
 		<div class="row posts">
