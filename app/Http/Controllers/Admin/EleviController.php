@@ -36,9 +36,31 @@ class EleviController extends Controller
         $nume=$request->nume;
         $prenume=$request->prenume;
         $id=DB::table("elevi")->insertGetId(["id_grupa"=>$id_grupa,
-                                            "nume"=>$nume,
-                                            "prenume"=>$prenume]);
-        $return=DB::table("elevi")->where("id",$id)->first();
+                                            "nume"=>ucfirst($nume),
+                                            "prenume"=>ucfirst($prenume)]);
+        $return=DB::table("elevi")->where("id_grupa",$id_grupa)->orderBy("nume")->orderBy("prenume")->get();
+        return response()->json($return);
+    }
+    public function modelev(Request $request){
+        if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            return redirect("/admin");
+        }
+        $id=$request->id;
+        $nume=$request->nume;
+        $prenume=$request->prenume;
+        DB::table("elevi")->where("id",$id)->update(["nume"=>ucfirst($nume),"prenume"=>ucfirst($prenume)]);
+        $id_grupa=DB::table("elevi")->where("id",$id)->value("id_grupa");
+        $return=DB::table("elevi")->where("id_grupa",$id_grupa)->orderBy("nume")->orderBy("prenume")->get();
+        return response()->json($return);
+    }
+    public function stergeelev(Request $request){
+        if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            return redirect("/admin");
+        }
+        $id=$request->id;
+        $id_grupa=DB::table("elevi")->where("id",$id)->value("id_grupa");
+        DB::table("elevi")->where("id",$id)->delete();
+        $return=DB::table("elevi")->where("id_grupa",$id_grupa)->orderBy("nume")->orderBy("prenume")->get();
         return response()->json($return);
     }
     public function getelevi(Request $request){

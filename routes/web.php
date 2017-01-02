@@ -44,6 +44,8 @@ Route::get('/admin/elevi','Admin\AdminController@elevi');
 Route::post('/admin/addan','Admin\EleviController@addan');
 Route::post('/admin/addgrupa','Admin\EleviController@addgrupa');
 Route::post('/admin/addelev','Admin\EleviController@addelev');
+Route::post('/admin/modelev','Admin\EleviController@modelev');
+Route::post('/admin/stergeelev','Admin\EleviController@stergeelev');
 Route::post('/admin/getelevi','Admin\EleviController@getelevi');
 /*End Admin Page*/
 

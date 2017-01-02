@@ -60,7 +60,9 @@
                 <label for="prenume">Prenume:</label>
                 <input type="text" name="prenume" class="form-control" id="prenume">
             </div>
-            <button type="submit" class="btn btn-default" name="addElev" disabled data-loading-text="<i class='fa fa-spinner fa-spin'></i> Se adauga">Adauga</button>
+            <button type="submit" class="btn btn-default" name="addElev" id="saveormod" disabled data-loading-text="<i class='fa fa-spinner fa-spin'></i> Se adauga">
+                Salveaza
+            </button>
         </form>
     </div>
     
@@ -104,6 +106,23 @@
           </div>
         </div>
     </div>
+    
+    <div class="modal fade" id="comfirm_delete_elev" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title text-center">Sterge admin</h4>
+            </div>
+            <div class="modal-body text-center">
+                <h2 class="calibri" style="margin: 0px 0px 15px 0px;">Sigur doriti sa stergeti acest elev?</h2>
+                <button class="btn btn-default" id="yesdelete">Da</button>
+                <button class="btn btn-primary" data-dismiss="modal">Nu</button>
+            </div>
+          </div>
+        </div>
+    </div>
     <script>
         $(document).ready(function() {
             $("button[name=addAn]").on("click",function(){
@@ -112,9 +131,50 @@
             $("button[name=addGrupa]").on("click",function(){
                 $("#add_grupa").modal();
             });
+            function afiseaza(data){
+                $("#totielevii").html("<tr><th>Nr</th><th>Nume</th><th>Prenume</th><th>Setari</th></tr>");
+                for(var i=0;i<data.length;i++){
+                    $("#totielevii").append("<tr id='elev"+data[i].id+"' nume='"+data[i].nume+"' prenume='"+data[i].prenume+"'><td>"+(i+1)+"</td><td>"+data[i].nume+"</td><td>"+data[i].prenume+"</td>\n\
+                                            <td style='width:200px'>\n\
+                                                <button class='btn btn-primary' idelev='"+data[i].id+"' name='modificaelev'>Modifica</button>\n\
+                                                <button class='btn btn-danger' idelev='"+data[i].id+"' name='stergeelev'>Sterge</button>\n\
+                                            </td></tr>");
+                }
+            }
+            $("body").on("click","button[name=modificaelev]",function(){
+                var id=$(this).attr("idelev");
+                var info=$("#elev"+id);
+                var nume=info.attr("nume");
+                var prenume=info.attr("prenume");
+                $("input[name=nume]").val(nume);
+                $("input[name=nume]").focus();
+                $("input[name=prenume]").val(prenume);
+                $("#saveormod").attr("name","modElev");
+                $("#saveormod").attr("idmod",id);
+            });
+            $("body").on("click","button[name=stergeelev]",function(){
+                var id=$(this).attr("idelev");
+                $("#comfirm_delete_elev").modal();
+                $("#yesdelete").attr("idsters",id);
+            });
+            $("body").on("click","#yesdelete",function(){
+                var id=$("#yesdelete").attr("idsters");
+                $.ajax({  
+                    type: 'POST',  
+                    url: "{{URL('/admin/stergeelev')}}", 
+                    data: 
+                        { 
+                            id:id
+                        },
+                    success: function(data) {
+                        afiseaza(data);
+                        $("#comfirm_delete_elev").modal("hide");
+                    }
+                });
+            });
             /*Afisam buttonul salveaza daca sunt selectate anul si grupa*/
-            $("body").on("click","input[name=radio_grupa]",function(){
-                $("button[name=addElev]").prop("disabled",false);
+            $("body").on("change","input[name=radio_grupa]",function(){
+                $("#saveormod").prop("disabled",false);
                 $("#totielevii").html("");
                 $("#loader").show();
                 var grupa=$(this).val();
@@ -126,22 +186,16 @@
                             grupa:grupa
                         },
                     success: function(data) {
-                        $("#totielevii").html("<tr><th>Nr</th><th>Nume</th><th>Prenume</th><th>Setari</th></tr>");
-                        for(var i=0;i<data.length;i++){
-                            $("#totielevii").append("<tr><td>"+(i+1)+"</td><td>"+data[i].nume+"</td><td>"+data[i].prenume+"</td>\n\
-                                                    <td style='width:200px'>\n\
-                                                        <button class='btn btn-primary'>Modifica</button>\n\
-                                                        <button class='btn btn-danger'>Sterge</button>\n\
-                                                    </td></tr>");
-                        }
+                        afiseaza(data);
                         $("#loader").hide();
                     }
                 });
             });
             /*Afisam grupele in dependenta de ce an a fost ales*/
-            $("body").on("click","input[name=radio_an]",function(){
+            $("body").on("change","input[name=radio_an]",function(){
+                $("#totielevii").html("");
                 $("button[name=addGrupa]").prop("disabled",false);
-                $("button[name=addElev]").prop("disabled",true);
+                $("#saveormod").prop("disabled",true);
                 var id=$(this).attr("value");
                 $("input[name=radio_grupa]").prop('checked', false);
                 $("label[ascunde=ascunde]").hide();
@@ -167,22 +221,45 @@
                     permit=false;
                 }
                 if(permit===true){
-                    $("button[name=addElev]").button("loading");
-                    $.ajax({  
-                        type: 'POST',  
-                        url: "{{URL('/admin/addelev')}}", 
-                        data: 
-                            { 
-                                id_grupa:id_grupa,
-                                nume:nume,
-                                prenume:prenume
-                            },
-                        success: function(data) {
-                            $("input[name=nume]").val("");
-                            $("input[name=prenume]").val("");
-                            $("button[name=addElev]").button("reset");
-                        }
-                    });
+                    if($("#saveormod").attr("name")==="addElev"){
+                        $("#saveormod").button("loading");
+                        $.ajax({  
+                            type: 'POST',  
+                            url: "{{URL('/admin/addelev')}}", 
+                            data: 
+                                { 
+                                    id_grupa:id_grupa,
+                                    nume:nume,
+                                    prenume:prenume
+                                },
+                            success: function(data) {
+                                $("input[name=nume]").val("");
+                                $("input[name=prenume]").val("");
+                                afiseaza(data);
+                                $("#saveormod").button("reset");
+                            }
+                        });
+                    }else{
+                        $("#saveormod").button("loading");
+                        $.ajax({  
+                            type: 'POST',  
+                            url: "{{URL('/admin/modelev')}}", 
+                            data: 
+                                { 
+                                    id:$("#saveormod").attr("idmod"),
+                                    nume:nume,
+                                    prenume:prenume
+                                },
+                            success: function(data) {
+                                $("input[name=nume]").val("");
+                                $("input[name=prenume]").val("");
+                                afiseaza(data);
+                                $("#saveormod").button("reset");
+                                $("#saveormod").attr("name","addElev");
+                                $("#saveormod").removeAttr("idmod");
+                            }
+                        });
+                    }
                 }
             });
             /*Adauga ani*/
