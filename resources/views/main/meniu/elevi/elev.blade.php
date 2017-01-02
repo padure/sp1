@@ -5,7 +5,7 @@
     <div class="form-group">
         <div class="col-md-6">
       <label for="sel1">Selectati anul absolvirii</label>
-      <select class="form-control" id="sel1">
+      <select class="form-control" id="anul">
         <option>2016</option>
         <option>2017</option>
         <option>2018</option>
@@ -14,7 +14,7 @@
       </div>
         <div class="col-md-6">
       <label for="sel1">Selectati grupa</label>
-      <select class="form-control" id="sel1">
+      <select class="form-control" id="grupa">
         <option>I1221</option>
         <option>B1121</option>
         <option>C1231</option>
