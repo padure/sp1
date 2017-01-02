@@ -159,7 +159,6 @@
                         password:$("input[name=password]").val()
                     },
                 success: function(data) {
-                    console.log(data);
                     $("#addAdmin").button("reset");
                     $("#nameeror").html(data.name);
                     $("#emaileror").html(data.email);

@@ -45,6 +45,9 @@ class SlideshowController extends Controller
         }
     }
     public function deleteimageslider(Request $request){
+        if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            return redirect("/admin");
+        }
         $id=$request->id;
         $sterg=DB::table("slideshow")->where("id",$id)->value("slideimage");
         File::delete($sterg);

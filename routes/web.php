@@ -14,6 +14,7 @@
 
 
 /*Admin Page*/
+
 /*Register routers*/
 Route::get('/admin','Admin\AdminController@base');
 Route::get('/admin/login','Admin\AdminController@getLogin');
@@ -38,6 +39,13 @@ Route::post('/admin/deleteevent','Admin\EventsController@deleteevent');
 Route::get('/admin/slideshow','Admin\AdminController@slideshow');
 Route::post('/admin/uploadslideshow','Admin\SlideshowController@uploadslideshow');
 Route::post('/admin/deleteimageslider','Admin\SlideshowController@deleteimageslider');
+/*Elevi routes*/
+Route::get('/admin/elevi','Admin\AdminController@elevi');
+Route::post('/admin/addan','Admin\EleviController@addan');
+Route::post('/admin/addgrupa','Admin\EleviController@addgrupa');
+Route::post('/admin/addelev','Admin\EleviController@addelev');
+Route::post('/admin/getelevi','Admin\EleviController@getelevi');
+/*End Admin Page*/
 
 /*Main Page*/
 /*Post routes*/
