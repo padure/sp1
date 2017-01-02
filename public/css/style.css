@@ -227,14 +227,17 @@ body{
 }
 .partnership div{
     width: 20%;
+    height: 110px;
     float: left;
-    border-right: 1px solid gray;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
 }
-
 .partnership img{
     width: 100%;
     height: auto;
 }
+
 /*Orar dreapta*/
 .orar{display: none;}
 .orar li a{
@@ -255,4 +258,18 @@ body{
 }
 .tabel-elevi{
     padding-top: 5px;
+}
+/*Galerie activitati-extracurs*/
+.activitati-extracurs img{
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    float: left;
+    width: 20%;
+    
+}
+.activitati-extracurs img:hover{
+    -webkit-filter: none; /* Safari 6.0 - 9.0 */
+    filter: none;
+    -webkit-transition: 2s; /* For Safari 3.1 to 6.0 */
+    transition: 2s;
 }

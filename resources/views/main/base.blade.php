@@ -190,7 +190,7 @@
 		</div>
 		<div class="partnership">
                     <div>
-                        <a href="{{URL("http://www.edu.gov.md/")}}"><img src="{{ asset ( "images/partnership/03_logo.png" ) }}" /></a>
+                        <a href="{{URL("http://www.edu.gov.md/")}}"><img src="{{ asset ( "images/partnership/03_logo.png" ) }}"  /></a>
                     </div>
                     <div>
                        <a href="{{URL("http://www.edu.gov.md/")}}"><img src="{{ asset ( "images/partnership/COMPANII TIC.jpg" ) }}" /></a>
@@ -202,7 +202,7 @@
                         <a href="{{URL("http://www.edu.gov.md/")}}"><img src="{{ asset ( "images/partnership/andy.png" ) }}" /></a>
                     </div>
                     <div style="border-right: 1px solid transparent;">
-                       <a href="{{URL("http://www.edu.gov.md/")}}"> <img src="{{ asset ( "images/partnership/usaid-logo.jpeg" ) }}" /></a>
+                       <a href="{{URL("http://www.edu.gov.md/")}}"><img src="{{ asset ( "images/partnership/usaid-logo.jpeg" ) }}" /></a>
                     </div>
 		</div>
 		<div class="row posts">
