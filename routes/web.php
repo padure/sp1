@@ -16,43 +16,46 @@
 /*Admin Page*/
 
 /*Register routers*/
-Route::get('/admin','Admin\AdminController@base');
-Route::get('/admin/login','Admin\AdminController@getLogin');
-Route::post('/admin/login','Admin\RegisterController@login');
-Route::get('/admin/register','Admin\AdminController@getRegister');
-Route::post('/admin/register','Admin\RegisterController@register');
-Route::post('/admin/registerother','Admin\RegisterController@registerother');
-Route::get('/confirm/{email}-{token}','Admin\RegisterController@comfirm');
-Route::get('/exitadmin','Admin\RegisterController@exitadmin');
-Route::get('/admin/users','Admin\AdminController@admins');
-Route::post('/admin/deleteadmin','Admin\SettingController@deleteadmin');
+    Route::get('/admin','Admin\AdminController@base');
+    Route::get('/admin/login','Admin\AdminController@getLogin');
+    Route::post('/admin/login','Admin\RegisterController@login');
+    Route::get('/admin/register','Admin\AdminController@getRegister');
+    Route::post('/admin/register','Admin\RegisterController@register');
+    Route::post('/admin/registerother','Admin\RegisterController@registerother');
+    Route::get('/confirm/{email}-{token}','Admin\RegisterController@comfirm');
+    Route::get('/exitadmin','Admin\RegisterController@exitadmin');
+    Route::get('/admin/users','Admin\AdminController@admins');
+    Route::post('/admin/deleteadmin','Admin\SettingController@deleteadmin');
 /*Event routes*/
-Route::get('/admin/events','Admin\AdminController@events');
-Route::get('/admin/newevent','Admin\AdminController@newevent');
-Route::post('/admin/saveevent','Admin\EventsController@saveevent');
-Route::post('/admin/defaultupload','Admin\EventsController@defaultupload');
-Route::post('/admin/othersupload','Admin\EventsController@othersupload');
-Route::get('/admin/modifica/{id}','Admin\AdminController@modifica');
-Route::post('/admin/modifica','Admin\EventsController@modificapost');
-Route::post('/admin/deleteevent','Admin\EventsController@deleteevent');
+    Route::get('/admin/events','Admin\AdminController@events');
+    Route::get('/admin/newevent','Admin\AdminController@newevent');
+    Route::post('/admin/saveevent','Admin\EventsController@saveevent');
+    Route::post('/admin/defaultupload','Admin\EventsController@defaultupload');
+    Route::post('/admin/othersupload','Admin\EventsController@othersupload');
+    Route::get('/admin/modifica/{id}','Admin\AdminController@modifica');
+    Route::post('/admin/modifica','Admin\EventsController@modificapost');
+    Route::post('/admin/deleteevent','Admin\EventsController@deleteevent');
 /*SlideShow routes*/
-Route::get('/admin/slideshow','Admin\AdminController@slideshow');
-Route::post('/admin/uploadslideshow','Admin\SlideshowController@uploadslideshow');
-Route::post('/admin/deleteimageslider','Admin\SlideshowController@deleteimageslider');
+    Route::get('/admin/slideshow','Admin\AdminController@slideshow');
+    Route::post('/admin/uploadslideshow','Admin\SlideshowController@uploadslideshow');
+    Route::post('/admin/deleteimageslider','Admin\SlideshowController@deleteimageslider');
 /*Elevi routes*/
-Route::get('/admin/elevi','Admin\AdminController@elevi');
-Route::post('/admin/addan','Admin\EleviController@addan');
-Route::post('/admin/modan','Admin\EleviController@modan');
-Route::post('/admin/delan','Admin\EleviController@delan');
-Route::post('/admin/addgrupa','Admin\EleviController@addgrupa');
-Route::post('/admin/modgrupa','Admin\EleviController@modgrupa');
-Route::post('/admin/delgrupa','Admin\EleviController@delgrupa');
-Route::post('/admin/addelev','Admin\EleviController@addelev');
-Route::post('/admin/modelev','Admin\EleviController@modelev');
-Route::post('/admin/stergeelev','Admin\EleviController@stergeelev');
-Route::post('/admin/getelevi','Admin\EleviController@getelevi');
+    Route::get('/admin/elevi','Admin\AdminController@elevi');
+    Route::post('/admin/addan','Admin\EleviController@addan');
+    Route::post('/admin/modan','Admin\EleviController@modan');
+    Route::post('/admin/delan','Admin\EleviController@delan');
+
+    Route::post('/admin/addgrupa','Admin\EleviController@addgrupa');
+    Route::post('/admin/modgrupa','Admin\EleviController@modgrupa');
+    Route::post('/admin/delgrupa','Admin\EleviController@delgrupa');
+
+    Route::post('/admin/addelev','Admin\EleviController@addelev');
+    Route::post('/admin/modelev','Admin\EleviController@modelev');
+    Route::post('/admin/stergeelev','Admin\EleviController@stergeelev');
+    Route::post('/admin/getelevi','Admin\EleviController@getelevi');
 /*End Admin Page*/
 
+    
 /*Main Page*/
 /*Post routes*/
 Route::get('/','Main\MainController@main');
