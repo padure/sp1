@@ -83,7 +83,7 @@
         <div id="loader">
             <img src="{{asset("allimages/system/loader.gif")}}" class="img-responsive"/>
         </div>
-        <table class="table" id="totielevii">
+        <table class="table table-striped" id="totielevii">
         </table>
     </div>
     <div class="modal fade" id="add_an" role="dialog">

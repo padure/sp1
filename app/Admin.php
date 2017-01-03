@@ -10,8 +10,10 @@ class Admin extends Model
     public function getHomepage(){
         $countevent=DB::table("events")->count("id");
         $countslideshow=DB::table("slideshow")->count("id");
+        $countelevi=DB::table("elevi")->count("id");
         return ["countevent"=>$countevent,
                 "countslideshow"=>$countslideshow,
+                "countelevi"=>$countelevi,
             ];
     }
     public function getEmail($email){
