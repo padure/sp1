@@ -259,6 +259,11 @@ body{
 .tabel-elevi{
     padding-top: 5px;
 }
+.elevi-absolventi{
+    width: 100%;
+    float:left;
+    margin:10px 0px 10px 0px;
+}
 /*Galerie activitati-extracurs*/
 .activitati-extracurs img{
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */

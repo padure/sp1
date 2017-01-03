@@ -35,7 +35,7 @@
         <div id="loader">
             <img src="{{asset("allimages/system/loader.gif")}}" class="img-responsive"/>
         </div>
-        <table class="table table-bordered table-hover" id="tableelev">
+        <table class="table table-striped" id="tableelev">
         </table>
     </div>
 <script>

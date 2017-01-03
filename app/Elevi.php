@@ -20,6 +20,8 @@ class Elevi extends Model
                 ->leftJoin("an",function($join){
                     $join->on('an.id', '=', 'grupe.id_an');
                 })
+                ->orderBy("nume")
+                ->orderBy("prenume")
                 ->where("id_grupa",$grupa)
                 ->get();
         return $return;
