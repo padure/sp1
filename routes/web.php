@@ -42,7 +42,11 @@ Route::post('/admin/deleteimageslider','Admin\SlideshowController@deleteimagesli
 /*Elevi routes*/
 Route::get('/admin/elevi','Admin\AdminController@elevi');
 Route::post('/admin/addan','Admin\EleviController@addan');
+Route::post('/admin/modan','Admin\EleviController@modan');
+Route::post('/admin/delan','Admin\EleviController@delan');
 Route::post('/admin/addgrupa','Admin\EleviController@addgrupa');
+Route::post('/admin/modgrupa','Admin\EleviController@modgrupa');
+Route::post('/admin/delgrupa','Admin\EleviController@delgrupa');
 Route::post('/admin/addelev','Admin\EleviController@addelev');
 Route::post('/admin/modelev','Admin\EleviController@modelev');
 Route::post('/admin/stergeelev','Admin\EleviController@stergeelev');

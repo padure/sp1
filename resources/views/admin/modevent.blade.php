@@ -298,7 +298,11 @@
                             if(input.val().length>1){
                                 save[index]=input.val();
                                 mode[index]=input.attr("mode");
-                                isimage[index]=input.attr("isimage");
+                                if(input.attr("isimage")){
+                                    isimage[index]=input.attr("isimage");
+                                }else{
+                                    isimage[index]="";
+                                }
                             }else{
                                 input.css("border-color","red");
                                 input.focus();

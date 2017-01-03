@@ -18,6 +18,24 @@ class EleviController extends Controller
         $return=DB::table("an")->where("id",$id)->first();
         return response()->json($return);
     }
+    public function modan(Request $request){
+        if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            return redirect("/admin");
+        }
+        $an=$request->an;
+        $id=$request->id_an;
+        DB::table("an")->where("id",$id)->update(["an"=>$an]);
+    }
+    public function delan(Request $request){
+        if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            return redirect("/admin");
+        }
+        $id=$request->id;
+        DB::table("an")->where("id",$id)->delete();
+        $elevi=DB::table("grupe")->where("id_an",$id)->pluck("id");
+        DB::table("grupe")->where("id_an",$id)->delete();
+        DB::table("elevi")->whereIn("id_grupa",$elevi)->delete();
+    }
     public function addgrupa(Request $request){
         if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
             return redirect("/admin");
@@ -27,6 +45,23 @@ class EleviController extends Controller
         $id=DB::table("grupe")->insertGetId(["id_an"=>$id_an,"nume_grupa"=>$nume_grupa]);
         $return=DB::table("grupe")->where("id",$id)->first();
         return response()->json($return);
+    }
+    public function modgrupa(Request $request){
+        if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            return redirect("/admin");
+        }
+        $nume_grupa=$request->grupa;
+        $id_an=$request->id_an;
+        $id=$request->id;
+        DB::table("grupe")->where("id",$id)->update(["id_an"=>$id_an,"nume_grupa"=>$nume_grupa]);
+    }
+    public function delgrupa(Request $request){
+        if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            return redirect("/admin");
+        }
+        $id=$request->id;
+        DB::table("grupe")->where("id",$id)->delete();
+        DB::table("elevi")->where("id_grupa",$id)->delete();
     }
     public function addelev(Request $request){
         if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
