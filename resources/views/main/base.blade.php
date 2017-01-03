@@ -176,7 +176,7 @@
 							<li><a href="#">About</a></li>
 						</ul>
                                 </div>
-                            <div class="col-md-2 my-link">
+                            <div class="col-md-2 my-link pull-right">
                                 
                                      <h3>Link-uri utile</h3>
 						<ul>

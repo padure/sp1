@@ -294,6 +294,7 @@
                                 },
                             success: function(data) {
                                 $("input[name=nume]").val("");
+                                $("input[name=nume]").focus();
                                 $("input[name=prenume]").val("");
                                 afiseaza(data);
                                 $("#saveormod").button("reset");
@@ -312,6 +313,7 @@
                                 },
                             success: function(data) {
                                 $("input[name=nume]").val("");
+                                $("input[name=nume]").focus();
                                 $("input[name=prenume]").val("");
                                 afiseaza(data);
                                 $("#saveormod").button("reset");

@@ -75,6 +75,7 @@ Route::get('/admitere/{admitere}', 'Main\MainController@admitere');
 Route::get('/parteneriate/{parteneriat}', 'Main\MainController@parteneriat');
 /*Absolventi*/
 Route::get('/elevi/absolventi', 'Main\MainController@absolvent');
+Route::post('/elevi/getelevi','Main\MainController@getelevi');
 /*Galerie*/
 Route::get('/galerie/activitati-extracurs', 'Main\MainController@activitati');
 Route::get('/galerie/decada-meseriilor', 'Main\MainController@decada');

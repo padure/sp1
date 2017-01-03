@@ -7,6 +7,7 @@ use App\Http\Controllers\Main;
 use App\Http\Controllers\Controller;
 use DB;
 use App\Events;
+use App\Elevi;
 
 class MainController extends Controller
 {
@@ -49,8 +50,13 @@ class MainController extends Controller
         return view('main.meniu.parteneriate.parteneriat');
     }
     /*Parteneriate*/
-     public function absolvent(){
-        return view('main.meniu.elevi.elev');
+    public function absolvent(Elevi $elevi){
+        $post=$elevi->getEleviInfo();
+        return view('main.meniu.elevi.elev',["post"=>$post]);
+    }
+    public function getelevi(Request $request , Elevi $elevi){
+        $grupa=$request->grupa;
+        return response()->json($elevi->getElevi($grupa));
     }
     /*Galerie*/
      public function activitati(){
