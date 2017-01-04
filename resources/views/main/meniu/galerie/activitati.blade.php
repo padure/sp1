@@ -9,5 +9,4 @@
     </div>
 </div>
 <script src="{{ asset("js/lightbox.min.js") }}"></script>
-<script src="{{ asset("js/lightbox-plus-jquery.min.js") }}"></script>
 @endsection
