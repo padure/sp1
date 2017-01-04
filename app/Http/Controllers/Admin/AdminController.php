@@ -9,6 +9,7 @@ use App\Admin;
 use App\Events;
 use App\Slideshow;
 use App\Elevi;
+use App\Logoname;
 
 class AdminController extends Controller
 {
@@ -83,6 +84,14 @@ class AdminController extends Controller
         if (filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
             $post=$elevi->getEleviInfo();
             return view('admin.elevi',['post'=>$post]);
+        }else{
+            return redirect("/admin/login");
+        }
+    }
+    public function logoname(Logoname $logoname){
+        if (filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            $post=$logoname->getInfo();
+            return view('admin.logoname',['post'=>$post]);
         }else{
             return redirect("/admin/login");
         }

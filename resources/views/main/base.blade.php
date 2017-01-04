@@ -28,9 +28,12 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="logo">
-					<a href="{{URL("/")}}"> <img src="{{ asset ( "images/Logo.png" ) }}"></a>
+                                    <?php
+                                        $logoname=  App\Logoname::getInfo(); 
+                                    ?>
+					<a href="{{URL("/")}}"> <img src="{{ asset ( $logoname["logo"]->valuevariable ) }}"></a>
 					<div class="name-site">
-						școala profesionala nr.1 cahul
+                                            {{$logoname["namesite"]->valuevariable}}
 					</div>
 				</div>
 			</div>

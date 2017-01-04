@@ -39,6 +39,10 @@
     Route::get('/admin/slideshow','Admin\AdminController@slideshow');
     Route::post('/admin/uploadslideshow','Admin\SlideshowController@uploadslideshow');
     Route::post('/admin/deleteimageslider','Admin\SlideshowController@deleteimageslider');
+/*Logo si nume routes*/
+    Route::get('/admin/logoname','Admin\AdminController@logoname');
+    Route::post('/admin/savenamesite','Admin\LogonameController@savenamesite');
+    Route::post('/admin/uploadlogo','Admin\LogonameController@uploadlogo');
 /*Elevi routes*/
     Route::get('/admin/elevi','Admin\AdminController@elevi');
     Route::post('/admin/addan','Admin\EleviController@addan');
