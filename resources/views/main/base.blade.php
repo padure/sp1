@@ -31,9 +31,17 @@
                                     <?php
                                         $logoname=  App\Logoname::getInfo(); 
                                     ?>
-					<a href="{{URL("/")}}"> <img src="{{ asset ( $logoname["logo"]->valuevariable ) }}"></a>
+					<a href="{{URL("/")}}"> 
+                                            @if(!empty($logoname["logo"]))
+                                                <img src="{{ asset ( $logoname["logo"]->valuevariable ) }}">
+                                            @else
+                                                home
+                                            @endif
+                                        </a>
 					<div class="name-site">
-                                            {{$logoname["namesite"]->valuevariable}}
+                                            @if(!empty($logoname["logo"]))
+                                                {{$logoname["namesite"]->valuevariable}}
+                                            @endif
 					</div>
 				</div>
 			</div>
