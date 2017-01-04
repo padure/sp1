@@ -39,7 +39,7 @@
                                             @endif
                                         </a>
 					<div class="name-site">
-                                            @if(!empty($logoname["logo"]))
+                                            @if(!empty($logoname["namesite"]))
                                                 {{$logoname["namesite"]->valuevariable}}
                                             @endif
 					</div>
