@@ -166,14 +166,14 @@
 				<div class="col-md-2 right-menu">
 						<h3>Menu</h3>
 						<ul>
-							<li><a href="#">Home</a></li>
+							<li><a href="#">Activitati lunare</a></li>
 							<li class="right-orar"><a>Orar</a></li>
                                                         <ul class="orar">
                                                             <li><a href="">Orar</a></li>
                                                             <li><a href="">Orar modificat</a></li>
                                                         </ul>
-							<li><a href="#">Contact</a></li>
-							<li><a href="#">About</a></li>
+							<li><a href="#">Forum</a></li>
+							<li><a href="#">Intrebari și raspunsuri</a></li>
 						</ul>
                                 </div>
                             <div class="col-md-2 my-link pull-right">
