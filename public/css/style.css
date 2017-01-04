@@ -293,4 +293,8 @@ body{
 }
 .admin-info{
     border-top: 1px solid gray;
+    padding-top: 10px;
+}
+.administratia div:first-child{
+    border-top: 1px solid transparent;
 }
