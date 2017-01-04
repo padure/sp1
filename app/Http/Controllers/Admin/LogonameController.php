@@ -42,10 +42,10 @@ class LogonameController extends Controller
                         $response=["succes"=>true,
                                    "image"=>$filename];
                         $logo = DB::table("logoname")->where("variable","logo")->first();
-                        File::delete($logo->valuevariable);
                         if(is_null($logo)){
                             DB::table("logoname")->insert(["variable"=>"logo","valuevariable"=>$filename]);
                         }else{
+                            File::delete($logo->valuevariable);
                             DB::table("logoname")->where("variable","logo")->update(["valuevariable"=>$filename]);
                         }
                     }
