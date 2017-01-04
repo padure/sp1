@@ -105,7 +105,7 @@
                                 <label class='file'>
                                     <img src='{{asset($post["others"][$i]->text)}}' class='img-responsive' id='form{{$f}}image'/>
                                     <input type='file' name='file' style='display:none;'>
-                                    <input type='text' mode='3' value='' isimage='1' id='form{{$f}}input' style='display:none;'>
+                                    <input type='text' mode='3' value='{{asset($post["others"][$i]->text)}}' isimage='1' id='form{{$f}}input' style='display:none;'>
                                 </label>
                                 <p id='form{{$f}}eror' class='text-red'></p>
                             </form>

@@ -9,7 +9,9 @@
             </a>
             <input type="file" name="file[]" multiple style="display:none;"><br>
         </label>
+        <strong class="text-danger">Atentie!</strong> toate imaginile trebuie sa fie de o marime! Sau latimea sa fie de 4 ori mai mare ca inaltimea. Ex: 300x1200 , 400x1600 , 450x1800 px
     </form>
+
     @if(!empty($post) && count($post)>0)
         @foreach($post as $i)
             <div class="slideimages">

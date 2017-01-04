@@ -45,7 +45,7 @@
             $("#tableelev").html("");
         }
         function afiseaza(data){
-            if(data.length>1){
+            if(data.length>0){
                 $("#tableelev").html("<tr class='info'><th>Nr</th><th>Nume</th><th>Prenume</th><th>Grupa</th><th>Anul absolvirii</th></tr>");
                 for(var i=0;i<data.length;i++){
                     $("#tableelev").append("<tr><td>"+(i+1)+"</td><td>"+data[i].nume+"</td><td>"+data[i].prenume+"</td><td>"+data[i].nume_grupa+"</td><td>"+data[i].an+"</td></tr>");
