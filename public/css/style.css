@@ -278,3 +278,19 @@ body{
     -webkit-transition: 2s; /* For Safari 3.1 to 6.0 */
     transition: 2s;
 }
+/*administratia*/
+.administratia img{
+    width: 75%;
+    padding: 5px;
+    
+}
+.administratia span{
+    margin-left: 5px;
+}
+.administratia{text-align: center;}
+.administratia .description{
+    text-align: left;
+}
+.admin-info{
+    border-top: 1px solid gray;
+}

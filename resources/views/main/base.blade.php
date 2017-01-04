@@ -179,7 +179,7 @@
 							<li><a href="#">Intrebari și raspunsuri</a></li>
 						</ul>
                                 </div>
-                            <div class="col-md-2 my-link pull-right">
+                            <div class="col-md-2 my-link">
                                 
                                      <h3>Link-uri utile</h3>
 						<ul>
