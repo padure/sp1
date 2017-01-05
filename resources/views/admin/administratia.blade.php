@@ -48,7 +48,7 @@
                         </div>
                     </div>
                     <a class="btn btn-primary" name="saveadministratia" id="saveormodadministrator" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Se salveaza">Salveaza</a>
-                    <button class="btn btn-default pull-right" id="anuleazaadd" type="reset">Anuleaza</button>
+                    <button class="btn btn-default pull-right" id="anuleazaadd" type="reset" onclick="location.reload();">Anuleaza</button>
                 </form>
             </div>
         </div>

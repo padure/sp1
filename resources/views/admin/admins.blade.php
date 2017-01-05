@@ -163,6 +163,10 @@
                     $("#nameeror").html(data.name);
                     $("#emaileror").html(data.email);
                     $("#passworderor").html(data.password);
+                    if(data===false){
+                        $("#mesajdelete").html("Dvs. nu puteti adauga admini");
+                        $("#delete_admin").modal();
+                    }
                     if(data.logat){
                         $("#confirm_email").modal();
                     }

@@ -89,6 +89,11 @@ class RegisterController extends Controller
         } 
     }
     public function registerother(Request $request , Admin $admin){
+        $permision=DB::table("admin")->min("id");
+        $session=session("idAdmin");
+        if($permision!=$session){
+            return response()->json(false);
+        }
         $register["logat"]=false; $inscrie=true;
         $register["name"]=""; $register["email"]=""; $register["password"]="";
         if(strlen($request->name)<6 || strlen($request->name)>25)
