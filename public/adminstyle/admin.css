@@ -84,6 +84,18 @@ html,body{
 .elevihome:hover{
     background-color: #25cc10;
 }
+.logonamehome{
+    background-color: #47866e;
+}
+.logonamehome:hover{
+    background-color: #447966;
+}
+.adminhome{
+    background-color: #f7a010;;
+}
+.adminhome:hover{
+    background-color: #e09210;
+}
 
 .fisierenefolositehome{
     background-color: #ff5722;
