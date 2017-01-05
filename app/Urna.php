@@ -15,7 +15,10 @@ class Urna extends Model
         
         $urna=null;
         if(count($events)>0 || count($administratia)>0 || count($eventcontent)>0){
-            $urna=DB::table("urna")->whereNotIn("urna",[$events,$administratia,$eventcontent])->pluck("urna");
+            $urna=DB::table("urna")->whereNotIn("urna",$events)
+                                    ->whereNotIn("urna",$administratia)
+                                    ->whereNotIn("urna",$eventcontent)
+                            ->pluck("urna");
         }else{
             if((count($events)+count($administratia)+count($eventcontent))==0){
                 $urna=DB::table("urna")->pluck("urna");
