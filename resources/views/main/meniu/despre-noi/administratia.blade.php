@@ -9,6 +9,7 @@
             </div>
             <div class="col-md-8 description">
                 <table class="table table-striped">
+                    <tr><td colspan="2">Mihai Viteazu</td></tr>
                     <tr><td><label>Functia:</label></td><td>Profesor istorie</td></tr>
                     <tr><td><label>Anul nasterii:</label></td><td>12.12.1978</td></tr>
                     <tr><td><label>Experienta:</label></td><td>15 ani</td></tr>
