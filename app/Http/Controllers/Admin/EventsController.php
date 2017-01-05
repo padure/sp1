@@ -57,9 +57,11 @@ class EventsController extends Controller
                     $name=$date->format("ymdhis");
                     $path="allimages/eventimages/default/";
                     if($files->move($path,$name.".".$ext)){
-                        File::delete($request->image);
                         $filename=$path.$name.".".$ext;
                         Image::make($filename)->fit(800, 800)->save($filename)->destroy();
+                        DB::table("urna")->insert(["urna"=>$filename]);
+                        DB::table("urna")->where("urna",$request->image)->delete();
+                        File::delete($request->image);
                         $response=["succes"=>true,
                                    "image"=>$filename];
                     }
@@ -85,9 +87,11 @@ class EventsController extends Controller
                     $name=$date->format("ymdhis");
                     $path="allimages/eventimages/others/";
                     if($files->move($path,$name.".".$ext)){
-                        File::delete($request->image);
                         $filename=$path.$name.".".$ext;
                         Image::make($filename)->fit(1200, 1200)->save($filename)->destroy();
+                        DB::table("urna")->insert(["urna"=>$filename]);
+                        DB::table("urna")->where("urna",$request->image)->delete();
+                        File::delete($request->image);
                         $response=["succes"=>true,
                                    "image"=>$filename];
                     }

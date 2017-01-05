@@ -63,6 +63,9 @@
     Route::post('/admin/modelev','Admin\EleviController@modelev');
     Route::post('/admin/stergeelev','Admin\EleviController@stergeelev');
     Route::post('/admin/getelevi','Admin\EleviController@getelevi');
+/*Urna routes*/
+    Route::get('/admin/urna','Admin\UrnaController@urna');
+    Route::get('/admin/deleteurna','Admin\UrnaController@deleteurna');
 /*End Admin Page*/
 
     

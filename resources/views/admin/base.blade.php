@@ -21,6 +21,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="{{URL("/admin/logoname")}}">Logo și nume</a></li>
                             <li><a href="{{URL("/admin/users")}}">Admini</a></li>
+                            <li><a href="{{URL("/admin/urna")}}">Fisiere nefolosite</a></li>
                         </ul>
                     </li>
                 </ul>

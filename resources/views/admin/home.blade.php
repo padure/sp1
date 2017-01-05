@@ -48,5 +48,17 @@
             </div>
         </a>
     </div>
+    
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+        <a href="{{URL("/admin/urna")}}">
+            <div class="fisierenefolositehome patrat">
+                <p class="imagehome">
+                    <img src="{{asset("allimages/system/fisierenefolositehome.png")}}" class="img-responsive"/>
+                </p>
+                <h3 class="text-center">Fisiere nefolosite</h3>
+                <h1 class="text-center">{{$countfisierenefolosite}}</h1>
+            </div>
+        </a>
+    </div>
 </div>
 @endsection

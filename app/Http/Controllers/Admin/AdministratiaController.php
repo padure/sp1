@@ -71,6 +71,8 @@ class AdministratiaController extends Controller
                         $response=["succes"=>true,
                                    "image"=>$filename];
                         Image::make($filename)->fit(800, 800)->save($filename)->destroy();
+                        DB::table("urna")->insert(["urna"=>$filename]);
+                        DB::table("urna")->where("urna",$request->image)->delete();
                         File::delete($request->image);
                     }
                 }
