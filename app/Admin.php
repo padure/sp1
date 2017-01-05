@@ -11,9 +11,11 @@ class Admin extends Model
         $countevent=DB::table("events")->count("id");
         $countslideshow=DB::table("slideshow")->count("id");
         $countelevi=DB::table("elevi")->count("id");
+        $countadministratia=DB::table("administratia")->count("id");
         return ["countevent"=>$countevent,
                 "countslideshow"=>$countslideshow,
                 "countelevi"=>$countelevi,
+                "countadministratia"=>$countadministratia,
             ];
     }
     public function getEmail($email){

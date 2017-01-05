@@ -72,6 +72,12 @@ html,body{
 .slideshowhome:hover{
     background-color: #1cb8e8;
 }
+.administratiahome{
+    background-color: #607D8B;
+}
+.administratiahome:hover{
+    background-color: #547180;
+}
 .elevihome{
     background-color: #27d411;
 }

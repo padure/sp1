@@ -26,6 +26,18 @@
     </div>
     
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+        <a href="{{URL("/admin/administratia")}}">
+            <div class="administratiahome patrat">
+                <p class="imagehome">
+                    <img src="{{asset("allimages/system/administratiahome.png")}}" class="img-responsive"/>
+                </p>
+                <h3 class="text-center">Administratia</h3>
+                <h1 class="text-center">{{$countadministratia}}</h1>
+            </div>
+        </a>
+    </div>
+    
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
         <a href="{{URL("/admin/elevi")}}">
             <div class="elevihome patrat">
                 <p class="imagehome">

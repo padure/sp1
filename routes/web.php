@@ -43,6 +43,8 @@
     Route::get('/admin/logoname','Admin\AdminController@logoname');
     Route::post('/admin/savenamesite','Admin\LogonameController@savenamesite');
     Route::post('/admin/uploadlogo','Admin\LogonameController@uploadlogo');
+/*Administratia routes*/
+    Route::get('/admin/administratia','Admin\AdminController@administratia');
 /*Elevi routes*/
     Route::get('/admin/elevi','Admin\AdminController@elevi');
     Route::post('/admin/addan','Admin\EleviController@addan');

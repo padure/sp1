@@ -14,6 +14,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{{URL("/admin/events")}}">Evenimente</a></li>
                     <li><a href="{{URL("/admin/slideshow")}}">Slideshow</a></li>
+                    <li><a href="{{URL("/admin/administratia")}}">Administratia</a></li>
                     <li><a href="{{URL("/admin/elevi")}}">Elevi</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Altele <span class="caret"></span></a>
