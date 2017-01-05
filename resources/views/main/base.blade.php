@@ -15,6 +15,7 @@
         
         
 	<link href="{{ asset("css/lightbox.min.css") }}" rel="stylesheet">
+        <link href="{{ asset("css/lightbox.min.css") }}" rel="stylesheet">
         <!--Icons -->
         <link rel="stylesheet" href="{{ asset("css/font-awesome.min.css") }}">
         <!-- token-->
