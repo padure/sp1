@@ -84,15 +84,4 @@
         </a>
     </div>
 </div>
-<div class="col-md-12 content">
-    <p class="text-info">
-        {{number_format( disk_free_space("/") / 1048576, 2)}} Mb liber din {{number_format( disk_total_space("/") / 1048576, 2)}} Mb
-    </p>
-    <div class="progress content">
-        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" 
-             style="width: {{100-number_format((disk_free_space("/")*100)/disk_total_space("/"),2)}}%;">
-             {{ 100-number_format((disk_free_space("/")*100)/disk_total_space("/"),2)}} %
-        </div>
-    </div>
-</div>
 @endsection
