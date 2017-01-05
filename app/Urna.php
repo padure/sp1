@@ -23,6 +23,14 @@ class Urna extends Model
         }
         return $urna;
     }
+    public static function getUrnaCount(){
+        $events=DB::table("events")->count("id");
+        $administratia=DB::table("administratia")->count("id");
+        $eventcontent=DB::table("eventcontent")->where("isimage",1)->count("id");
+        
+        $urna=DB::table("urna")->count("id");
+        return $urna-($events+$administratia+$eventcontent);
+    }
     public function getUrna(){
         $urna=Urna::getInfoUrna();
         if(count($urna)>0){
