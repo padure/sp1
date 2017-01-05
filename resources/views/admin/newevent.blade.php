@@ -183,7 +183,7 @@
                                     $("#"+idcolor+"image").css("border-color","#ccc");
                                 }
                             if(input.val().length>1){
-                                save[index]=input.val();
+                                save[index]=input.val().replace("{{asset('/')}}","");
                                 mode[index]=input.attr("mode");
                                 if(input.attr("isimage")){
                                     isimage[index]=input.attr("isimage");
