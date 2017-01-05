@@ -169,6 +169,7 @@
                     }
                     if(data.logat){
                         $("#confirm_email").modal();
+                        $("#registerother")[0].reset();
                     }
                 }
             });
