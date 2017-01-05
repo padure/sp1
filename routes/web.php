@@ -45,6 +45,10 @@
     Route::post('/admin/uploadlogo','Admin\LogonameController@uploadlogo');
 /*Administratia routes*/
     Route::get('/admin/administratia','Admin\AdminController@administratia');
+    Route::post('/admin/uploadadministratia','Admin\AdministratiaController@uploadadministratia');
+    Route::post('/admin/addadministratia','Admin\AdministratiaController@addadministratia');
+    Route::post('/admin/deladministratia','Admin\AdministratiaController@deladministratia');
+    Route::post('/admin/modadministratia','Admin\AdministratiaController@modadministratia');
 /*Elevi routes*/
     Route::get('/admin/elevi','Admin\AdminController@elevi');
     Route::post('/admin/addan','Admin\EleviController@addan');

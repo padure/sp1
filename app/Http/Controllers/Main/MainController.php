@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use DB;
 use App\Events;
 use App\Elevi;
+use App\Administratia;
 
 class MainController extends Controller
 {
@@ -22,8 +23,9 @@ class MainController extends Controller
     public function meserii($meserii){
         return view('main.meniu.meserii.meserie');
     }
-    public function administratia(){
-        return view('main.meniu.despre-noi.administratia');
+    public function administratia(Administratia $administratia){
+        $post=$administratia->getAdministratia();
+        return view('main.meniu.despre-noi.administratia',["post"=>$post]);
     }
     public function misiune(){
         return view('main.meniu.despre-noi.despre-noi');

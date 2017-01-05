@@ -16,7 +16,6 @@ class CreateAdministratiaTable extends Migration
         Schema::create('administratia', function (Blueprint $table) {
             $table->increments('id');
             $table->string('anume');
-            $table->string('aprenume');
             $table->string('photo');
             $table->string('functia');
             $table->date('anulnasterii');

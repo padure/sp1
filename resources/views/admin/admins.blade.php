@@ -77,7 +77,7 @@
               <h4 class="modal-title text-center">Adaugat!!</h4>
             </div>
             <div class="modal-body text-center">
-                <h2 class="calibri" style="margin: 0px 0px 15px 0px;">Pe acest link a fost trimis un email</h2>
+                <h2 class="calibri" style="margin: 0px 0px 15px 0px;">Pe acest email a fost trimis un mesaj</h2>
                 <button class="btn btn-default" data-dismiss="modal">Ok</button>
             </div>
           </div>
