@@ -16,6 +16,7 @@
                     <li><a href="{{URL("/admin/slideshow")}}">Slideshow</a></li>
                     <li><a href="{{URL("/admin/administratia")}}">Administratia</a></li>
                     <li><a href="{{URL("/admin/elevi")}}">Elevi</a></li>
+                    <li><a href="{{URL("/admin/parteneriati")}}">Parteneriati</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Altele <span class="caret"></span></a>
                         <ul class="dropdown-menu">

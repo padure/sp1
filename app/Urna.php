@@ -12,15 +12,17 @@ class Urna extends Model
         $events=DB::table("events")->pluck("image");
         $administratia=DB::table("administratia")->pluck("photo");
         $eventcontent=DB::table("eventcontent")->where("isimage",1)->pluck("text");
+        $parteneriati=DB::table("parteneriati")->pluck("image");
         
         $urna=null;
-        if(count($events)>0 || count($administratia)>0 || count($eventcontent)>0){
+        if(count($events)>0 || count($administratia)>0 || count($eventcontent)>0 || count($parteneriati)>0){
             $urna=DB::table("urna")->whereNotIn("urna",$events)
                                     ->whereNotIn("urna",$administratia)
                                     ->whereNotIn("urna",$eventcontent)
+                                    ->whereNotIn("urna",$parteneriati)
                             ->pluck("urna");
         }else{
-            if((count($events)+count($administratia)+count($eventcontent))==0){
+            if((count($events)+count($administratia)+count($eventcontent)+count($parteneriati))==0){
                 $urna=DB::table("urna")->pluck("urna");
             }
         }

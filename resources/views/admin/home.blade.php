@@ -50,6 +50,18 @@
     </div>
     
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+        <a href="{{URL("/admin/parteneriati")}}">
+            <div class="parteneriatihome patrat">
+                <p class="imagehome">
+                    <img src="{{asset("allimages/system/parteneriatihome.png")}}" class="img-responsive"/>
+                </p>
+                <h3 class="text-center">Parteneriati</h3>
+                <h1 class="text-center">{{$countparteneriati}}</h1>
+            </div>
+        </a>
+    </div>
+    
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
         <a href="{{URL("/admin/logoname")}}">
             <div class="logonamehome patrat">
                 <p class="imagehome">

@@ -11,6 +11,7 @@ use App\Slideshow;
 use App\Elevi;
 use App\Logoname;
 use App\Administratia;
+use App\Parteneriati;
 
 class AdminController extends Controller
 {
@@ -101,6 +102,14 @@ class AdminController extends Controller
         if (filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
             $post=$administratia->getAdministratia();
             return view('admin.administratia',['post'=>$post]);
+        }else{
+            return redirect("/admin/login");
+        }
+    }
+    public function parteneriati(Parteneriati $parteneriati){
+        if (filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            $post=$parteneriati->getParteneriati();
+            return view('admin.parteneriati',['post'=>$post]);
         }else{
             return redirect("/admin/login");
         }

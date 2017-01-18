@@ -66,6 +66,12 @@
 /*Urna routes*/
     Route::get('/admin/urna','Admin\UrnaController@urna');
     Route::get('/admin/deleteurna','Admin\UrnaController@deleteurna');
+/*Urna routes*/
+    Route::get('/admin/parteneriati','Admin\AdminController@parteneriati');
+    Route::post('/admin/uploadimageparteneriat','Admin\ParteneriatiController@uploadimageparteneriat');
+    Route::post('/admin/saveparteneriat','Admin\ParteneriatiController@saveparteneriat');
+    Route::post('/admin/modparteneriat','Admin\ParteneriatiController@modparteneriat');
+    Route::post('/admin/delparteneriat','Admin\ParteneriatiController@delparteneriat');
 /*End Admin Page*/
 
     

@@ -70,10 +70,11 @@
                     success: function(data){
                         $("#curentname").html("<b>Nume:</b> "+data);
                         $("#inputnamesite").val("");
+						$("#namesite").button("reset");
                     }
                 });
                 
-                $("#namesite").button("reset");
+                
                 
             }else{
                 $("#inputnamesite").css("border-color","red");
