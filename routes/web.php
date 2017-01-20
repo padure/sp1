@@ -80,7 +80,11 @@
 Route::get('/','Main\MainController@main');
 Route::get('/post/{i}','Main\MainController@infopost');
 /*Meniu routes*/
-Route::get('/meserii/{meserii}','Main\MainController@meserii');
+Route::get('/meserii/operator-suport-tehnic','Main\MainController@operator');
+Route::get('/meserii/controleor-produse-alimentare','Main\MainController@controlor');
+Route::get('/meserii/bucatar-chelner','Main\MainController@bucatar');
+Route::get('/meserii/croitor-confectioner','Main\MainController@croitor');
+Route::get('/meserii/cofetar','Main\MainController@cofetar');
 Route::get('/despre-noi/misiune-viziune','Main\MainController@misiune');
 Route::get('/despre-noi/administratia','Main\MainController@administratia');
 Route::get('/despre-noi/plan-dezvoltare-scoala','Main\MainController@plan');

@@ -1,8 +1,8 @@
 @extends("main.base")
 @section("content")
 <div class="col-md-12 meserii">
-    <h3>Operator pentru suport tehnic al calculatoarelor</h3>
-    <div class="col-md-8">
+    <h3>Croitor confecționer înbrăcăminte la comandă - cusător</h3>
+    <div class="col-md-8 meserii">
         <p>Programul de formare profesionala la meseria ”Operator Suport Tehnic Calculatoare”,
 are misiunea de a pregati muncitori calificati pentru segmentele pietei muncii din domeniul TIC.</p>
         <ul>
@@ -17,7 +17,7 @@ are misiunea de a pregati muncitori calificati pentru segmentele pietei muncii d
         </ul>
     </div>
     <div class="col-lg-4">
-    <img src="{{ asset ( "images/operator.png" ) }}" class="img-thumbnail">
+    <img src="{{ asset ( "images/croitor.jpg" ) }}" class="img-thumbnail">
     </div>
     <div class="col-md-12">
         <p>Curriculum modular a fost eleborat in stransa colaborare cu reprezentantii mediului de afaceri.

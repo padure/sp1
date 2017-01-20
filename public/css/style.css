@@ -114,11 +114,13 @@ body{
 }
 .main-post img{
     margin-bottom: 10px;
+    transition: transform 1s;
 }
 .main-post h3{
     width: 100%;
     color: red;
     font-size: 18px;
+    transition: font-family 2s;
 }
 .main-post span{
     float: right;
@@ -135,9 +137,25 @@ body{
     height: auto;
     float:left;
     padding-bottom: 15px;
+    transition: background-color 1s;
+}
+.main-post:hover{
+    background-color: #b3e6ff;
+}
+.main-post h3:hover{
+    font-family: sans-serif;
+}
+.main-post img:hover{
+    -ms-transform: rotate(10deg); /* IE 9 */
+    -webkit-transform: rotate(10deg); /* Safari */
+    transform: rotate(10deg); /* Standard syntax */
+}
+.main-post button:hover{
+    background-color: #0099cc;
 }
 .main-post button{
     float: left;
+    padding: 3px;
 }
 /*info post*/
 .info-post{
@@ -241,12 +259,13 @@ body{
 /*Orar dreapta*/
 .orar{display: none;}
 .orar li a{
-    background-color: red;
+    background-color: #e6e6e6;
     padding: 3px;
     padding-left: 40px;
 }
 .orar li a:hover{
-    background-color: blue;
+    background-color: #555;
+    color: white;
     
 }
 /*Elevi absolventi*/
@@ -277,6 +296,7 @@ body{
     filter: none;
     -webkit-transition: 2s; /* For Safari 3.1 to 6.0 */
     transition: 2s;
+    
 }
 /*administratia*/
 .administratia img{
@@ -297,4 +317,7 @@ body{
 }
 .administratia div:first-child{
     border-top: 1px solid transparent;
+}
+.meserii p{
+    text-align: justify;
 }

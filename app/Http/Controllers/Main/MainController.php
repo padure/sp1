@@ -20,8 +20,20 @@ class MainController extends Controller
         $post=$events->getEvent($i);
         return view('main.posts.infopost',['post'=>$post]);
     }
-    public function meserii($meserii){
-        return view('main.meniu.meserii.meserie');
+    public function operator(){
+        return view('main.meniu.meserii.operator');
+    }
+    public function controlor(){
+        return view('main.meniu.meserii.controlor');
+    }
+    public function bucatar(){
+        return view('main.meniu.meserii.bucatar');
+    }
+    public function croitor(){
+        return view('main.meniu.meserii.croitor');
+    }
+    public function cofetar(){
+        return view('main.meniu.meserii.cofetar');
     }
     public function administratia(Administratia $administratia){
         $post=$administratia->getAdministratia();
