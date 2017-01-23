@@ -67,6 +67,9 @@
 /*Corp didactic routes*/
     Route::get('/admin/corpdidactic','Admin\AdminController@corpdidactic');
     Route::post('/admin/addcorpdidactic','Admin\CorpdidacticController@addcorpdidactic');
+    Route::post('/admin/modcorpdidactic','Admin\CorpdidacticController@modcorpdidactic');
+    Route::post('/admin/delcorpdidactic','Admin\CorpdidacticController@delcorpdidactic');
+    
     
 /*Urna routes*/
     Route::get('/admin/urna','Admin\UrnaController@urna');

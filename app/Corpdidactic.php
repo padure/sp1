@@ -8,6 +8,6 @@ use DB;
 class Corpdidactic extends Model
 {
     public function getCorpdidactic(){
-        return true;
+        return DB::table("corpdidactic")->get();
     }
 }

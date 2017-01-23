@@ -14,8 +14,26 @@ class CorpdidacticController extends Controller
         $prenume=$request->prenume;
         $functia=$request->functia;
         DB::table("corpdidactic")->insert([
-                        "nume"=>  ucfirst(strtolower($nume)),
-                        "prenume"=>ucfirst(strtolower($prenume)),
-                        "functia"=>ucfirst(strtolower($functia))]);
+                        "nume"=>  ucwords(strtolower($nume)),
+                        "prenume"=>  ucwords(strtolower($prenume)),
+                        "functia"=>ucwords(strtolower($functia))]);
+        return DB::table("corpdidactic")->get();
+    }
+    public function modcorpdidactic(Request $request){
+        $id=$request->id;
+        $nume=$request->nume;
+        $prenume=$request->prenume;
+        $functia=$request->functia;
+        DB::table("corpdidactic")->where("id",$id)->update([
+            "nume"=>  ucwords(strtolower($nume)),
+            "prenume"=>  ucwords(strtolower($prenume)),
+            "functia"=>ucwords(strtolower($functia))
+        ]);
+        return DB::table("corpdidactic")->get();
+    }
+    public function delcorpdidactic(Request $request){
+        $id=$request->id;
+        DB::table("corpdidactic")->where("id",$id)->delete();
+        return $id;
     }
 }
