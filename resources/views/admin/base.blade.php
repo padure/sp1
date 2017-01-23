@@ -18,8 +18,9 @@
                     <li><a href="{{URL("/admin/elevi")}}">Elevi</a></li>
                     <li><a href="{{URL("/admin/parteneriati")}}">Parteneriati</a></li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Altele <span class="caret"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mai multe <span class="caret"></span></a>
                         <ul class="dropdown-menu">
+                            <li><a href="{{URL("/admin/corpdidactic")}}">Corp Didactic</a></li>
                             <li><a href="{{URL("/admin/logoname")}}">Logo și nume</a></li>
                             <li><a href="{{URL("/admin/users")}}">Admini</a></li>
                             <li><a href="{{URL("/admin/urna")}}">Fisiere nefolosite</a></li>

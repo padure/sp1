@@ -12,6 +12,7 @@ use App\Elevi;
 use App\Logoname;
 use App\Administratia;
 use App\Parteneriati;
+use App\Corpdidactic;
 
 class AdminController extends Controller
 {
@@ -90,6 +91,14 @@ class AdminController extends Controller
             return redirect("/admin/login");
         }
     }
+    public function corpdidactic(Corpdidactic $corp){
+        if (filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            $post=$corp->getCorpdidactic();
+            return view('admin.corpdidactic',['post'=>$post]);
+        }else{
+            return redirect("/admin/login");
+        }
+    }
     public function logoname(Logoname $logoname){
         if (filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
             $post=$logoname->getInfo();
@@ -114,4 +123,5 @@ class AdminController extends Controller
             return redirect("/admin/login");
         }
     }
+    
 }
