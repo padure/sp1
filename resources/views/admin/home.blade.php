@@ -62,6 +62,18 @@
     </div>
     
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+        <a href="{{URL("/admin/corpdidactic")}}">
+            <div class="corpdidactichome patrat">
+                <p class="imagehome">
+                    <img src="{{asset("allimages/system/cadrudidactichome.png")}}" class="img-responsive"/>
+                </p>
+                <h3 class="text-center">Corp Didactic</h3>
+                <h1 class="text-center">{{$countcorpdidactic}}</h1>
+            </div>
+        </a>
+    </div>
+    
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
         <a href="{{URL("/admin/logoname")}}">
             <div class="logonamehome patrat">
                 <p class="imagehome">

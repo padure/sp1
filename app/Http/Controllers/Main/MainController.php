@@ -9,6 +9,7 @@ use DB;
 use App\Events;
 use App\Elevi;
 use App\Administratia;
+use App\Corpdidactic;
 
 class MainController extends Controller
 {
@@ -48,8 +49,9 @@ class MainController extends Controller
     public function organigrama(){
         return view('main.meniu.despre-noi.organigrama');
     }
-    public function corpul(){
-        return view('main.meniu.despre-noi.corpul');
+    public function corpul(Corpdidactic $corp){
+        $post=$corp->getCorpdidactic();
+        return view('main.meniu.despre-noi.corpul',["post"=>$post]);
     }
     /*Regulamentele*/
      public function regulament($regulament){

@@ -84,6 +84,12 @@ html,body{
 .elevihome:hover{
     background-color: #25cc10;
 }
+.corpdidactichome{
+    background-color: #4885b7;
+}
+.corpdidactichome:hover{
+    background-color: #4179a7;
+}
 .parteneriatihome{
     background-color: #264858;
 }
