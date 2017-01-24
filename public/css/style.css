@@ -20,7 +20,7 @@ body{
 	padding: 0;	
 }
 .logo img{
-	width: 60px;
+	width: 85px;
 	height: auto;
 	float: left;
 	margin: 5px;
@@ -28,13 +28,13 @@ body{
 .logo{
 	padding: 0;
 	width: 100%;
-	height: 70px;
+	height: 80px;
 	float: left;
 }
 .name-site{
 	height: auto;
 	color: #000;
-	font-size: 130%;
+	font-size: 170%;
 	font-weight: 700;
 	text-align: center;
 	background-color: transparent;	
@@ -141,6 +141,7 @@ body{
 }
 .main-post:hover{
     background-color: #b3e6ff;
+    border: 1px solid gray;
 }
 .main-post h3:hover{
     font-family: sans-serif;
@@ -255,7 +256,12 @@ body{
     width: 100%;
     height: auto;
 }
-
+.content-part {
+    background-color:green;
+    margin: 10px;
+    color:white;
+    text-align:center;
+}
 /*Orar dreapta*/
 .orar{display: none;}
 .orar li a{

@@ -2,7 +2,7 @@
 @section("content")
     @if(!empty($posts))
         @foreach($posts as $i)
-            <div class="col-md-12 main-post" style="border: 1px solid gray;">
+            <div class="col-md-12 main-post" style="">
                 <h3>{{$i->title}}
                     <span>
                         {{Carbon\Carbon::createFromFormat('Y-m-d H:i:s',$i->created_at)->format('d/m/Y')}}
