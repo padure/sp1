@@ -13,6 +13,7 @@ use App\Logoname;
 use App\Administratia;
 use App\Parteneriati;
 use App\Corpdidactic;
+use App\Regulamente;
 
 class AdminController extends Controller
 {
@@ -95,6 +96,14 @@ class AdminController extends Controller
         if (filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
             $post=$corp->getCorpdidactic();
             return view('admin.corpdidactic',['post'=>$post]);
+        }else{
+            return redirect("/admin/login");
+        }
+    }
+    public function regulamente(Regulamente $regulamente){
+        if (filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            $post=$regulamente->getRegulamente();
+            return view('admin.regulamente',['post'=>$post]);
         }else{
             return redirect("/admin/login");
         }

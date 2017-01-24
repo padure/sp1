@@ -70,6 +70,8 @@
     Route::post('/admin/modcorpdidactic','Admin\CorpdidacticController@modcorpdidactic');
     Route::post('/admin/delcorpdidactic','Admin\CorpdidacticController@delcorpdidactic');
     
+/*Regulamente routes*/
+    Route::get('/admin/regulamente','Admin\AdminController@regulamente');
     
 /*Urna routes*/
     Route::get('/admin/urna','Admin\UrnaController@urna');
