@@ -90,6 +90,13 @@ html,body{
 .corpdidactichome:hover{
     background-color: #4179a7;
 }
+.regulamentehome{
+    background-color: #ff000c;
+}
+.regulamentehome:hover{
+    background-color: #dc050f;
+}
+
 .parteneriatihome{
     background-color: #264858;
 }

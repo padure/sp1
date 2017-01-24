@@ -74,6 +74,18 @@
     </div>
     
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+        <a href="{{URL("/admin/regulamente")}}">
+            <div class="regulamentehome patrat">
+                <p class="imagehome">
+                    <img src="{{asset("allimages/system/regulamenthome.png")}}" class="img-responsive"/>
+                </p>
+                <h3 class="text-center">Regulamente</h3>
+                <h1 class="text-center">{{$countregulamente}}</h1>
+            </div>
+        </a>
+    </div>
+    
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
         <a href="{{URL("/admin/logoname")}}">
             <div class="logonamehome patrat">
                 <p class="imagehome">
