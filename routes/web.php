@@ -72,6 +72,8 @@
     
 /*Regulamente routes*/
     Route::get('/admin/regulamente','Admin\AdminController@regulamente');
+    Route::post('/admin/addregulament','Admin\RegulamenteController@addregulament');
+    Route::post('/admin/delregulament','Admin\RegulamenteController@delregulament');
     
 /*Urna routes*/
     Route::get('/admin/urna','Admin\UrnaController@urna');
