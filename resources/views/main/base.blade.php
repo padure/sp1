@@ -85,13 +85,12 @@
                                                </ul>
                                         </li>
                                         <li class="dropdown">
-                                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Regulamente</a>
+                                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Regulamente/Rapoarte</a>
                                                 <ul class="dropdown-menu">
                                                     <li><a href="{{URL("regulamente/regulament-intern-activitate-scoala")}}">Regulamentul intern de activitate al școlii profesionale</a></li>
-                                                    <li><a href="{{URL("regulamente/regulament-activitate-consiliu-admin")}}">Regulamentul de activitate al consiliului de administrație</a></li>
                                                     <li><a href="{{URL("regulamente/regulament-consiliu-elevi")}}">Regulamentul consiliului elevilor</a></li>
-                                                    <li><a href="{{URL("regulamente/regulament-modul-cazare")}}">Regulamentul privind modul și condițiile de cazare</a></li>
                                                     <li><a href="{{URL("regulamente/regulament-activitate-camine")}}">Regulamentul de activitate a căminurilor</a></li>
+                                                    <li><a href="{{URL("regulamente/regulament-activitate-camine")}}">Rapoarte</a></li>
                                                </ul>
                                         </li>
                                         <li class="dropdown">
@@ -107,14 +106,13 @@
                                                     <li><a href="{{URL("parteneriate/parteneri-educationali")}}">Parteneri educaționali</a></li>
                                                     <li><a href="{{URL("parteneriate/parteneri-nationali")}}">Parteneri naționali</a></li>
                                                     <li><a href="{{URL("parteneriate/parteneri-internationali")}}">Parteneri internaționali</a></li>
-                                                    <li><a href="{{URL("parteneriate/agenti-economici")}}">Agenți economici</a></li>
                                                </ul>
                                         </li>
                                         <li class="dropdown">
                                             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Elevi</a>
                                                 <ul class="dropdown-menu">
                                                     <li><a href="{{URL("elevi/absolventi")}}">Elevi absolvenți</a></li>
-                                                    <li><a href="{{URL("https://goo.gl/forms/UX6yP9FPyJtcf0xi2")}}">Chestionar pentru elevi</a></li>
+                                                    <li><a href="{{URL("https://goo.gl/forms/UX6yP9FPyJtcf0xi2")}}">Chestionar elevi absolvenți</a></li>
                                                </ul>
                                         </li>
                                         <li class="dropdown">
@@ -187,7 +185,6 @@
                                                             <li><a href="">Orar</a></li>
                                                             <li><a href="">Orar modificat</a></li>
                                                         </ul>
-							<li><a href="#">Forum</a></li>
 							<li><a href="#">Intrebari și raspunsuri</a></li>
 						</ul>
                                 </div>
