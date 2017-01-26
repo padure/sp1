@@ -126,6 +126,10 @@
                             $("#"+id+"image").attr("src",'{{asset("/allimages/system/upload.png")}}');
                             $("#"+id+"input").attr("value","");
                         }
+                    },
+                    error:function(){
+                        $("#"+id+"image").attr("src",'{{asset("/allimages/system/upload.png")}}');
+                        $("#"+id+"input").attr("value","");
                     }
                 });
             }));
@@ -159,6 +163,14 @@
                             }else{
                                 $("#defaultimagepreview").attr("src",'{{asset("/allimages/system/upload.png")}}');
                             }
+                        }
+                    },
+                    error:function(){
+                        $("#imageeror").html("A aparut o eroare la incarcare");
+                        if(image.length>=2){
+                            $("#defaultimagepreview").attr("src",'{{asset("/")}}'+image);
+                        }else{
+                            $("#defaultimagepreview").attr("src",'{{asset("/allimages/system/upload.png")}}');
                         }
                     }
                 });

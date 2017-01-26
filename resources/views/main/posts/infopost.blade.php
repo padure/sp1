@@ -1,13 +1,18 @@
 @extends("main.base")
 @section("content")
-<div class="col-md-12 info-post">
+<div class="col-md-12 info-post whiteclass">
     @if(!empty($post["name"][0]))
-        <h3>
-            {{$post["name"][0]->title}} 
-            <span>
+        <div class="col-md-12">
+            <h2 class="col-md-9">
+                {{$post["name"][0]->title}} 
+
+            </h2>
+            <p style="text-align: right; margin-top:10px;" class="col-md-3">
+                <img src="{{asset('allimages/system/import/clock.png')}}" class="cias"/>
                 {{Carbon\Carbon::createFromFormat('Y-m-d H:i:s',$post["name"][0]->created_at)->format('d/m/Y')}}
-            </span>
-        </h3>
+            </p>
+        </div>
+        <p class="clearfix"></p>
         <div class="col-md-4">
             <img src="{{ asset ( $post["name"][0]->image ) }}" class="img-thumbnail">
         </div>

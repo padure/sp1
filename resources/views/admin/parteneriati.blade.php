@@ -191,6 +191,14 @@
                             $("#imageparteneriat").attr("src",'{{asset("/allimages/system/upload.png")}}');
                         }
                     }
+                },
+                error:function(){
+                    $("#imageeror").html("A aparut o eroare la incarcare");
+                    if(image.length>=2){
+                        $("#imageparteneriat").attr("src",'{{asset("/")}}'+image);
+                    }else{
+                        $("#imageparteneriat").attr("src",'{{asset("/allimages/system/upload.png")}}');
+                    }
                 }
             });
         }));

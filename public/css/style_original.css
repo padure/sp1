@@ -10,11 +10,7 @@ body{
     width: 100%;
 }
 .main{
-    background-color: #f2f2f2;
-}
-.whiteclass{
-    background-color: #f2f2f2;
-    margin-top:15px !important;
+	background-color: #f2f2f2;
 }
 .container{
 	padding: 0;
@@ -116,13 +112,9 @@ body{
     text-align: justify;
     font-size: 12px;
 }
-.main-post .roteste{
-    margin-top: 30px;
+.main-post img{
+    margin-bottom: 10px;
     transition: transform 1s;
-}
-.cias{
-    width: 25px;
-    margin-top: -5px;
 }
 .main-post h3{
     width: 100%;
@@ -136,8 +128,9 @@ body{
     margin-right: 15px;
 }
 .main-posts{
-    height: auto;
-    padding: 0;
+	border-right: 1px solid gray;
+	height: auto;
+	padding: 0;
 }
 .main-post{
     width: 100%;
@@ -146,7 +139,14 @@ body{
     padding-bottom: 15px;
     transition: background-color 1s;
 }
-.main-post:hover .roteste{
+.main-post:hover{
+    background-color: #b3e6ff;
+    border: 1px solid gray;
+}
+.main-post h3:hover{
+    font-family: sans-serif;
+}
+.main-post img:hover{
     -ms-transform: rotate(10deg); /* IE 9 */
     -webkit-transform: rotate(10deg); /* Safari */
     transform: rotate(10deg); /* Standard syntax */
@@ -168,8 +168,9 @@ body{
     font-size: 18px;
     margin-right: 15px;
 }
-.info-post h2{
-    color: #333;
+.info-post h3{
+    color: #80b3ff;
+    margin-left: 15px;
 }
 .info-post p{
      text-align: justify;
@@ -183,9 +184,6 @@ body{
     padding: 15px;
     margin: 0;
 }
-.info-post .galerie .col-md-6{
-    padding:7px;
-}
 /*Meserii*/
 .meserii h3{
     color: #80b3ff;
@@ -195,12 +193,10 @@ body{
     
 }
 /*Postari meniu main*/
-.main-posts h2{
-    color: #333;
+.main-posts h3{
+    color: #80b3ff;
+    border-bottom: 1px dotted gray;
     margin-right: 0px;
-}
-.main-posts h2 a:hover{
-    text-decoration: none;
 }
 .main-posts h4{
     color: #80b3ff;
@@ -212,6 +208,7 @@ body{
 }
 .main-posts{
     padding-bottom: 15px;
+    border-top: 1px solid gray;
 }
 /*Slideshow*/
 .mySlidesss {display:none;}
@@ -227,17 +224,10 @@ body{
 .my-link{
     border-top: 1px solid gray;
 }
-.my-link h3{
-   padding-left: 10px;
-}
 .my-link ul{
-    padding: 0px;
-    margin:0px;
+    padding-left: 5px;
     font-size: 12px;
     list-style-type: none;
-}
-.my-link li{
-    padding-left: 10px;
 }
 .my-link li a:hover{
     text-decoration: none;

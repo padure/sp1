@@ -96,6 +96,10 @@
                             $("#error").html("A aparut o eroare la incarcare");
                         }
                         $("#saveregulament").button("reset");
+                    },
+                    error:function(){
+                        $("#error").html("A aparut o eroare la incarcare");
+                        $("#saveregulament").button("reset");
                     }
                 });
             }else{

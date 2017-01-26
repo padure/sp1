@@ -50,6 +50,10 @@
                         $("#imageeror").html("fisierul nu este imagine");
                     }
                     $("#logosite").button("reset");
+                },
+                error:function(){
+                    $("#imageeror").html("A aparut o eroare");
+                    $("#logosite").button("reset");
                 }
             });
         });

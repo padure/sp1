@@ -28,30 +28,30 @@
         
     </head>
     <body>
-<div class="container main">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="logo">
-                                    <?php
-                                        $logoname=  App\Logoname::getInfo(); 
-                                    ?>
-					<a href="{{URL("/")}}"> 
-                                            @if(!empty($logoname["logo"]))
-                                                <img src="{{ asset ( $logoname["logo"]->valuevariable ) }}">
-                                            @else
-                                                home
-                                            @endif
-                                        </a>
-					<div class="name-site">
-                                            @if(!empty($logoname["namesite"]))
-                                                {{$logoname["namesite"]->valuevariable}}
-                                            @endif
-					</div>
-				</div>
-			</div>
-		</div>
+        <div class="container main">
+            <div class="row">
+                <div class="col-md-12">
+                        <div class="logo">
+                            <?php
+                                $logoname=  App\Logoname::getInfo(); 
+                            ?>
+                                <a href="{{URL("/")}}"> 
+                                    @if(!empty($logoname["logo"]))
+                                        <img src="{{ asset ( $logoname["logo"]->valuevariable ) }}">
+                                    @else
+                                        home
+                                    @endif
+                                </a>
+                                <div class="name-site">
+                                    @if(!empty($logoname["namesite"]))
+                                        {{$logoname["namesite"]->valuevariable}}
+                                    @endif
+                                </div>
+                        </div>
+                </div>
+            </div>
 		<!-- menu top-->
-              <div class="row my-nave">
+            <div class="row my-nave">
 		<nav class="navbar navbar-inverse col-md-12" style=" margin-bottom: 0px;">
 			  <div class="container-fluid">
 				<div class="navbar-header">
@@ -170,64 +170,69 @@
                 </div>
             </div>
         </div>
-        @endif             
-                <div class="row posts">
-			<div class="col-md-12 content">
-				<div class="col-md-10 main-posts">
-                                    @yield("content")
-				</div>
-				<div class="col-md-2 right-menu">
-						<h3>Menu</h3>
-						<ul>
-							<li><a href="#">Activitati lunare</a></li>
-							<li class="right-orar"><a>Orar</a></li>
-                                                        <ul class="orar">
-                                                            <li><a href="">Orar</a></li>
-                                                            <li><a href="">Orar modificat</a></li>
-                                                        </ul>
-							<li><a href="#">Intrebari și raspunsuri</a></li>
-						</ul>
-                                </div>
-                            <div class="col-md-2 my-link">
-                                
-                                     <h3>Link-uri utile</h3>
-						<ul>
-							<li><a href="{{URL("http://ctice.md/ctice2013/")}}">Ctice</a></li>
-							<li><a href="{{URL("http://www.edu.gov.md/")}}">Ministerul Educatiei al RM</a></li>
-							<li><a href="{{URL("http://www.aee.edu.md/")}}">Agenţia Naţională pentru Curriculum şi Evaluare</a></li>
-							<li><a href="{{URL("http://ctice.md/ctice2013/")}}">About</a></li>
-						</ul>               
-				</div>
-			</div>
-		</div>
-		<div class="partnership">
-                    <div>
-                        <a href="{{URL("http://www.edu.gov.md/")}}"><img src="{{ asset ( "images/partnership/03_logo.png" ) }}"  /></a>
+        @endif  
+    </div>
+        <div class="container">
+            <div class="row posts">
+                <div class="col-md-12 content">
+                    <div class="col-md-10 main-posts" id="getheight">
+                        @yield("content")
                     </div>
-                    <div>
-                       <a href="{{URL("http://www.edu.gov.md/")}}"><img src="{{ asset ( "images/partnership/COMPANII TIC.jpg" ) }}" /></a>
-                    </div>
-                    <div>
-                        <a href="{{URL("http://www.edu.gov.md/")}}"><img src="{{ asset ( "images/partnership/tricon.png" ) }}" /></a>
-                    </div>
-                    <div>
-                        <a href="{{URL("http://www.edu.gov.md/")}}"><img src="{{ asset ( "images/partnership/andy.png" ) }}" /></a>
-                    </div>
-                    <div style="border-right: 1px solid transparent;">
-                       <a href="{{URL("http://www.edu.gov.md/")}}"><img src="{{ asset ( "images/partnership/usaid-logo.jpeg" ) }}" /></a>
-                    </div>
-		</div>
-		<div class="row posts">
-			<div class="col-md-12 block footer">
-                            <address>Scoala Profesională Nr.1 Cahul</address>
+                    <div id="setheight" class="col-md-2 whiteclass" style="border-left: 1px solid #333; padding:0px;">
+                        <div class="right-menu ">
+                                    <h3>Menu</h3>
+                                    <ul>
+                                            <li><a href="#">Activitati lunare</a></li>
+                                            <li class="right-orar"><a>Orar</a></li>
+                                            <ul class="orar">
+                                                <li><a href="">Orar</a></li>
+                                                <li><a href="">Orar modificat</a></li>
+                                            </ul>
+                                            <li><a href="#">Intrebari și raspunsuri</a></li>
+                                    </ul>
                         </div>
-		</div>
+                        <div class="my-link ">
+                            <h3>Link-uri utile</h3>
+                            <ul>
+                                    <li><a href="{{URL("http://ctice.md/ctice2013/")}}">Ctice</a></li>
+                                    <li><a href="{{URL("http://www.edu.gov.md/")}}">Ministerul Educatiei al RM</a></li>
+                                    <li><a href="{{URL("http://www.aee.edu.md/")}}">Agenţia Naţională pentru Curriculum şi Evaluare</a></li>
+                                    <li><a href="{{URL("http://ctice.md/ctice2013/")}}">About</a></li>
+                            </ul>               
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="partnership">
+                <div>
+                    <a href="{{URL("http://www.edu.gov.md/")}}"><img src="{{ asset ( "images/partnership/03_logo.png" ) }}"  /></a>
+                </div>
+                <div>
+                   <a href="{{URL("http://www.edu.gov.md/")}}"><img src="{{ asset ( "images/partnership/COMPANII TIC.jpg" ) }}" /></a>
+                </div>
+                <div>
+                    <a href="{{URL("http://www.edu.gov.md/")}}"><img src="{{ asset ( "images/partnership/tricon.png" ) }}" /></a>
+                </div>
+                <div>
+                    <a href="{{URL("http://www.edu.gov.md/")}}"><img src="{{ asset ( "images/partnership/andy.png" ) }}" /></a>
+                </div>
+                <div style="border-right: 1px solid transparent;">
+                   <a href="{{URL("http://www.edu.gov.md/")}}"><img src="{{ asset ( "images/partnership/usaid-logo.jpeg" ) }}" /></a>
+                </div>
+            </div>
+            <div class="row posts">
+                <div class="col-md-12 block footer">
+                    <address>Scoala Profesională Nr.1 Cahul</address>
+                </div>
+            </div>
+        </div>
     </body>
     <script>
         $(document).ready(function(){
              $(".right-orar").click(function(){
                 $(".orar").toggle();
-    });
-});
+            });
+        });
+        $("#setheight").height($("#getheight").height()-15);
     </script>
 </html>

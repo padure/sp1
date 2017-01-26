@@ -80,6 +80,9 @@
                     success:function(data){
                         $("#uploadslideshowButton").button("reset");
                         location.reload();
+                    },
+                    error:function(){
+                        location.reload();
                     }
                 });
             });
