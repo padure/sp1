@@ -2,12 +2,12 @@
 @section("content")
 <div class="col-md-12 info-post whiteclass">
     @if(!empty($post["name"][0]))
-        <div class="col-md-12">
-            <h2 class="col-md-9">
+        <div class="col-md-12" style="border-bottom: 1px dotted;">
+            <h2 class="col-sm-9">
                 {{$post["name"][0]->title}} 
 
             </h2>
-            <p style="text-align: right; margin-top:10px;" class="col-md-3">
+            <p style="text-align: right; margin-top:15px;" class="col-sm-3">
                 <img src="{{asset('allimages/system/import/clock.png')}}" class="cias"/>
                 {{Carbon\Carbon::createFromFormat('Y-m-d H:i:s',$post["name"][0]->created_at)->format('d/m/Y')}}
             </p>
