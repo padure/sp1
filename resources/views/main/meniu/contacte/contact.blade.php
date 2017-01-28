@@ -1,7 +1,8 @@
 @extends("main.base")
 @section("content")
-<h4>Contacte</h4>
-<div class="col-md-12">
+<div class="col-md-12 whiteclass">
+    <h4>Contacte</h4>
+
     <div class="col-lg-8">
         <ul>
             <p >Date de contact</p>

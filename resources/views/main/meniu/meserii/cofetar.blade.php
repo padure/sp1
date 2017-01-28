@@ -1,6 +1,6 @@
 @extends("main.base")
 @section("content")
-<div class="col-md-12 meserii">
+<div class="col-md-12 meserii whiteclass">
     <h3>Cofetar</h3>
     <div class="col-md-8 meserii">
         <p>Programul de formare profesionala la meseria ”Operator Suport Tehnic Calculatoare”,

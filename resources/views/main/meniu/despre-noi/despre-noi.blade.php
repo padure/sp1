@@ -1,5 +1,6 @@
 @extends("main.base")
 @section("content")
+<div class="col-md-12 whiteclass">
 <h3>Misiune și viziune</h3>
 <div class="col-md-8">
         <p>Programul de formare profesionala la meseria ”Operator Suport Tehnic Calculatoare”,
@@ -16,6 +17,7 @@ are misiunea de a pregati muncitori calificati pentru segmentele pietei muncii d
         </ul>
     </div>
     <div class="col-lg-4">
-    <img src="{{ asset ( "images/mager.jpg" ) }}" class="img-thumbnail">
+        <img src="{{ asset ( "images/mager.jpg" ) }}" class="img-thumbnail">
     </div>
+</div>
 @endsection

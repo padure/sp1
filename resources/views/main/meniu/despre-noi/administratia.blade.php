@@ -1,6 +1,6 @@
 @extends("main.base")
 @section("content")
-<div class="col-md-12">
+<div class="col-md-12 whiteclass">
     <h3>Administrația</h3>
     <div class="col-md-12 administratia">
         @if(!empty($post) && count($post)>0)

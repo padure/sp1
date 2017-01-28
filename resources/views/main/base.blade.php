@@ -233,6 +233,8 @@
                 $(".orar").toggle();
             });
         });
-        $("#setheight").height($("#getheight").height()-15);
+        if($("#getheight").height()>$("#setheight").height()){
+            $("#setheight").height($("#getheight").height()-15);
+        }
     </script>
 </html>

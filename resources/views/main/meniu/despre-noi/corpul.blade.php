@@ -1,7 +1,7 @@
 @extends("main.base")
 @section("content")
     @if(!empty($post) && count($post)>0)
-        <div style="padding: 10px">
+        <div style="padding: 10px" class="whiteclass">
             <h3>Corpul didactic</h3>
             <table class="table table-striped" >
                 <tr>
