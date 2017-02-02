@@ -15,6 +15,7 @@ use App\Parteneriati;
 use App\Corpdidactic;
 use App\Regulamente;
 use App\Orar;
+use App\Admiterea;
 
 class AdminController extends Controller
 {
@@ -109,6 +110,15 @@ class AdminController extends Controller
             return redirect("/admin/login");
         }
     }
+    public function admiterea(Admiterea $admiterea){
+        if (filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            $post=$admiterea->getAdmiterea();
+            return view('admin.admiterea',['post'=>$post]);
+        }else{
+            return redirect("/admin/login");
+        }
+    }
+    
     public function orar(Orar $orar){
         if (filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
             $post=$orar->getOrar();

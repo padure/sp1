@@ -80,6 +80,10 @@
     Route::post('/admin/addregulament','Admin\RegulamenteController@addregulament');
     Route::post('/admin/delregulament','Admin\RegulamenteController@delregulament');
     
+/*Admitere routes*/
+    Route::get('/admin/admiterea','Admin\AdminController@admiterea'); 
+    Route::post('/admin/addadmiterea','Admin\AdmitereaController@addadmiterea');
+    Route::post('/admin/deladmiterea','Admin\AdmitereaController@deladmiterea');
 /*Urna routes*/
     Route::get('/admin/urna','Admin\UrnaController@urna');
     Route::get('/admin/deleteurna','Admin\UrnaController@deleteurna');

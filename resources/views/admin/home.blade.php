@@ -91,7 +91,7 @@
                     <img src="{{asset("allimages/system/admitereahome.png")}}" class="img-responsive"/>
                 </p>
                 <h3 class="text-center">Admiterea</h3>
-                <h1 class="text-center"></h1>
+                <h1 class="text-center">{{$countadmiterea}}</h1>
             </div>
         </a>
     </div>
