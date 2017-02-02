@@ -84,6 +84,17 @@
             </div>
         </a>
     </div>
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+        <a href="{{URL("/admin/admiterea")}}">
+            <div class="admitereahome patrat">
+                <p class="imagehome">
+                    <img src="{{asset("allimages/system/admitereahome.png")}}" class="img-responsive"/>
+                </p>
+                <h3 class="text-center">Admiterea</h3>
+                <h1 class="text-center"></h1>
+            </div>
+        </a>
+    </div>
     
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
         <a href="{{URL("/admin/orar")}}">

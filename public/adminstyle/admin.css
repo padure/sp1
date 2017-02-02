@@ -96,6 +96,12 @@ html,body{
 .regulamentehome:hover{
     background-color: #dc050f;
 }
+.admitereahome{
+    background-color: #4caf50;
+}
+.admitereahome:hover{
+    background-color: #4ea752;
+}
 .orarhome{
     background-color: #009688;
 }

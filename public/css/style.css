@@ -1,5 +1,5 @@
 body{
-	background-image: URL(images/font1.jpg);
+	background-color: #f2f2f2;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -34,6 +34,7 @@ body{
 	width: 100%;
 	height: 80px;
 	float: left;
+        background-color: #b3b3b3;
 }
 .name-site{
 	height: auto;
@@ -339,4 +340,22 @@ body{
 }
 .meserii p{
     text-align: justify;
+}
+/*Misiune viziune*/
+.main-posts h2{
+    text-align: center;
+    font-weight: 600;
+}
+.citat-misiune{
+    text-align: right;
+    font-style: italic;
+    font-size: 18px;
+}
+.descriere-misiune{text-align: justify; color: black;  padding: 30px; font-size: 14px;  }
+.descriere-misiune p{
+    text-indent: 30px;
+}
+.misiune{
+    /*background-color: white;*/
+    padding: 30px;
 }

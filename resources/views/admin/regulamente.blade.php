@@ -3,7 +3,7 @@
     <p class="text-danger text-center"><b>Nota:</b> Pentru modificarea regulamentului va rugam sa stergeti regulamentul vechi si sa-l adaugati din nou</p>
     <div class="col-md-6">
         <label class="text-info">Nume Regulament: </label> 
-        <span class="text-info">(Ex.Regulamentul de activitate a căminurilor)</span>
+        <span class="text-info">(Ex.Regulamentul de activitate a căminurilor , Raportul...)</span>
         <input type="text" name="nume" class="form-control" placeholder="Nume reglament" style="margin-bottom: 10px;"/>
         <label class="text-info">Fisierul PDF: </label>
         <form id="upload" enctype="multipart/form-data" style="width: 100%;">

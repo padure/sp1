@@ -30,7 +30,9 @@ class OrarController extends Controller
                         if(is_null($orar)){
                             DB::table("orar")->insert(["variable"=>"orar","valuevariable"=>$filename]);
                         }else{
-                            File::delete($orar->valuevariable);
+                            if(File::exists($orar->valuevariable)){
+                                File::delete($orar->valuevariable);
+                            }
                             DB::table("orar")->where("variable","orar")->update(["valuevariable"=>$filename]);
                         }
                         $response=["succes"=>true];
@@ -62,7 +64,9 @@ class OrarController extends Controller
                         if(is_null($orar)){
                             DB::table("orar")->insert(["variable"=>"orarmodificat","valuevariable"=>$filename]);
                         }else{
-                            File::delete($orar->valuevariable);
+                            if(File::exists($orar->valuevariable)){
+                                File::delete($orar->valuevariable);
+                            }
                             DB::table("orar")->where("variable","orarmodificat")->update(["valuevariable"=>$filename]);
                         }
                         $response=["succes"=>true];
@@ -80,7 +84,9 @@ class OrarController extends Controller
         }
         $id=$request->id;
         $sterge=DB::table("orar")->where("id",$id)->value("valuevariable");
-        File::delete($sterge);
+        if(File::exists($sterge)){
+            File::delete($sterge);
+        }
         DB::table("orar")->where("id",$id)->delete();
     }
 }
