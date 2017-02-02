@@ -86,6 +86,17 @@
     </div>
     
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+        <a href="{{URL("/admin/orar")}}">
+            <div class="orarhome patrat">
+                <p class="imagehome">
+                    <img src="{{asset("allimages/system/orarhome.png")}}" class="img-responsive"/>
+                </p>
+                <h3 class="text-center">Orar</h3>
+            </div>
+        </a>
+    </div>
+    
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
         <a href="{{URL("/admin/logoname")}}">
             <div class="logonamehome patrat">
                 <p class="imagehome">

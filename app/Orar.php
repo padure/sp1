@@ -8,7 +8,8 @@ use DB;
 class Orar extends Model
 {
     public function getOrar(){
-        $return=DB::table("orar")->get();
-        return $return;
+        $orar=DB::table('orar')->where("variable","orar")->first();
+        $orarmodificat=DB::table('orar')->where("variable","orarmodificat")->first();
+        return ["orar"=>$orar,"orarmodificat"=>$orarmodificat];
     }
 }

@@ -96,7 +96,12 @@ html,body{
 .regulamentehome:hover{
     background-color: #dc050f;
 }
-
+.orarhome{
+    background-color: #009688;
+}
+.orarhome:hover{
+    background-color: #008477;
+}
 .parteneriatihome{
     background-color: #264858;
 }

@@ -74,4 +74,13 @@ class OrarController extends Controller
             return response()->json(array('succes'=>"notfound"));
         }
     }
+    public function deleteorar(Request $request){
+        if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            return redirect("/admin");
+        }
+        $id=$request->id;
+        $sterge=DB::table("orar")->where("id",$id)->value("valuevariable");
+        File::delete($sterge);
+        DB::table("orar")->where("id",$id)->delete();
+    }
 }
