@@ -22,6 +22,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="{{URL("/admin/corpdidactic")}}">Corp Didactic</a></li>
                             <li><a href="{{URL("/admin/regulamente")}}">Regulamente</a></li>
+                            <li><a href="{{URL("/admin/orar")}}">Orar</a></li>
                             <li><a href="{{URL("/admin/logoname")}}">Logo și nume</a></li>
                             <li><a href="{{URL("/admin/users")}}">Admini</a></li>
                             <li><a href="{{URL("/admin/urna")}}">Fisiere nefolosite</a></li>

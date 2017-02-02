@@ -1,5 +1,6 @@
 @extends("main.base")
 @section("content")
+<div class="col-md-12 whiteclass">
     <div class="col-md-12">
         <div class="elevi-absolventi">
             <div class="form-group">
@@ -38,6 +39,7 @@
         <table class="table table-striped" id="tableelev">
         </table>
     </div>
+</div>
 <script>
     $(document).ready(function() {
         function showload(){
