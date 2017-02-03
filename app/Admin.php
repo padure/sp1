@@ -15,6 +15,7 @@ class Admin extends Model
         $countcorpdidactic=DB::table("corpdidactic")->count("id");
         $countregulamente=DB::table("regulamente")->count("id");
         $countadmiterea=DB::table("admiterea")->count("id");
+        $countgalerie=DB::table("galeriephotos")->count("id");
         $countadministratia=DB::table("administratia")->count("id");
         $countadmin=DB::table("admin")->count("id");
         $countfisierenefolosite=count(Urna::getInfoUrna());
@@ -23,6 +24,7 @@ class Admin extends Model
                 "countelevi"=>$countelevi,
                 "countregulamente"=>$countregulamente,
                 "countadmiterea"=>$countadmiterea,
+                "countgalerie"=>$countgalerie,
                 "countcorpdidactic"=>$countcorpdidactic,
                 "countparteneriati"=>$countparteneriati,
                 "countadministratia"=>$countadministratia,

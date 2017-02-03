@@ -102,6 +102,12 @@ html,body{
 .admitereahome:hover{
     background-color: #4ea752;
 }
+.galeriehome{
+    background-color: #3d4495;
+}
+.galeriehome:hover{
+    background-color: #343b8c;
+}
 .orarhome{
     background-color: #009688;
 }

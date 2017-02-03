@@ -95,7 +95,17 @@
             </div>
         </a>
     </div>
-    
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+        <a href="{{URL("/admin/galerie")}}">
+            <div class="galeriehome patrat">
+                <p class="imagehome">
+                    <img src="{{asset("allimages/system/galeriehome.png")}}" class="img-responsive"/>
+                </p>
+                <h3 class="text-center">Galerie</h3>
+                <h1 class="text-center">{{$countgalerie}}</h1>
+            </div>
+        </a>
+    </div>
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
         <a href="{{URL("/admin/orar")}}">
             <div class="orarhome patrat">
