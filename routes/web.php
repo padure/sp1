@@ -119,7 +119,10 @@ Route::get('/despre-noi/plan-dezvoltare-scoala','Main\MainController@plan');
 Route::get('/despre-noi/organigrama-institutiei','Main\MainController@organigrama');
 Route::get('/despre-noi/corp-didactic','Main\MainController@corpul');
 /*Regulamentele*/
-Route::get('/regulamente/{regulament}', 'Main\MainController@regulament');
+Route::get('/regulamente/regulament-intern-activitate-scoala', 'Main\MainController@regulamentintern');
+Route::get('/regulamente/regulament-consiliu-elevi', 'Main\MainController@regulamentconsiliu');
+Route::get('/regulamente/regulament-activitate-camine', 'Main\MainController@regulamentcamine');
+Route::get('/regulamente/rapoarte', 'Main\MainController@rapoarte');
 /*Admitere*/
 Route::get('/admitere/{admitere}', 'Main\MainController@admitere');
 /*Parteneriate*/
@@ -133,3 +136,6 @@ Route::get('/galerie/decada-meseriilor', 'Main\MainController@decada');
 Route::get('/galerie/alte-activitati', 'Main\MainController@altele');
 /*Contacte*/
 Route::get('/contacte', 'Main\MainController@contacte');
+/*Orar*/
+Route::get('/orar', 'Main\MainController@orar');
+Route::get('/orar-modificat', 'Main\MainController@orarmodificat');

@@ -359,3 +359,11 @@ body{
     /*background-color: white;*/
     padding: 30px;
 }
+/*Plan*/
+.titlu-plan h3{
+    text-align: center;
+}
+.titlu-plan h2{
+    font-size: 40px;
+    padding-top: 10px;
+}
