@@ -53,9 +53,21 @@ class MainController extends Controller
         $post=$corp->getCorpdidactic();
         return view('main.meniu.despre-noi.corpul',["post"=>$post]);
     }
-    /*Regulamentele*/
-     public function regulament($regulament){
+    /*Regulamentele interne*/
+     public function regulamentintern(){
         return view('main.meniu.regulamente.regulament');
+    }
+    /*Regulamentele consiliu*/
+     public function regulamentconsiliu(){
+        return view('main.meniu.regulamente.regulamente-consiliu');
+    }
+    /*Regulamentele camine*/
+     public function regulamentcamine(){
+        return view('main.meniu.regulamente.regulamentcamine');
+    }
+    /*Rapoarte*/
+     public function rapoarte(){
+        return view('main.meniu.regulamente.rapoarte');
     }
     /*Admitere*/
      public function admitere($admitere){
@@ -87,5 +99,13 @@ class MainController extends Controller
     /*Contacte*/
     public function contacte(){
         return view('main.meniu.contacte.contact');
+    }
+    /*Orar*/
+    public function orar(){
+        return view('main.meniu.orar.orar');
+    }
+    /*Orar*/
+    public function orarmodificat(){
+        return view('main.meniu.orar.orar-modificat');
     }
 }

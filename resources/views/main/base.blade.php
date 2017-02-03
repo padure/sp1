@@ -90,7 +90,7 @@
                                                     <li><a href="{{URL("regulamente/regulament-intern-activitate-scoala")}}">Regulamentul intern de activitate al școlii profesionale</a></li>
                                                     <li><a href="{{URL("regulamente/regulament-consiliu-elevi")}}">Regulamentul consiliului elevilor</a></li>
                                                     <li><a href="{{URL("regulamente/regulament-activitate-camine")}}">Regulamentul de activitate a căminurilor</a></li>
-                                                    <li><a href="{{URL("regulamente/regulament-activitate-camine")}}">Rapoarte</a></li>
+                                                    <li><a href="{{URL("regulamente/rapoarte")}}">Rapoarte</a></li>
                                                </ul>
                                         </li>
                                         <li class="dropdown">
@@ -185,10 +185,10 @@
                                             <li><a href="#">Activitati lunare</a></li>
                                             <li class="right-orar"><a>Orar</a></li>
                                             <ul class="orar">
-                                                <li><a href="">Orar</a></li>
-                                                <li><a href="">Orar modificat</a></li>
+                                                <li><a href="{{URL("/orar")}}">Orar</a></li>
+                                                <li><a href="{{URL("/orar-modificat")}}">Orar modificat</a></li>
                                             </ul>
-                                            <li><a href="#">Intrebari și raspunsuri</a></li>
+                                            <li><a href="{{URL("/orar")}}">Intrebari și raspunsuri</a></li>
                                     </ul>
                         </div>
                         <div class="my-link ">

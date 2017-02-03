@@ -68,6 +68,19 @@
 <li>creşterea rolului managerului şi a echipei manageriale în formarea echipelor de colaboratori, în promovarea „omului potrivit la locul potrivit”, valorificarea resurselor umane existente şi identificarea posibilităţilor de optimizare a valorii capitalului uman disponibil.</li>
 </ul>
 <p>Ameliorarea şi modernizarea bazei didactico-materiale, care facilitează punerea în operă a viziunii unităţii şcolare, va fi structurată pe trei direcţii:</p>
+<ol type="a">
+    <li><b>investiţii de capital </b>(reabilitare termică, modernizarea spaţiilor de învăţămînt şi cazare, amenajarea bazei sportive şi a curţii şcolare);</li>
+    <li><b>dotarea cu mijloace de învăţămînt şi material didactic specific activităţilor de instruire şi educaţie;</b></li>
+    <li><b>sporirea resurselor financiare necesare proiectelor de dezvoltare instituţională </b>(fonduri alocate de M.E.T., venituri extrabugetare).</li>
+</ol>
+<p>Proiectarea ofertei de educaţie şi formare va valorifica la parametri superiori nevoia locală de calificare a forţei de muncă, potenţialul de dezvoltare a zonei şi a şcolii, resursele umane şi materiale existente în şcoală, nevoile şi interesele elevilor, precum şi parteneriatele educaţionale realizate cu elevii prin:</p>
+<ul>
+    <li>creşterea responsabilităţii unităţii de învăţămînt faţă de beneficiarii educaţiei, de societatea civilă şi diversificarea implicării acesteia în viaţa comunităţii locale;</li>
+    <li>stabilirea legăturilor formale, intersistemice şi comunitare prin perfecţionarea sistemului de relaţii (cu şcoli de acelaşi nivel, cu universităţi, comunitatea locală prin instituţiile sale şi agenţii economici din oraş, din raion sau din ţară);</li>
+    <li>dezvoltarea unei reţele de relaţii internaţionale potrivit domeniilor de interes ale unităţii.</li>
+</ul>
+<p>În societatea actuală, şcoala trebuie să realizeze adaptarea absolvenţilor săi la rigorile economiei de piaţă, să dezvolte capacităţi de valorificare şi utilizare a fluxului mereu în creştere de informaţii profesionale, precum şi să creeze o perspectivă care să le ofere tinerilor un permanent termen de comparaţie al propriilor realizări cu performanţele la vîrf în domeniile în care urmează să activeze.</p>
+<p>Ţelul nostru este să redevenim o unitate şcolară de referinţă, integrată nevoilor sociale ale comunităţii, care să realizeze pregătirea de astăzi a tinerilor pentru viitorul de mîine, la standarde europene.</p>
 </div>
 </div>
     </div>
