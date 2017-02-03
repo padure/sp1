@@ -14,7 +14,10 @@
 
 
 /*Admin Page*/
-
+/*Profil routes*/
+    Route::get('/admin/profil','Admin\AdminController@profil');
+    Route::post('/admin/changename','Admin\SettingController@changename');
+    Route::post('/admin/profil','Admin\SettingController@changepassword');
 /*Register routers*/
     Route::get('/admin','Admin\AdminController@base');
     Route::get('/admin/login','Admin\AdminController@getLogin');

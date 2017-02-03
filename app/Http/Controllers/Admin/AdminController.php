@@ -28,6 +28,13 @@ class AdminController extends Controller
             return redirect("/admin/login");
         }
     }
+    public function profil(Admin $admin){
+        if (filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            return view("admin.profil");
+        }else{
+            return redirect("/admin/login");
+        }
+    }
     public function admins(Admin $admin){
         if (filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
             $result=$admin->getAdmins();
