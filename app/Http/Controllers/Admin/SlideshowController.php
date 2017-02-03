@@ -50,7 +50,9 @@ class SlideshowController extends Controller
         }
         $id=$request->id;
         $sterg=DB::table("slideshow")->where("id",$id)->value("slideimage");
-        File::delete($sterg);
+        if(File::exists($sterg)){
+            File::delete($sterg);
+        }
         DB::table("slideshow")->where("id",$id)->delete();
         return response()->json(["succes"=>true]);
         

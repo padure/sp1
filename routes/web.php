@@ -84,10 +84,17 @@
     Route::get('/admin/admiterea','Admin\AdminController@admiterea'); 
     Route::post('/admin/addadmiterea','Admin\AdmitereaController@addadmiterea');
     Route::post('/admin/deladmiterea','Admin\AdmitereaController@deladmiterea');
+/*Galerie routes*/
+    Route::get('/admin/galerie','Admin\AdminController@galerie');
+    Route::post('/admin/addgalerie','Admin\GalerieController@addgalerie');
+    Route::post('/admin/uploadgalerie','Admin\GalerieController@uploadgalerie');
+    Route::post('/admin/deleteimagegalerie','Admin\GalerieController@deleteimagegalerie');
+    Route::post('/admin/modgalerie','Admin\GalerieController@modgalerie');
+    Route::post('/admin/delgalerie','Admin\GalerieController@delgalerie');
 /*Urna routes*/
     Route::get('/admin/urna','Admin\UrnaController@urna');
     Route::get('/admin/deleteurna','Admin\UrnaController@deleteurna');
-/*Urna routes*/
+/*Parteneriati routes*/
     Route::get('/admin/parteneriati','Admin\AdminController@parteneriati');
     Route::post('/admin/uploadimageparteneriat','Admin\ParteneriatiController@uploadimageparteneriat');
     Route::post('/admin/saveparteneriat','Admin\ParteneriatiController@saveparteneriat');

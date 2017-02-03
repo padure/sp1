@@ -136,7 +136,9 @@ class EventsController extends Controller
         $id=$request->id;
         $images=DB::table("eventcontent")->where("events_id",$id)->where("isimage",1)->get();
         foreach($images as $i){
-            File::delete($i->text);
+            if(File::exists($i->text)){
+                File::delete($i->text);
+            }
         }
         DB::table("eventcontent")->where("events_id",$id)->delete();
         File::delete(DB::table("events")->where("id",$id)->value("image"));
