@@ -4,5 +4,5 @@
 <h3>Orar</h3>
 </div>
 <embed src="{{asset("documents/orar.pdf")}}?#zoom=85" 
-                   type='application/pdf'width="100%" height="900px"/>
+                   type='application/pdf' width="100%" height="900px"/>
 @endsection

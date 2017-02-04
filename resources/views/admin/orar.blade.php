@@ -25,6 +25,18 @@
         </label>
         <p id="orarmodificateror" class="text-danger"></p>
     </form>
+    <!--Orar modificat-->
+    <form id="activitati" enctype="multipart/form-data" class="col-md-4">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <label class="file">
+            <a class='btn btn-info' id="btnactivitati" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Se incarca">
+                <span class="glyphicon glyphicon-cloud-upload"></span>
+                Incarca activitatile lunare
+            </a>
+            <input type="file" name="file" style="display:none;"><br>
+        </label>
+        <p id="activitatieror" class="text-danger"></p>
+    </form>
     <div class="col-md-12">
         @if(!empty($post["orar"]))
             <h2>
@@ -48,6 +60,18 @@
                 </button>
             </h2>
             <embed src="{{asset($post["orarmodificat"]->valuevariable)}}?#zoom=120" 
+                   type='application/pdf'width="100%" height="500px"/>
+        @endif
+        @if(!empty($post["activitati"]))
+            <h2>
+                Activitati lunare
+                <button class="btn btn-danger pull-right" id="{{$post["activitati"]->id}}" name="deleteorar" >
+                    <span class="glyphicon glyphicon-remove"></span>
+                    Sterge
+                    <span class="glyphicon glyphicon-arrow-down"></span>
+                </button>
+            </h2>
+            <embed src="{{asset($post["activitati"]->valuevariable)}}?#zoom=120" 
                    type='application/pdf'width="100%" height="500px"/>
         @endif
     </div>
@@ -146,6 +170,36 @@
         });
         $("#orarmodificat").on("change", function() {
             $("#orarmodificat").submit();
+        });
+        /*Activitati*/
+        $("#activitati").on("submit",function(e){
+            e.preventDefault();
+            $("#btnactivitati").button("loading");
+            $("#activitatieror").html("");
+            var formData = new FormData(this);
+            $.ajax({
+                type:'POST',
+                url: "{{URL('/admin/uploadactivitati')}}",
+                data:formData,
+                cache:false,
+                contentType: false,
+                processData: false,
+                success:function(data){
+                    if(data.succes===true){
+                        location.reload();
+                    }else{
+                        $("#activitatieror").html("fisierul nu este format PDF");
+                    }
+                    $("#btnactivitati").button("reset");
+                },
+                error:function(){
+                    $("#activitatieror").html("A aparut o eroare");
+                    $("#btnactivitati").button("reset");
+                }
+            });
+        });
+        $("#activitati").on("change", function() {
+            $("#activitati").submit();
         });
     });
 </script>

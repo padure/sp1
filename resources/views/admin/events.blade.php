@@ -21,23 +21,23 @@
                 </thead>
                 @foreach($posts as $i)
                 <tr>
-                    <td>{{$i->id}}</td>
+                    <td>{{$i["item"]->id}}</td>
                     <td>
-                        <img src="{{ asset($i->image) }}" class="img-responsive"/>
+                        <img src="{{ asset($i["item"]->image) }}" class="img-responsive"/>
                     </td>
                     <td>
-                        <a href="{{URL("/post/".$i->id)}}" target="_blank">
-                            {{$i->title}}
+                        <a href="{{URL("/post/".$i["item"]->id)}}" target="_blank">
+                            {{$i["item"]->title}}
                         </a>
                     </td>
-                    <td>{{$i->views}}</td>
-                    <td>{{date('d/m/Y', strtotime($i->created_at))}}</td>
+                    <td>{{$i["item"]->views}}</td>
+                    <td>{{date('d/m/Y', strtotime($i["item"]->created_at))}}</td>
                     <td>
-                        <a href="{{URL("/admin/modifica/".$i->id)}}" data-toggle="modal"> 
+                        <a href="{{URL("/admin/modifica/".$i["item"]->id)}}" data-toggle="modal"> 
                             <span class="glyphicon glyphicon-cog"></span>
                             Modifica
                         </a>  
-                        <a class="deleteevent" name="deleteevent" id="{{$i->id}}"> 
+                        <a class="deleteevent" name="deleteevent" id="{{$i["item"]->id}}"> 
                             <span class="glyphicon glyphicon-remove"></span>
                             Sterge
                         </a>  

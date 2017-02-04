@@ -24,7 +24,7 @@
                             <li><a href="{{URL("/admin/regulamente")}}">Regulamente</a></li>
                             <li><a href="{{URL("/admin/admiterea")}}">Admiterea</a></li>
                             <li><a href="{{URL("/admin/galerie")}}">Galerie</a></li>
-                            <li><a href="{{URL("/admin/orar")}}">Orar</a></li>
+                            <li><a href="{{URL("/admin/orar")}}">Orar/Activitati lunare</a></li>
                             <li><a href="{{URL("/admin/logoname")}}">Logo și nume</a></li>
                             <li><a href="{{URL("/admin/users")}}">Admini</a></li>
                             <li><a href="{{URL("/admin/urna")}}">Fisiere nefolosite</a></li>

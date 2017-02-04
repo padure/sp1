@@ -78,6 +78,40 @@ class OrarController extends Controller
             return response()->json(array('succes'=>"notfound"));
         }
     }
+    public function uploadactivitati(Request $request){
+        if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            return redirect("/admin");
+        }
+        $response=[];
+        $files=$request->file("file");
+        $extensii=["pdf"];
+        if ($request->hasFile('file')){
+            if($files->isValid()){
+                $ext=strtolower($files->getClientOriginalExtension());
+                if(in_array($ext, $extensii)){
+                    $date=Carbon::now();
+                    $name=$date->format("ymdhis")."a";
+                    $path="files/activitati/";
+                    if($files->move($path,$name.".".$ext)){
+                        $filename=$path.$name.".".$ext;
+                        $orar = DB::table("orar")->where("variable","activitati")->first();
+                        if(is_null($orar)){
+                            DB::table("orar")->insert(["variable"=>"activitati","valuevariable"=>$filename]);
+                        }else{
+                            if(File::exists($orar->valuevariable)){
+                                File::delete($orar->valuevariable);
+                            }
+                            DB::table("orar")->where("variable","activitati")->update(["valuevariable"=>$filename]);
+                        }
+                        $response=["succes"=>true];
+                    }
+                }
+            }
+            return response()->json($response);
+        }else{
+            return response()->json(array('succes'=>"notfound"));
+        }
+    }
     public function deleteorar(Request $request){
         if (!filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
             return redirect("/admin");

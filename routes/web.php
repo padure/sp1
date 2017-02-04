@@ -46,6 +46,7 @@
     Route::get('/admin/orar','Admin\AdminController@orar');
     Route::post('/admin/uploadorar','Admin\OrarController@uploadorar');
     Route::post('/admin/uploadorarmodificat','Admin\OrarController@uploadorarmodificat');
+    Route::post('/admin/uploadactivitati','Admin\OrarController@uploadactivitati');
     Route::post('/admin/deleteorar','Admin\OrarController@deleteorar');
 /*Logo si nume routes*/
     Route::get('/admin/logoname','Admin\AdminController@logoname');

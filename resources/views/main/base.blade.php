@@ -228,6 +228,11 @@
         </div>
     </body>
     <script>
+        $(document).ready(function() {
+            $('#carousel').carousel({
+                interval: 3000
+            });
+        });
         $(document).ready(function(){
              $(".right-orar").click(function(){
                 $(".orar").toggle();

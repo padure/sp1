@@ -112,7 +112,8 @@
                 <p class="imagehome">
                     <img src="{{asset("allimages/system/orarhome.png")}}" class="img-responsive"/>
                 </p>
-                <h3 class="text-center">Orar</h3>
+                <h3 class="text-center">Orar,</h3>
+                <h3 class="text-center">Activitati lunare</h3>
             </div>
         </a>
     </div>

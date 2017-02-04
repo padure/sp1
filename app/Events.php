@@ -17,14 +17,11 @@ class Events extends Model
                     ->orderby("events.id","desc")
                     ->get();
         $aseaza=[];
-        $id=[];
-        foreach($return as $i){
-            if(!in_array($i->id,$id)){
-                $id[]=$i->id;
-                $aseaza[]=$i;
-            }
+        foreach($return as $key => $item)
+        {   $afiseaza[$item->id]['item']=$item;
+            $afiseaza[$item->id]['content'][$key] = $item->text;
         }
-        return $aseaza;
+        return $afiseaza;
     }
     
     public function getEvent($i){
