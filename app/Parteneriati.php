@@ -7,7 +7,7 @@ use DB;
 
 class Parteneriati extends Model
 {
-    public function getParteneriati(){
+    public static function getParteneriati(){
         $result=DB::table("parteneriati")->get();
         return $result;
     }

@@ -3,7 +3,7 @@
     @if(!empty($posts))
         @foreach($posts as $i)
             <div class="col-md-12 main-post whiteclass">
-                <div class="col-md-10" style="padding-right: 0px;">
+                <div class="col-md-10">
                     <h2>
                         <a href="{{URL("/post/".$i['item']->id)}}">
                             {{$i['item']->title}}

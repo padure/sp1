@@ -15,7 +15,10 @@
         
         
 	<link href="{{ asset("css/lightbox.min.css") }}" rel="stylesheet">
-        <link href="{{ asset("css/lightbox.min.css") }}" rel="stylesheet">
+        <!--Parteneriati -->
+        <link href="{{ asset("css/flexisel.css") }}" rel="stylesheet">
+        <script src="{{ asset("js/jquery.flexisel.js") }}"></script>
+        
         <!--Icons -->
         <link rel="stylesheet" href="{{ asset("css/font-awesome.min.css") }}">
         <!-- token-->
@@ -178,7 +181,7 @@
                     <div class="col-md-10 main-posts" id="getheight">
                         @yield("content")
                     </div>
-                    <div id="setheight" class="col-md-2 whiteclass" style="border-left: 1px solid #333; padding:0px;">
+                    <div id="setheight" class="col-md-2 col-xs-12 whiteclass" style="border-left: 1px solid #333; padding:0px;float: right;">
                         <div class="right-menu ">
                                     <h3>Menu</h3>
                                     <ul>
@@ -203,24 +206,22 @@
                     </div>
                 </div>
             </div>
-            <div class="partnership">
-                <div>
-                    <a href="{{URL("http://www.edu.gov.md/")}}"><img src="{{ asset ( "images/partnership/03_logo.png" ) }}"  /></a>
-                </div>
-                <div>
-                   <a href="{{URL("http://www.edu.gov.md/")}}"><img src="{{ asset ( "images/partnership/COMPANII TIC.jpg" ) }}" /></a>
-                </div>
-                <div>
-                    <a href="{{URL("http://www.edu.gov.md/")}}"><img src="{{ asset ( "images/partnership/tricon.png" ) }}" /></a>
-                </div>
-                <div>
-                    <a href="{{URL("http://www.edu.gov.md/")}}"><img src="{{ asset ( "images/partnership/andy.png" ) }}" /></a>
-                </div>
-                <div style="border-right: 1px solid transparent;">
-                   <a href="{{URL("http://www.edu.gov.md/")}}"><img src="{{ asset ( "images/partnership/usaid-logo.jpeg" ) }}" /></a>
-                </div>
-            </div>
-            <div class="row posts">
+            <!--Parteneriati -->
+            <?php 
+                $parteneriati=App\Parteneriati::getParteneriati(); 
+            ?>
+            @if(!empty($parteneriati) && count($parteneriati)>0)
+                <ul id="flexiselDemo3">
+                    @foreach($parteneriati as $i)
+                        <li>
+                            <a href="{{$i->link}}" target="_blank">
+                                <img src="{{asset($i->image)}}" />
+                            </a>
+                        </li>   
+                    @endforeach
+                </ul>
+            @endif
+            <div class="row posts" style="float: left;width: 100%;">
                 <div class="col-md-12 block footer">
                     <address>Scoala Profesională Nr.1 Cahul</address>
                 </div>
@@ -228,6 +229,19 @@
         </div>
     </body>
     <script>
+        /*Parteneriati scroll*/
+        $(window).load(function() {
+            $("#flexiselDemo3").flexisel({
+                visibleItems: 5,
+                itemsToScroll: 1,         
+                autoPlay: {
+                    enable: true,
+                    interval: 3000,
+                    pauseOnHover: true
+                }        
+            });
+        });
+        
         $(document).ready(function() {
             $('#carousel').carousel({
                 interval: 3000
