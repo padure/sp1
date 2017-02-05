@@ -54,24 +54,14 @@ class MainController extends Controller
         return view('main.meniu.despre-noi.corpul',["post"=>$post]);
     }
     /*Regulamentele interne*/
-     public function regulamentintern(){
-        return view('main.meniu.regulamente.regulament');
-    }
-    /*Regulamentele consiliu*/
-     public function regulamentconsiliu(){
-        return view('main.meniu.regulamente.regulamente-consiliu');
-    }
-    /*Regulamentele camine*/
-     public function regulamentcamine(){
-        return view('main.meniu.regulamente.regulamentcamine');
-    }
-    /*Rapoarte*/
-     public function rapoarte(){
-        return view('main.meniu.regulamente.rapoarte');
+     public function regulamente($id){
+        $return=DB::table("regulamente")->where("id",$id)->first();
+        return view('main.meniu.regulamente.regulament',["post"=>$return]);
     }
     /*Admitere*/
-     public function admitere($admitere){
-        return view('main.meniu.admitere.admiterea');
+     public function admitere($id){
+        $return=DB::table("admiterea")->where("id",$id)->first();
+        return view('main.meniu.admitere.admiterea',["post"=>$return]);
     }
     /*Parteneriate*/
      public function parteneriat($parteneriat){
@@ -87,14 +77,9 @@ class MainController extends Controller
         return response()->json($elevi->getElevi($grupa));
     }
     /*Galerie*/
-     public function activitati(){
-        return view('main.meniu.galerie.activitati');
-    }
-     public function decada(){
-        return view('main.meniu.galerie.decada');
-    }
-     public function altele(){
-        return view('main.meniu.galerie.alte');
+     public function galerie($id){
+        $return=DB::table("galeriephotos")->where("galerie_id",$id)->get();
+        return view('main.meniu.galerie.activitati',["post"=>$return]);
     }
     /*Contacte*/
     public function contacte(){

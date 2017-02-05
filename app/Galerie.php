@@ -7,7 +7,7 @@ use DB;
 
 class Galerie extends Model
 {
-    public function getGalerie(){
+    public static function getGalerie(){
         $return=DB::table("galerie")->get();
         return $return;
     }

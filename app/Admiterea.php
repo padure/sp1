@@ -7,7 +7,7 @@ use DB;
 
 class Admiterea extends Model
 {
-    public function getAdmiterea(){
+    public static function getAdmiterea(){
         return DB::table('admiterea')->get();
     }
 }

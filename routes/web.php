@@ -123,21 +123,16 @@ Route::get('/despre-noi/plan-dezvoltare-scoala','Main\MainController@plan');
 Route::get('/despre-noi/organigrama-institutiei','Main\MainController@organigrama');
 Route::get('/despre-noi/corp-didactic','Main\MainController@corpul');
 /*Regulamentele*/
-Route::get('/regulamente/regulament-intern-activitate-scoala', 'Main\MainController@regulamentintern');
-Route::get('/regulamente/regulament-consiliu-elevi', 'Main\MainController@regulamentconsiliu');
-Route::get('/regulamente/regulament-activitate-camine', 'Main\MainController@regulamentcamine');
-Route::get('/regulamente/rapoarte', 'Main\MainController@rapoarte');
+Route::get('/regulamente/{id}', 'Main\MainController@regulamente');
 /*Admitere*/
-Route::get('/admitere/{admitere}', 'Main\MainController@admitere');
+Route::get('/admitere/{id}', 'Main\MainController@admitere');
 /*Parteneriate*/
 Route::get('/parteneriate/{parteneriat}', 'Main\MainController@parteneriat');
 /*Absolventi*/
 Route::get('/elevi/absolventi', 'Main\MainController@absolvent');
 Route::post('/elevi/getelevi','Main\MainController@getelevi');
 /*Galerie*/
-Route::get('/galerie/activitati-extracurs', 'Main\MainController@activitati');
-Route::get('/galerie/decada-meseriilor', 'Main\MainController@decada');
-Route::get('/galerie/alte-activitati', 'Main\MainController@altele');
+Route::get('/galerie/{id}', 'Main\MainController@galerie');
 /*Contacte*/
 Route::get('/contacte', 'Main\MainController@contacte');
 /*Orar*/

@@ -1,8 +1,13 @@
 @extends("main.base")
 @section("content")
 <div class="col-md-12 meserii whiteclass">
-<h3>Regulamentul intern de activitate al școlii profesionale</h3>
-</div>
-<embed src="{{asset("documents/regulament_intern.pdf")}}?#zoom=120" 
+    @if(!empty($post) && count($post) > 0)
+        <h3>{{$post->nume}}</h3>
+        <embed src="{{asset($post->link)}}?#zoom=110" 
                    type='application/pdf'width="100%" height="900px"/>
+    @else
+        <h1>Nu s-a gasit acest regulament</h1>
+    @endif
+</div>
+
 @endsection

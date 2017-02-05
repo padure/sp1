@@ -7,7 +7,7 @@ use DB;
 
 class Regulamente extends Model
 {
-    public function getRegulamente(){
+    public static function getRegulamente(){
         return DB::table('regulamente')->get();
     }
 }

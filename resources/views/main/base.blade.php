@@ -89,19 +89,37 @@
                                         </li>
                                         <li class="dropdown">
                                             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Regulamente/Rapoarte</a>
+                                            <?php 
+                                                $regulamente=  App\Regulamente::getRegulamente();
+                                            ?>
+                                            @if(!empty($regulamente) && count($regulamente) >0)
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="{{URL("regulamente/regulament-intern-activitate-scoala")}}">Regulamentul intern de activitate al școlii profesionale</a></li>
-                                                    <li><a href="{{URL("regulamente/regulament-consiliu-elevi")}}">Regulamentul consiliului elevilor</a></li>
-                                                    <li><a href="{{URL("regulamente/regulament-activitate-camine")}}">Regulamentul de activitate a căminurilor</a></li>
-                                                    <li><a href="{{URL("regulamente/rapoarte")}}">Rapoarte</a></li>
+                                                    @foreach($regulamente as $i)
+                                                        <li>
+                                                            <a href="{{URL("regulamente/".$i->id)}}">
+                                                                {{$i->nume}}
+                                                            </a>
+                                                        </li>
+                                                    @endforeach
                                                </ul>
+                                            @endif
                                         </li>
                                         <li class="dropdown">
                                             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Admiterea</a>
+                                            <?php 
+                                                $admiterea= App\Admiterea::getAdmiterea();
+                                            ?>
+                                            @if(!empty($admiterea) && count($admiterea) >0)
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="{{URL("admitere/regulamentul-admitere")}}">Regulamentul de admitere</a></li>
-                                                    <li><a href="{{URL("admitere/plan-inmatriculare")}}">Planul de înmatriculare</a></li>
+                                                    @foreach($admiterea as $i)
+                                                        <li>
+                                                            <a href="{{URL("admitere/".$i->id)}}">
+                                                                {{$i->nume}}
+                                                            </a>
+                                                        </li>
+                                                    @endforeach
                                                </ul>
+                                            @endif
                                         </li>
                                         <li class="dropdown">
                                             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Parteneriate</a>
@@ -120,11 +138,20 @@
                                         </li>
                                         <li class="dropdown">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Galerie</a>
+                                            <?php 
+                                                $galerie= App\Galerie::getGalerie();
+                                            ?>
+                                            @if(!empty($galerie) && count($galerie) >0)
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="{{URL("galerie/activitati-extracurs")}}">Activitați extracurs</a></li>
-                                                    <li><a href="{{URL("galerie/decada-meseriilor")}}">Decada meseriilor</a></li>
-                                                    <li><a href="{{URL("galerie/alte-activitati")}}">Alte activitați</a></li>
+                                                    @foreach($galerie as $i)
+                                                        <li>
+                                                            <a href="{{URL("galerie/".$i->id)}}">
+                                                                {{$i->name}}
+                                                            </a>
+                                                        </li>
+                                                    @endforeach
                                                </ul>
+                                            @endif
                                         </li>
 					<li><a href="{{URL("contacte")}}">Contacte</a></li>
 				  </ul>

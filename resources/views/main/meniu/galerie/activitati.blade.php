@@ -1,47 +1,16 @@
 @extends("main.base")
 @section("content")
-<div class="col-md-12 activitati-extracurs">
-   <h3>Activitati extracurs</h3>
-   <div class="">
-   <a href="{{ asset ( "images/extracurs/img1.jpg" ) }}" data-title="My first caption" data-lightbox="Vacation">
-        <img src="{{ asset ( "images/extracurs/img1.jpg" ) }}" class="img-thumbnail"/>
-   </a>
-    </div>
-   <div class="">
-   <a href="{{ asset ( "images/extracurs/img2.jpg" ) }}" data-title="My first caption" data-lightbox="Vacation">
-        <img src="{{ asset ( "images/extracurs/img2.jpg" ) }}" class="img-thumbnail"/>
-   </a>
-    </div>
-   <div class="">
-   <a href="{{ asset ( "images/extracurs/img3.jpg" ) }}" data-title="My first caption" data-lightbox="Vacation">
-        <img src="{{ asset ( "images/extracurs/img3.jpg" ) }}" class="img-thumbnail"/>
-   </a>
-    </div>
-   <div class="">
-   <a href="{{ asset ( "images/extracurs/img4.jpg" ) }}" data-title="My first caption" data-lightbox="Vacation">
-        <img src="{{ asset ( "images/extracurs/img4.jpg" ) }}" class="img-thumbnail"/>
-   </a>
-    </div>
-   <div class="">
-   <a href="{{ asset ( "images/extracurs/img5.jpg" ) }}" data-title="My first caption" data-lightbox="Vacation">
-        <img src="{{ asset ( "images/extracurs/img5.jpg" ) }}" class="img-thumbnail"/>
-   </a>
-    </div>
-   <div class="">
-   <a href="{{ asset ( "images/extracurs/img6.jpg" ) }}" data-title="My first caption" data-lightbox="Vacation">
-        <img src="{{ asset ( "images/extracurs/img6.jpg" ) }}" class="img-thumbnail"/>
-   </a>
-    </div>
-   <div class="">
-   <a href="{{ asset ( "images/extracurs/img7.jpg" ) }}" data-title="My first caption" data-lightbox="Vacation">
-        <img src="{{ asset ( "images/extracurs/img7.jpg" ) }}" class="img-thumbnail"/>
-   </a>
-    </div>
-   <div class="">
-   <a href="{{ asset ( "images/extracurs/img8.jpg" ) }}" data-title="My first caption" data-lightbox="Vacation">
-        <img src="{{ asset ( "images/extracurs/img8.jpg" ) }}" class="img-thumbnail"/>
-   </a>
-    </div>
+<div class="col-md-12 activitati-extracurs whiteclass" >
+    @if(!empty($post) && count($post) >0)
+        <h3></h3>
+        @foreach($post as $i)
+            <div class="">
+                 <a href="{{ asset ( $i->address ) }}" data-title="My first caption" data-lightbox="Vacation">
+                      <img src="{{ asset ( $i->address ) }}" class="img-thumbnail"/>
+                 </a>
+             </div>
+        @endforeach
+   @endif
 </div>
 <script src="{{ asset("js/lightbox.min.js") }}"></script>
 @endsection
