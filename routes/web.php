@@ -110,6 +110,7 @@
 /*Main Page*/
 /*Post routes*/
 Route::get('/','Main\MainController@main');
+Route::get('/page={id}','Main\MainController@page');
 Route::get('/post/{i}','Main\MainController@infopost');
 /*Meniu routes*/
 Route::get('/meserii/operator-suport-tehnic','Main\MainController@operator');

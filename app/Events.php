@@ -7,7 +7,8 @@ use DB;
 
 class Events extends Model
 {
-    public function getAllEvents(){
+    public function getAllEvents($pag){
+        $nrPePag=10;
         $return=DB::table('events')
                     ->select('events.*','eventcontent.text')
                     ->leftJoin("eventcontent",function($join){
@@ -15,6 +16,7 @@ class Events extends Model
                             $join->where('eventcontent.type',1);
                         })
                     ->orderby("events.id","desc")
+                    ->skip(($pag-1)*$nrPePag)->take($nrPePag)
                     ->get();
         $afiseaza=[];
         foreach($return as $key => $item)
@@ -23,7 +25,18 @@ class Events extends Model
         }
         return $afiseaza;
     }
-    
+    public function getPaginare(){
+        $nrPePag=10;
+        $total=DB::table('events')
+                ->count();
+        if ($total%$nrPePag==0){
+            $total=(int)($total/$nrPePag);
+        }
+        else{
+            $total=(int)($total/$nrPePag)+1;
+        }
+        return $total;
+    }
     public function getEvent($i){
         if(!isset($_COOKIE['views'])) {
             setcookie("views", $i, time()+30);

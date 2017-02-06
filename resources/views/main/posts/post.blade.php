@@ -31,5 +31,6 @@
                 
             </div>
         @endforeach
+        @include('main.posts.paginare')
     @endif
 @endsection

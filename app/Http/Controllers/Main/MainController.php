@@ -14,8 +14,14 @@ use App\Corpdidactic;
 class MainController extends Controller
 {
     public function main(Events $events){
-        $posts=$events->getAllEvents();
-        return view('main.posts.post',['posts'=>$posts]);
+        $posts=$events->getAllEvents(1);
+        $paginare=$events->getPaginare();
+        return view('main.posts.post',['posts'=>$posts,'paginare'=>$paginare,"curentpage"=>1]);
+    }
+    public function page(Events $events , $id){
+        $posts=$events->getAllEvents($id);
+        $paginare=$events->getPaginare();
+        return view('main.posts.post',['posts'=>$posts,'paginare'=>$paginare,"curentpage"=>$id]);
     }
     public function infopost(Events $events , $i){
         $post=$events->getEvent($i);
