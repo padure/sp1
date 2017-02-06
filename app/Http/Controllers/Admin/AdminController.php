@@ -68,7 +68,7 @@ class AdminController extends Controller
     }
     public function events(Events $events){
         if (filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
-            $posts=$events->getAllEvents();
+            $posts=$events->getAllEventsAdmin();
             return view('admin.events',['posts'=>$posts]);
         }else{
             return redirect("/admin/login");

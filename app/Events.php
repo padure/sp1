@@ -25,6 +25,22 @@ class Events extends Model
         }
         return $afiseaza;
     }
+    public function getAllEventsAdmin(){
+        $return=DB::table('events')
+                    ->select('events.*','eventcontent.text')
+                    ->leftJoin("eventcontent",function($join){
+                            $join->on('events.id', '=', 'eventcontent.events_id');
+                            $join->where('eventcontent.type',1);
+                        })
+                    ->orderby("events.id","desc")
+                    ->get();
+        $afiseaza=[];
+        foreach($return as $key => $item)
+        {   $afiseaza[$item->id]['item']=$item;
+            $afiseaza[$item->id]['content'][$key] = $item->text;
+        }
+        return $afiseaza;
+    }
     public function getPaginare(){
         $nrPePag=10;
         $total=DB::table('events')
