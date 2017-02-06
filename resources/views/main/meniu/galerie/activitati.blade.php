@@ -15,4 +15,4 @@
    @endif
 </div>
 <script src="{{ asset("js/lightbox.min.js") }}"></script>
-@endsection
+@endsection 

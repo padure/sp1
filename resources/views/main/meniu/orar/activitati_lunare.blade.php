@@ -9,7 +9,4 @@
         <h3>Nu sunt activitati lunare</h3>
     @endif
 </div>
-
-
-
 @endsection

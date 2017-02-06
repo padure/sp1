@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Main;
 use App\Http\Controllers\Controller;
 use DB;
-use App\Events;
+use App\Events; 
 use App\Elevi;
 use App\Administratia;
 use App\Corpdidactic;
