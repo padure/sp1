@@ -136,6 +136,7 @@ Route::get('/galerie/{id}', 'Main\MainController@galerie');
 /*Contacte*/
 Route::get('/contacte', 'Main\MainController@contacte');
 /*Orar*/
+Route::get('/activitati-lunare', 'Main\MainController@activitatilunare');
 Route::get('/orar', 'Main\MainController@orar');
 Route::get('/orar-modificat', 'Main\MainController@orarmodificat');
 /*Activitati*/

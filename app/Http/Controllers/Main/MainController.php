@@ -78,7 +78,8 @@ class MainController extends Controller
     }
     /*Galerie*/
      public function galerie($id){
-        $return=DB::table("galeriephotos")->where("galerie_id",$id)->get();
+        $return["name"]=DB::table("galerie")->where("id",$id)->value("name");
+        $return["items"]=DB::table("galeriephotos")->where("galerie_id",$id)->get();
         return view('main.meniu.galerie.activitati',["post"=>$return]);
     }
     /*Contacte*/
@@ -86,11 +87,16 @@ class MainController extends Controller
         return view('main.meniu.contacte.contact');
     }
     /*Orar*/
-    public function orar(){
-        return view('main.meniu.orar.orar');
+    public function activitatilunare(){
+        $post=DB::table("orar")->where("variable","activitati")->first();
+        return view('main.meniu.orar.activitati_lunare',["post"=>$post]);
     }
-    /*Orar*/
+    public function orar(){
+        $post=DB::table("orar")->where("variable","orar")->first();
+        return view('main.meniu.orar.orar',["post"=>$post]);
+    }
     public function orarmodificat(){
-        return view('main.meniu.orar.orar-modificat');
+        $post=DB::table("orar")->where("variable","orarmodificat")->first();
+        return view('main.meniu.orar.orar-modificat',["post"=>$post]);
     }
 }

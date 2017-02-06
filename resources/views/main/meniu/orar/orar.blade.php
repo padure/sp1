@@ -1,8 +1,12 @@
 @extends("main.base")
 @section("content")
 <div class="col-md-12 meserii whiteclass">
-<h3>Orar</h3>
+    @if(!empty($post) && count($post) >0)
+        <h3>Orar</h3>
+        <embed src="{{asset($post->valuevariable)}}?#zoom=85" 
+                       type='application/pdf'width="100%" height="900px"/>
+    @else
+        <h3>Nu este orar</h3>
+    @endif
 </div>
-<embed src="{{asset("documents/orar.pdf")}}?#zoom=85" 
-                   type='application/pdf' width="100%" height="900px"/>
 @endsection

@@ -212,8 +212,8 @@
                         <div class="right-menu ">
                                     <h3>Menu</h3>
                                     <ul>
-                                            <li><a href="#">Activitati lunare</a></li>
-                                            <li class="right-orar"><a>Orar</a></li>
+                                            <li><a href="{{URL("/activitati-lunare")}}">Activitati lunare</a></li>
+                                            <li class="right-orar"><a style="cursor: pointer;">Orar</a></li>
                                             <ul class="orar">
                                                 <li><a href="{{URL("/orar")}}">Orar</a></li>
                                                 <li><a href="{{URL("/orar-modificat")}}">Orar modificat</a></li>
@@ -224,10 +224,18 @@
                         <div class="my-link ">
                             <h3>Link-uri utile</h3>
                             <ul>
-                                    <li><a href="{{URL("http://ctice.md/ctice2013/")}}">Ctice</a></li>
-                                    <li><a href="{{URL("http://www.edu.gov.md/")}}">Ministerul Educatiei al RM</a></li>
-                                    <li><a href="{{URL("http://www.aee.edu.md/")}}">Agenţia Naţională pentru Curriculum şi Evaluare</a></li>
-                                    <li><a href="{{URL("http://ctice.md/ctice2013/")}}">About</a></li>
+                                <a href="{{URL("http://ctice.md/ctice2013/")}}" target="_blank">
+                                    <li>Ctice</li>
+                                </a>
+                                <a href="{{URL("http://www.edu.gov.md/")}}" target="_blank">
+                                    <li>Ministerul Educatiei al RM</li>
+                                </a>
+                                <a href="{{URL("http://www.aee.edu.md/")}}" target="_blank">
+                                    <li>Agenţia Naţională pentru Curriculum şi Evaluare</li>
+                                </a>
+                                <a href="{{URL("http://ctice.md/ctice2013/")}}" target="_blank">
+                                    <li>About</li>
+                                </a>
                             </ul>               
                         </div>
                     </div>
@@ -281,6 +289,9 @@
         });
         if($("#getheight").height()>$("#setheight").height()){
             $("#setheight").height($("#getheight").height()-15);
+        }else{
+            $("#getheight").height($("#setheight").height()-15);
+            $("#getheight").addClass("whiteclass");
         }
     </script>
 </html>
