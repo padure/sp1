@@ -16,7 +16,7 @@ class Events extends Model
                         })
                     ->orderby("events.id","desc")
                     ->get();
-        $aseaza=[];
+        $afiseaza=[];
         foreach($return as $key => $item)
         {   $afiseaza[$item->id]['item']=$item;
             $afiseaza[$item->id]['content'][$key] = $item->text;
