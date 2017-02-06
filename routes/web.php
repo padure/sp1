@@ -29,6 +29,10 @@
     Route::get('/exitadmin','Admin\RegisterController@exitadmin');
     Route::get('/admin/users','Admin\AdminController@admins');
     Route::post('/admin/deleteadmin','Admin\SettingController@deleteadmin');
+    Route::get('/admin/reset','Admin\AdminController@reset');
+    Route::post('/admin/reset','Admin\RegisterController@sendemail');
+    Route::post('/admin/setcode','Admin\RegisterController@setcode');
+    Route::post('/admin/newpass','Admin\RegisterController@newpass');
 /*Event routes*/
     Route::get('/admin/events','Admin\AdminController@events');
     Route::get('/admin/newevent','Admin\AdminController@newevent');

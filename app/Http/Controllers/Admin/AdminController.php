@@ -43,6 +43,9 @@ class AdminController extends Controller
             return redirect("/admin/login");
         }
     }
+    public function reset(Admin $admin){
+        return view("admin.partials.reset");
+    }
     public function getLogin(){
         $first=DB::table('admin')->where('confirmed',1)->count();
         if($first>0)

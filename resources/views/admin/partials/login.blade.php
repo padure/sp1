@@ -31,7 +31,7 @@
                         <button type="submit" class="btn btn-primary">
                             Login
                         </button>
-                        <a class="btn btn-link" href="{{ url('/password/reset') }}">Am uitat parola?</a>
+                        <a class="btn btn-link" href="{{ url('/admin/reset') }}">Am uitat parola?</a>
                     </div>
                 </div>
             </form>

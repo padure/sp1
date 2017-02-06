@@ -59,6 +59,49 @@ class RegisterController extends Controller
         });
         return view('admin.tanks.emailsend'); 
     }
+    public function sendemail(Request $request){
+        $email=$request->email;
+        $exist=DB::table("admin")->where("email",$email)->first();
+        if(!empty($exist) && count($exist) >0){
+            $token=str_random(5);
+            DB::table('admin')->where("email",$email)->update([
+                'token' => $token,
+                ]);
+            Mail::send('admin.emails.reset', ['token' => $token], function ($m) use ($email) {
+                $m->to($email)->subject('Resetare parola');
+            });
+            return view("admin.partials.reset",["corect"=>$email]);
+        }
+        else{
+            return view("admin.partials.reset",["error"=>"eroare"]);
+        }
+    }
+    public function setcode(Request $request){
+        $email=$request->email;
+        $code=$request->code;
+        $exist=DB::table("admin")->where("email",$email)->value("token");
+        
+        if(strcmp($code,$exist)==0){
+            return view("admin.partials.reset",["newpass"=>$email,"corect"=>true]);
+        }
+        else{
+            return view("admin.partials.reset",["corect"=>$email,"codeeror"=>"eror"]);
+        }
+    }
+    public function newpass(Request $request){
+        $email=$request->email;
+        $newpass=$request->newpass;
+        if(strlen($newpass)>5 && strlen($newpass)<50){
+            DB::table("admin")->where("email",$email)->update([
+                'token' => null,
+                'password'=>bcrypt(strtolower($newpass)),
+                ]);
+            return redirect("/admin");
+        }
+        else{
+            return view("admin.partials.reset",["newpass"=>$email,"corect"=>true,"newpasseror"=>"eror"]);
+        }
+    }
     public function comfirm($email,$token){
         $email=Crypt::decrypt($email);
         $confirmation=DB::table('admin')
