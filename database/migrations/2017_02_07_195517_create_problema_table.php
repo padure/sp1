@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateParteneriatiTable extends Migration
+class CreateProblemaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreateParteneriatiTable extends Migration
      */
     public function up()
     {
-        Schema::create('parteneriati', function (Blueprint $table) {
+        Schema::create('problema', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('link');
-            $table->string('image');
-            $table->integer('tip');
+            $table->string("nume");
+            $table->string("prenume");
+            $table->string("telefon");
+            $table->string("email");
+            $table->text("problema");
         });
     }
 
@@ -28,6 +30,6 @@ class CreateParteneriatiTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('parteneriati');
+        Schema::dropIfExists('problema');
     }
 }

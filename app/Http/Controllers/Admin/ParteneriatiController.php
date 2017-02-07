@@ -46,7 +46,8 @@ class ParteneriatiController extends Controller
         }
         $link=$request->link;
         $logo=$request->logo;
-        DB::table('parteneriati')->insert(["link"=>$link,"image"=>$logo]);
+        $tip=$request->tip;
+        DB::table('parteneriati')->insert(["link"=>$link,"image"=>$logo,"tip"=>$tip]);
         return response()->json(true);
     }
     public function modparteneriat(Request $request){
@@ -56,9 +57,10 @@ class ParteneriatiController extends Controller
         $link=$request->link;
         $logo=$request->logo;
         $id=$request->id;
+        $tip=$request->tip;
         DB::table('parteneriati')
                 ->where("id",$id)
-                ->update(["link"=>$link,"image"=>$logo]);
+                ->update(["link"=>$link,"image"=>$logo,"tip"=>$tip]);
         return response()->json(true);
     }
     public function delparteneriat(Request $request){

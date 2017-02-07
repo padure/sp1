@@ -289,6 +289,9 @@
                     pauseOnHover: true
                 }        
             });
+            if($("#getheight").height()>$("#setheight").height()){
+                $("#setheight").height($("#getheight").height()-15);
+            }
         });
         
         $(document).ready(function() {
@@ -301,11 +304,6 @@
                 $(".orar").toggle();
             });
         });
-        if($("#getheight").height()>$("#setheight").height()){
-            $("#setheight").height($("#getheight").height()-15);
-        }else{
-            $("#getheight").height($("#setheight").height()-15);
-            $("#getheight").addClass("whiteclass");
-        }
+        
     </script>
 </html>

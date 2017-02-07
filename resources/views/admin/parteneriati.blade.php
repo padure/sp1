@@ -11,6 +11,7 @@
             <tr>
                 <th style="width: 150px;">Logo parteneriat</th>
                 <th>Adresa parteneriat</th>
+                <th>Tip</th>
                 <th style="width: 250px;">Setari</th>
             </tr>
             @foreach($post as $i)
@@ -22,7 +23,16 @@
                         <a href="{{$i->link}}" target="_blank">{{$i->link}}</a>
                     </td>
                     <td>
-                        <a class="btn btn-info" link="{{$i->link}}" logo="{{$i->image}}" name="modparteneriat" idmod="{{$i->id}}"> 
+                        @if($i->tip==0)
+                            Educationali
+                        @elseif($i->tip==1)
+                            Nationali
+                        @else
+                            Internationali
+                        @endif
+                    </td>
+                    <td>
+                        <a class="btn btn-info" link="{{$i->link}}" logo="{{$i->image}}" tip="{{$i->tip}}" name="modparteneriat" idmod="{{$i->id}}"> 
                             <span class="glyphicon glyphicon-cog"></span>
                             Modifica
                         </a>  
@@ -47,6 +57,15 @@
             </div>
             <div class="modal-body text-center">
                 <input type="text" name="linkp" class="form-control" placeholder="Linkul catre parteneriat" style="margin-bottom: 10px;"/>
+                <label>
+                    <input type="radio" name="tip" value="0" id="educat"/>Educationali
+                </label>
+                <label>
+                    <input type="radio" name="tip" value="1"/>Nationali
+                </label>
+                <label>
+                    <input type="radio" name="tip" value="2"/>Internationali
+                <label>
                 <form id="upload" enctype="multipart/form-data" style="width: 30%;">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <label class="file">
@@ -105,11 +124,13 @@
             $("#imageparteneriat").attr("src","{{asset('/')}}"+image);
             $("input[name=linkp]").val($(this).attr("link"));
             $("#add_parteneriat").modal();
+            $('input:radio[name="tip"]').filter('[value="'+$(this).attr("tip")+'"]').attr('checked', true);
         });
         $("button[name=savemod]").on('click',function(){
             var link=$("input[name=linkp]").val();
             var logo=image;
             var permit=true;
+            var tip=$("input[name=tip]:checked").val();
             if(link.length===0){
                 $("input[name=linkp]").css("border-color","red");
                 $("input[name=linkp]").focus();
@@ -132,7 +153,8 @@
                         url:"{{URL('/admin/saveparteneriat')}}",
                         data:{
                             link:link,
-                            logo:logo
+                            logo:logo,
+                            tip:tip
                         },
                         success:function(){
                             location.reload();
@@ -145,7 +167,8 @@
                         data:{
                             id:$("button[name=savemod]").attr("idmod"),
                             link:link,
-                            logo:logo
+                            logo:logo,
+                            tip:tip
                         },
                         success:function(){
                             location.reload();

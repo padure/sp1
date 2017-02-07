@@ -169,5 +169,13 @@ class AdminController extends Controller
             return redirect("/admin/login");
         }
     }
+    public function probleme(){
+        if (filter_var(session("emailAdmin"), FILTER_VALIDATE_EMAIL)){
+            $post=DB::table("problema")->get();
+            return view('admin.probleme',['post'=>$post]);
+        }else{
+            return redirect("/admin/login");
+        }
+    }
     
 }
