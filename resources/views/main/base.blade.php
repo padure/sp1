@@ -258,7 +258,21 @@
             @endif
             <div class="row posts polaroid" style="float: left;width: 100%;">
                 <div class="col-md-12 block footer">
-                    <address>Scoala Profesională Nr.1 Cahul</address>
+                    <div class="col-md-12">
+                    <address>&#169; Scoala Profesională Nr.1 Cahul</address>
+                    
+                    <span class="glyphicon glyphicon-info-sign" aria-hidden="true" style=""></span>
+                    <b>Despre</b>
+                    <ul class="despre">
+                        <li>R. Moldova, or.Cahul, </li>
+                        <li>str. M.Solohov, 40. </li>
+                        <li>0 (299) 8-10-75</li>
+                        <li id="facebook"><i class="fa fa-facebook" aria-hidden="true"></i>
+                        <a href="{{URL("https://www.facebook.com/sp1cahul")}}">https://www.facebook.com/sp1cahul</a></li>
+                    </ul>
+
+                    </div>
+                    
                 </div>
             </div>
         </div>

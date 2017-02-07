@@ -60,12 +60,23 @@ body{
 	background-color: #333;
 	color: white;
 	text-align: center;
-	padding-top: 5%;
+	padding-top: 2%;
 }
-
+.footer ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.footer b{
+    font-size: 12px;
+}
+.footer li{
+    font-size: 12px;
+}
+address{ margin-bottom: 0;}
 .right-menu{
     padding: 0;
-    background-color: #5bc0de;
+    background-color: #333;
     margin-top: 0;
 }
 .right-menu ul {
@@ -90,7 +101,8 @@ body{
 .right-menu h3{
 	padding-left: 10px;
         margin-top: 0px;
-        background-color: #5bc0de;
+        background-color: #333;
+        color: white;
 }
 .posts{
 	margin: 0;
@@ -283,7 +295,7 @@ body{
 /*Orar dreapta*/
 .orar{display: none;}
 .orar li a{
-    background-color: #b3d9ff;
+    background-color: #444;
     padding: 3px;
     padding-left: 40px;
     font-weight: 500;
@@ -371,4 +383,26 @@ body{
 .titlu-plan h2{
     font-size: 40px;
     padding-top: 10px;
+}
+.intrebari label{
+    width: 100px;
+}
+.intrebari textarea{
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.intrebari i{
+    color: red;
+}
+.parteneri-all img{
+    width: 100%;
+}
+
+.despre li{
+    float: left;
+    width: 150px;
+}
+#facebook{
+    width: 250px;
 }
