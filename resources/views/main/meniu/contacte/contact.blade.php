@@ -14,31 +14,11 @@
     <div class="col-lg-4">
         <img src="{{ asset ( "images/scoala.jpg" ) }}" class="img-thumbnail">
     </div>
-    <!-- Add Google Maps -->
-<div id="googleMap" style="height:400px;filter:grayscale(90%);-webkit-filter:grayscale(90%);"></div>
-</div>
-<script src="{{ asset("https://maps.googleapis.com/maps/api/js") }}"></script>
-<script>
-var myCenter = new google.maps.LatLng(41.878114, -87.629798);
-    
-function initialize() {
-    var mapProp = {
-    center: myCenter,
-    zoom: 12,
-    scrollwheel: false,
-    draggable: false,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-};
-    
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-    
-var marker = new google.maps.Marker({
-    position: myCenter,
-});
-    
-marker.setMap(map);
-}
-    
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
+<iframe
+  width="100%"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBHkMbZ818uHMYUZELEJ1ZwGcqLRw--BjU
+    &q=Space+Needle,Seattle+WA" allowfullscreen>
+</iframe>
 @endsection

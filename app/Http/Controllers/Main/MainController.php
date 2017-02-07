@@ -71,7 +71,9 @@ class MainController extends Controller
     }
     /*Parteneriate*/
      public function parteneriat($parteneriat){
-        return view('main.meniu.parteneriate.parteneriat');
+        $post["parteneriate"]=DB::table("parteneriati")->where("tip",$parteneriat)->get();
+        $post["den"]=$parteneriat;
+        return view('main.meniu.parteneriate.parteneriat',["post"=>$post]);
     }
     /*Parteneriate*/
     public function absolvent(Elevi $elevi){

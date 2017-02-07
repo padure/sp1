@@ -124,9 +124,9 @@
                                         <li class="dropdown">
                                             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Parteneriate</a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="{{URL("parteneriate/parteneri-educationali")}}">Parteneri educaționali</a></li>
-                                                    <li><a href="{{URL("parteneriate/parteneri-nationali")}}">Parteneri naționali</a></li>
-                                                    <li><a href="{{URL("parteneriate/parteneri-internationali")}}">Parteneri internaționali</a></li>
+                                                    <li><a href="{{URL("parteneriate/0")}}">Parteneri educaționali</a></li>
+                                                    <li><a href="{{URL("parteneriate/1")}}">Parteneri naționali</a></li>
+                                                    <li><a href="{{URL("parteneriate/2")}}">Parteneri internaționali</a></li>
                                                </ul>
                                         </li>
                                         <li class="dropdown">
@@ -149,8 +149,9 @@
                                                                 {{$i->name}}
                                                             </a>
                                                         </li>
-                                                        <li><a href="{{URL("/video")}}">Video</a></li>
+                                                        
                                                     @endforeach
+                                                    <li><a href="{{URL("/video")}}">Video</a></li>
                                                </ul>
                                             @endif
                                         </li>
@@ -260,7 +261,11 @@
             <div class="row posts polaroid" style="float: left;width: 100%;">
                 <div class="col-md-12 block footer">
                     <div class="col-md-12">
-                    <address>&#169; Scoala Profesională Nr.1 Cahul</address>
+                    <address>&#169; 
+                                    @if(!empty($logoname["namesite"]))
+                                        {{$logoname["namesite"]->valuevariable}}
+                                    @endif
+                    </address>
                     
                     <span class="glyphicon glyphicon-info-sign" aria-hidden="true" style=""></span>
                     <b>Despre</b>
