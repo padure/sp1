@@ -1,32 +1,58 @@
 @extends("main.base")
 @section("content")
 <div class="col-md-12 meserii whiteclass">
-    <h3>Operator pentru suport tehnic al calculatoarelor</h3>
-    <div class="col-md-8 meserii">
-        <p>Programul de formare profesionala la meseria ”Operator Suport Tehnic Calculatoare”,
-are misiunea de a pregati muncitori calificati pentru segmentele pietei muncii din domeniul TIC.</p>
-        <ul>
-            <h4>Operatorul Suport Tehnic Calculatoare este o persoana specializata, care:</h4>
-            <li>Asamblarea si depanarea calculatoarelor personale</li>
-            <li>Intretinerea calculatoarelor personale</li>
-            <li>Instalarea si depanarea retelelor de calculatoare personale</li>
-            <li>Intretinerea retelelor de calculatoare personale</li>
-            <li>Instalarea si configurarea produselor-program</li>
-            <li>Intretinerea produselor-program</li>
-            <li>Crearea unui mediu adecvat de munca si remedierea situatiilor de risc</li>
-        </ul>
+            <h3>Operator pentru suport tehnic al calculatoarelor</h3>
+       
+    <div class="col-md-12 meserii">
+        <div class="col-md-8">
+       <b>Ce înveți?</b>
+       <ul>
+           <li>Instalezi componentele unui sistem de calcul conform specificațiilor</li>
+           <li>Verifici funcționarea sistemului de calcul-instalarea hardware și mentenanță</li>
+           <li>Utilizezi metode specifice de protejare a programelor și datelor</li>
+           <li>Ameliorezi performanțele sistemelor de calcul prin upgrade și update</li>
+           <li>Instalezi și configurezi sisteme de securitate a sistemelor de calcul și a rețelelor de calculatoare</li>
+           <li>Asiguri mentenanța preventiva a calculatoarelor și rețelelor de calculatoare</li>
+       </ul>
+       <b>Care sunt beneficiile tale?</b>
+       <ul>
+           <li>Sunt multe joburi in domeniu,ceea ce iți oferă posibilități multiple de a alege o cariera dupa absolvire</li>
+           <li>Dobindești cunoștințe și abilitați precise , intr-o abordare modulara,intr-un  domeniu aflat in continuă expansiune</li>
+           <li>Ești capabil să indeplinești sarcini cu caracter tehnic de montaj , punere in funcțiune, întreținere și reparare a sistemelor sistemelor de calcul</li>
+       </ul>
+       <b>Ce job poți avea?</b>
+       <ul>
+           <li>Tehnician operator tehnică de calcul</li>
+           <li>Tehnician componente de calcul și rețele</li>
+           <li>Tehnician service echipamente de calcul</li>
+       </ul>
+        </div>
+        <div class="col-md-4">
+            <img style="width: 100%;" src="{{asset('images/meserii/operator1.jpg')}}" class="img-thumbnail">
+        </div>
+        </div>
+       <div class="col-md-12">
+           <div class="col-md-4">
+               <img style="width: 100%;" src="{{asset('images/meserii/operator2.jpg')}}" class="img-thumbnail" />
+           </div>
+               <div class="col-md-8" style="">
+                <b>Posibili angajatori</b>
+                <ul>
+                    <li>SRL "STARNET REGIONAL"</li>
+                    <li>SRL "PRINT MASTER"</li>
+                    <li>ACO "SERVIS-ELECTRON"</li>
+                    <li>SRL "NNP ANDREI"</li>
+                </ul>
+           </div>
+       </div>
+<div class="col-md-12">
+    <div class="col-md-8">
+       <b style="margin-top: 35px;">Impresii ale absolvenților</b>
+       <p>"M-am angajat cu ușurința,existand locuri de muncă in domeniu,intr-o firma de calculatoare."</p>
     </div>
-    <div class="col-lg-4">
-    <img src="{{ asset ( "images/operator.png" ) }}" class="img-thumbnail">
+    <div class="col-md-4">
+            <img style="width: 100%;" src="{{asset('images/meserii/operator3.jpg')}}" class="img-thumbnail">
     </div>
-    <div class="col-md-12">
-        <p>Curriculum modular a fost eleborat in stransa colaborare cu reprezentantii mediului de afaceri.
-    Cadrele didactice și-au perfecționat competențele profesionale prin cursuri specializate,
-    intership-uri, cursuri de limba engleza și formari psihopedagogice.
-școala beneficiaza de un laborator modern dotat cu echipamente tehnice performante.
-Acest laborator este o șansa pentru elevi de a se pregati pentru piața muncii, destul de
-competitiva, sa-și capete competențele necesare pentru a avea un loc de munca bine platit.
-</p>
 </div>
-    </div>
+</div>
 @endsection
