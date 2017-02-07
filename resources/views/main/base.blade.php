@@ -263,16 +263,16 @@
                     
                     <span class="glyphicon glyphicon-info-sign" aria-hidden="true" style=""></span>
                     <b>Despre</b>
-                    <ul class="despre">
+                    <ul>
                         <li>R. Moldova, or.Cahul, </li>
                         <li>str. M.Solohov, 40. </li>
                         <li>0 (299) 8-10-75</li>
-                        <li id="facebook"><i class="fa fa-facebook" aria-hidden="true"></i>
-                        <a href="{{URL("https://www.facebook.com/sp1cahul")}}">https://www.facebook.com/sp1cahul</a></li>
-                    </ul>
-
+                        </ul>
                     </div>
-                    
+                    <div class="col-md-12">
+                        <b>Sula Valentin</b>
+                        <b>Pădure Gheorghe</b>
+                    </div>
                 </div>
             </div>
         </div>

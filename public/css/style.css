@@ -398,11 +398,15 @@ address{ margin-bottom: 0;}
 .parteneri-all img{
     width: 100%;
 }
-
+.despre{
+    text-align: center;
+}
 .despre li{
-    float: left;
     width: 150px;
 }
 #facebook{
     width: 250px;
+}
+.footer ul li{
+    font-size: 10px;
 }
