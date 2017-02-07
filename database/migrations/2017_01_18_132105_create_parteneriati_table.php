@@ -17,6 +17,7 @@ class CreateParteneriatiTable extends Migration
             $table->increments('id');
             $table->string('link');
             $table->string('image');
+            $table->integer('tip');
         });
     }
 
