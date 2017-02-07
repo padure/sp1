@@ -146,3 +146,5 @@ Route::get('/orar', 'Main\MainController@orar');
 Route::get('/orar-modificat', 'Main\MainController@orarmodificat');
 /*Activitati*/
 Route::get('/activitati', 'Main\MainController@activitatile');
+/*Intrebari*/
+Route::get('/intrebari-raspunsuri', 'Main\MainController@intrebari');

@@ -105,4 +105,7 @@ class MainController extends Controller
         $post=DB::table("orar")->where("variable","orarmodificat")->first();
         return view('main.meniu.orar.orar-modificat',["post"=>$post]);
     }
+    public function intrebari() {
+        return view('main.meniu.orar.intrebari');
+    }
 }

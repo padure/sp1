@@ -218,7 +218,7 @@
                                                 <li><a href="{{URL("/orar")}}">Orar</a></li>
                                                 <li><a href="{{URL("/orar-modificat")}}">Orar modificat</a></li>
                                             </ul>
-                                            <li><a href="{{URL("/orar")}}">Intrebari și raspunsuri</a></li>
+                                            <li><a href="{{URL("/intrebari-raspunsuri")}}">Intrebari și raspunsuri</a></li>
                                     </ul>
                         </div>
                         <div class="my-link ">
