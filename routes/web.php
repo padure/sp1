@@ -152,3 +152,5 @@ Route::get('/activitati', 'Main\MainController@activitatile');
 /*Intrebari*/
 Route::get('/intrebari-raspunsuri', 'Main\MainController@intrebari');
 Route::post('/sendproblem', 'Main\ProblemaController@intrebari');
+/*Video*/
+Route::get('/video', 'Main\MainController@video');

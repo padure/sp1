@@ -108,4 +108,7 @@ class MainController extends Controller
     public function intrebari() {
         return view('main.meniu.orar.intrebari');
     }
+    public function video() {
+        return view('main.meniu.galerie.video');
+    }
 }

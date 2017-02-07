@@ -149,6 +149,7 @@
                                                                 {{$i->name}}
                                                             </a>
                                                         </li>
+                                                        <li><a href="{{URL("/video")}}">Video</a></li>
                                                     @endforeach
                                                </ul>
                                             @endif

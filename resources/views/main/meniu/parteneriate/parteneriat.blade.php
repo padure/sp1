@@ -1,5 +1,6 @@
 @extends("main.base")
 @section("content")
+<div class="col-md-12 whiteclass">
 <h3>Parteneriate</h3>
 <div class="col-md-12">
     <div class="col-md-3 parteneri-all">
@@ -26,5 +27,6 @@
     <div class="col-md-3 parteneri-all">
         <a href="#"><img src="{{ asset('allimages/parteneriati/170207052016.png')}}"></a>
     </div>
+</div>
 </div>
 @endsection
