@@ -256,7 +256,7 @@
                     @endforeach
                 </ul>
             @endif
-            <div class="row posts" style="float: left;width: 100%;">
+            <div class="row posts polaroid" style="float: left;width: 100%;">
                 <div class="col-md-12 block footer">
                     <address>Scoala Profesională Nr.1 Cahul</address>
                 </div>
