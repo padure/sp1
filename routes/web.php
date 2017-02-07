@@ -108,6 +108,9 @@
     Route::post('/admin/saveparteneriat','Admin\ParteneriatiController@saveparteneriat');
     Route::post('/admin/modparteneriat','Admin\ParteneriatiController@modparteneriat');
     Route::post('/admin/delparteneriat','Admin\ParteneriatiController@delparteneriat');
+/*Probleme routes*/
+    Route::get('/admin/probleme','Admin\AdminController@probleme');
+    Route::post('/admin/delproblema','Main\ProblemaController@delproblema');
 /*End Admin Page*/
 
     
@@ -148,3 +151,4 @@ Route::get('/orar-modificat', 'Main\MainController@orarmodificat');
 Route::get('/activitati', 'Main\MainController@activitatile');
 /*Intrebari*/
 Route::get('/intrebari-raspunsuri', 'Main\MainController@intrebari');
+Route::post('/sendproblem', 'Main\ProblemaController@intrebari');

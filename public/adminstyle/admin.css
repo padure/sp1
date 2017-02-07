@@ -66,6 +66,12 @@ html,body{
 .evenimentehome:hover{
     background-color: #e44040;
 }
+.problemahome{
+    background-color: #c75c5c;
+}
+.problemahome:hover{
+    background-color: #ff0000;
+}
 .slideshowhome{
     background-color: #22beef;
 }

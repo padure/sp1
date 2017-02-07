@@ -26,6 +26,18 @@
     </div>
     
     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+        <a href="{{URL("/admin/probleme")}}">
+            <div class="problemahome patrat">
+                <p class="imagehome">
+                    <img src="{{asset("allimages/system/problemahome.png")}}" class="img-responsive"/>
+                </p>
+                <h3 class="text-center">Probleme</h3>
+                <h1 class="text-center">{{$countprobleme}}</h1>
+            </div>
+        </a>
+    </div>
+    
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
         <a href="{{URL("/admin/administratia")}}">
             <div class="administratiahome patrat">
                 <p class="imagehome">

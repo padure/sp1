@@ -14,12 +14,13 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{{URL("/admin/events")}}">Evenimente</a></li>
                     <li><a href="{{URL("/admin/slideshow")}}">Slideshow</a></li>
+                    <li><a href="{{URL("/admin/probleme")}}">Probleme</a></li>
                     <li><a href="{{URL("/admin/administratia")}}">Administratia</a></li>
                     <li><a href="{{URL("/admin/elevi")}}">Elevi</a></li>
-                    <li><a href="{{URL("/admin/parteneriati")}}">Parteneriati</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mai multe <span class="caret"></span></a>
                         <ul class="dropdown-menu">
+                            <li><a href="{{URL("/admin/parteneriati")}}">Parteneriati</a></li>
                             <li><a href="{{URL("/admin/corpdidactic")}}">Corp Didactic</a></li>
                             <li><a href="{{URL("/admin/regulamente")}}">Regulamente</a></li>
                             <li><a href="{{URL("/admin/admiterea")}}">Admiterea</a></li>
