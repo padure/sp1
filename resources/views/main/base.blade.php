@@ -141,7 +141,7 @@
                                             <?php 
                                                 $galerie= App\Galerie::getGalerie();
                                             ?>
-                                            @if(!empty($galerie) && count($galerie) >0)
+                                            @if(!empty($galerie))
                                                 <ul class="dropdown-menu">
                                                     @foreach($galerie as $i)
                                                         <li>
@@ -149,11 +149,11 @@
                                                                 {{$i->name}}
                                                             </a>
                                                         </li>
-                                                        
                                                     @endforeach
                                                     <li><a href="{{URL("/video")}}">Video</a></li>
                                                </ul>
                                             @endif
+                                            
                                         </li>
 					<li><a href="{{URL("contacte")}}">Contacte</a></li>
 				  </ul>
