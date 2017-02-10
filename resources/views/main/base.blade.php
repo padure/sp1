@@ -265,6 +265,12 @@
                                     @if(!empty($logoname["namesite"]))
                                         {{$logoname["namesite"]->valuevariable}}
                                     @endif
+                                     
+                                    <?php 
+                                        $totalviews=App\Admin::totalviews();
+                                    ?>
+                                    {{$totalviews->totalviews}}
+                                    
                     </address>
                     
                     <span class="glyphicon glyphicon-info-sign" aria-hidden="true" style=""></span>

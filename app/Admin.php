@@ -7,6 +7,13 @@ use DB;
 
 class Admin extends Model
 {
+    public static function totalviews(){
+        if(!isset($_COOKIE['totalviews'])) {
+            setcookie("totalviews", true, time()+30);
+            DB::table("totalviews")->increment('totalviews');
+        }
+        return DB::table("totalviews")->first();
+    }
     public function getHomepage(){
         $countevent=DB::table("events")->count("id");
         $countslideshow=DB::table("slideshow")->count("id");
