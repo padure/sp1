@@ -8,6 +8,7 @@
         <script src="{{ asset("js/jquery.min.js") }}"></script>
         <script src="{{ asset("js/bootstrap.min.js") }}"></script>
         <script src="{{ asset("js/myjs.js") }}"></script>
+		<link rel="icon" href="{{ asset("allimages/logo/170208014616.png") }}" type="image/gif" >
         <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet" >
         <link href="{{ asset("css/style.css") }}" rel="stylesheet" >
         <link href="{{ asset("css/bootstrap-theme.min.css") }}" rel="stylesheet" type="text/css">
@@ -55,20 +56,20 @@
             </div>
 		<!-- menu top-->
             <div class="row my-nave">
-		<nav class="navbar navbar-inverse col-md-12" style=" margin-bottom: 0px;">
-			  <div class="container-fluid">
+		<nav class="navbar navbar-inverse" style=" margin-bottom: 0px;">
+			  <div class="container-fluid " style="background-color: #4668fd;!important">
 				<div class="navbar-header">
 				  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>                        
 				  </button>
-				  <a class="navbar-brand actives" href="{{URL("/")}}">HOME</a>
+				  <a class="navbar-brand actives" href="{{URL("/")}}" style="color: white!important">HOME</a>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
                                     <ul class="nav navbar-nav">
 					<li class="dropdown">
-                                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Meserii</a>
+                                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >MESERII</a>
                                                 <ul class="dropdown-menu">
                                                     <li><a href="{{URL("/meserii/operator-suport-tehnic")}}">Operator pentru suport tehnic al calculatoarelor</a></li>
                                                     <li><a href="{{URL("/meserii/controleor-produse-alimentare")}}">Controlor produse alimentare</a></li>
@@ -78,7 +79,7 @@
                                                </ul>
                                         </li>
                                         <li class="dropdown">
-                                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Despre noi</a>
+                                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >DESPRE NOI</a>
                                                 <ul class="dropdown-menu">
                                                     <li><a href="{{URL("/despre-noi/misiune-viziune")}}">Misiune și viziune</a></li>
                                                     <li><a href="{{URL("/despre-noi/plan-dezvoltare-scoala")}}">Plan de dezvoltare școlară</a></li>
@@ -88,7 +89,7 @@
                                                </ul>
                                         </li>
                                         <li class="dropdown">
-                                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Regulamente/Rapoarte</a>
+                                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">REGULAMENTE/RAPOARTE</a>
                                             <?php 
                                                 $regulamente=  App\Regulamente::getRegulamente();
                                             ?>
@@ -105,7 +106,7 @@
                                             @endif
                                         </li>
                                         <li class="dropdown">
-                                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Admiterea</a>
+                                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >ADMITEREA</a>
                                             <?php 
                                                 $admiterea= App\Admiterea::getAdmiterea();
                                             ?>
@@ -122,22 +123,22 @@
                                             @endif
                                         </li>
                                         <li class="dropdown">
-                                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Parteneriate</a>
+                                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >PARTENERIATE</a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="{{URL("parteneriate/0")}}">Parteneri educaționali</a></li>
-                                                    <li><a href="{{URL("parteneriate/1")}}">Parteneri naționali</a></li>
-                                                    <li><a href="{{URL("parteneriate/2")}}">Parteneri internaționali</a></li>
+                                                    <li><a href="{{URL("/parteneriate/educationali")}}">Parteneri educaționali</a></li>
+                                                    <li><a href="{{URL("/parteneriate/nationali")}}">Parteneri naționali</a></li>
+                                                    <li><a href="{{URL("/parteneriate/internationali")}}">Parteneri internaționali</a></li>
                                                </ul>
                                         </li>
                                         <li class="dropdown">
-                                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Elevi</a>
+                                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >ELEVI</a>
                                                 <ul class="dropdown-menu">
                                                     <li><a href="{{URL("elevi/absolventi")}}">Elevi absolvenți</a></li>
                                                     <li><a href="{{URL("https://goo.gl/forms/UX6yP9FPyJtcf0xi2")}}">Chestionar elevi absolvenți</a></li>
                                                </ul>
                                         </li>
                                         <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Galerie</a>
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >GALERIE</a>
                                             <?php 
                                                 $galerie= App\Galerie::getGalerie();
                                             ?>
@@ -155,7 +156,7 @@
                                             @endif
                                             
                                         </li>
-					<li><a href="{{URL("contacte")}}">Contacte</a></li>
+					<li><a href="{{URL("contacte")}}">CONTACTE</a></li>
 				  </ul>
 				</div>
 			  </div> 
@@ -227,7 +228,7 @@
                             <h3>Link-uri utile</h3>
                             <ul>
                                 <a href="{{URL("http://ctice.md/ctice2013/")}}" target="_blank">
-                                    <li>Ctice</li>
+                                    <li>CTICE</li>
                                 </a>
                                 <a href="{{URL("http://www.edu.gov.md/")}}" target="_blank">
                                     <li>Ministerul Educatiei al RM</li>
@@ -235,9 +236,7 @@
                                 <a href="{{URL("http://www.aee.edu.md/")}}" target="_blank">
                                     <li>Agenţia Naţională pentru Curriculum şi Evaluare</li>
                                 </a>
-                                <a href="{{URL("http://ctice.md/ctice2013/")}}" target="_blank">
-                                    <li>About</li>
-                                </a>
+                                
                             </ul>               
                         </div>
                     </div>
@@ -265,25 +264,22 @@
                                     @if(!empty($logoname["namesite"]))
                                         {{$logoname["namesite"]->valuevariable}}
                                     @endif
-                                     
-                                    <?php 
-                                        $totalviews=App\Admin::totalviews();
-                                    ?>
-                                    {{$totalviews->totalviews}}
-                                    
                     </address>
                     
                     <span class="glyphicon glyphicon-info-sign" aria-hidden="true" style=""></span>
                     <b>Despre</b>
                     <ul>
-                        <li>R. Moldova, or.Cahul, </li>
-                        <li>str. M.Solohov, 40. </li>
+                        <li>R. Moldova, or.Cahul, str. M.Solohov, 40.</li>
                         <li>0 (299) 8-10-75</li>
+						<?php 
+							$totalviews=App\Admin::totalviews();
+						?>
+						<li>Vizualizări: {{$totalviews->totalviews}}</li>
                         </ul>
                     </div>
                     <div class="col-md-12">
-                        <b>Sula Valentin</b>
-                        <b>Pădure Gheorghe</b>
+                        <b style="font-size: 10px;">Sula Valentin: sula.valentin@gmail.com</b>
+                        <b style="font-size: 10px;">Pădure Gheorghe: paduregheorghe7@gmail.com</b>
                     </div>
                 </div>
             </div>
